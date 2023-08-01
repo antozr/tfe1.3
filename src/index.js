@@ -8,6 +8,7 @@ import ErrorP from './pages/ErrorP';
 import TonAventure from './pages/TonAventure';
 import PlusDInfo from './pages/PlusDInfo';
 import StylePB from './pages/StylePB';
+import NavBar from './routes/NavBar';
 
 
 const router = createBrowserRouter([
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorP/>
   },
   {
-    path:'/ton-aventure',
+    path:'/mon-aventure',
     element:<TonAventure/>,
     errorElement: <ErrorP/>
   }
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    
     <RouterProvider router={router} />
   </React.StrictMode>
 );
