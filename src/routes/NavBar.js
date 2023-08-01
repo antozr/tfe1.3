@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Navbar.scss";
 import { Link, NavLink } from "react-router-dom";
 
@@ -27,14 +27,17 @@ function NavBar() {
   ];
 
   ////* Function to open / close tne nav in mobile */
-
+  let btnNav = useRef(document.querySelector(".nav__btn"))
+function openNav(e){
+    alert('open')
+}
   return (
     <header className={window.innerWidth > 600 ? "head" : "head head--mobile"}>
       <nav className="head__nav">
         <ul className="nav__list">
           {allDataLink.map((el, key) => (
             <li className="nav__el" key={el.id}>
-              <Link
+              <NavLink
                 key={el.id}
                 to={el.link}
                 // className="nav__a"
@@ -48,12 +51,12 @@ function NavBar() {
                 }
               >
                 {el.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
 
-        <button className="nav__btn">
+        <button className="nav__btn" onClick={openNav} ref={btnNav}>
           <span className="nav__btnBarre"></span>
           <span className="nav__btnBarre"></span>
           <span className="nav__btnBarre"></span>

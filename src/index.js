@@ -10,6 +10,7 @@ import PlusDInfo from './pages/PlusDInfo';
 import StylePB from './pages/StylePB';
 import NavBar from './routes/NavBar';
 import HomeP from './pages/HomeP';
+import LayoutTattoo from './pages/LayoutTattoo';
 
 
 const router = createBrowserRouter([
@@ -21,8 +22,14 @@ const router = createBrowserRouter([
       {
         path:'styles',
         element:<StylePB />,
+        children:[
+          {
+            path:'oldschool',
+            element: <LayoutTattoo />
+          }
+        ]},
         
-      },
+      
       {
         path:'plus-d-infos',
         element:<PlusDInfo />,
