@@ -11,20 +11,22 @@ function NavBar() {
     },
     {
       name: "Les styles",
-      link: "/styles",
+      link: "styles",
       id: 2,
     },
     {
       name: <>En&nbsp;savoir&nbsp;+</>,
-      link: "/plus-d-infos",
+      link: "plus-d-infos",
       id: 3,
     },
     {
       name: "Mon aventure",
-      link: "/mon-aventure",
+      link: "mon-aventure",
       id: 4,
     },
   ];
+
+  ////* Function to open / close tne nav in mobile */
 
   return (
     <header className={window.innerWidth > 600 ? "head" : "head head--mobile"}>
@@ -35,8 +37,15 @@ function NavBar() {
               <Link
                 key={el.id}
                 to={el.link}
-                className=""
+                // className="nav__a"
                 aria-label="Je redirige vers la home"
+                className={({ isActive, isPending }) =>
+                  isPending
+                    ? "nav__a"
+                    : isActive
+                    ? "nav__a nav__a--active"
+                    : "nav__a"
+                }
               >
                 {el.name}
               </Link>

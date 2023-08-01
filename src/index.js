@@ -9,6 +9,7 @@ import TonAventure from './pages/TonAventure';
 import PlusDInfo from './pages/PlusDInfo';
 import StylePB from './pages/StylePB';
 import NavBar from './routes/NavBar';
+import HomeP from './pages/HomeP';
 
 
 const router = createBrowserRouter([
@@ -16,22 +17,44 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     errorElement: <ErrorP />,
+    children:[
+      {
+        path:'styles',
+        element:<StylePB />,
+        
+      },
+      {
+        path:'plus-d-infos',
+        element:<PlusDInfo />,
+        
+      },
+      {
+        path:'mon-aventure',
+        element:<TonAventure />,
+        
+      },
+      {
+        path:'',
+        element:<HomeP />,
+        
+      }
+    ]
   },
-  {
-    path:'/styles',
-    element:<StylePB />,
-    errorElement: <ErrorP/>
-  },
-  {
-    path:'/plus-d-infos',
-    element:<PlusDInfo />,
-    errorElement: <ErrorP/>
-  },
-  {
-    path:'/mon-aventure',
-    element:<TonAventure/>,
-    errorElement: <ErrorP/>
-  }
+  // {
+  //   path:'/styles',
+  //   element:<StylePB />,
+  //   errorElement: <ErrorP/>
+  // },
+  // {
+  //   path:'/plus-d-infos',
+  //   element:<PlusDInfo />,
+  //   errorElement: <ErrorP/>
+  // },
+  // {
+  //   path:'/mon-aventure',
+  //   element:<TonAventure/>,
+  //   errorElement: <ErrorP/>
+  // }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

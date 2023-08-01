@@ -1,13 +1,15 @@
 
+import { Outlet } from 'react-router';
 import './App.scss';
+import StylePB from './pages/StylePB';
 import NavBar from './routes/NavBar';
 
 function App() {
   return (
     <>
     <NavBar />
-    <div className="App">
-     je suis là
+    <div id="detail">
+      <Outlet />
     </div>
     </>
   );

@@ -40,6 +40,20 @@
         display: none;
     }
 
+    &__a{
+        color: inherit;
+        padding: 8px 14px;
+
+        &:hover {
+            color: #F9B949;
+            transition: 0.3s;
+        }
+        &--active{
+            color: #F9B949;
+            transition: 0.3s;
+        }
+    }
+
 
     &__btn {
         width: 38px;
@@ -89,5 +103,50 @@
                 transform: translateY(-10px) rotate(-45deg);
             }
         }
+    }
+}
+
+
+@media(min-width:600px){
+
+    .nav{
+        &__list{
+            display: flex;
+            flex-direction: row;
+            column-gap:38px ;
+            
+        }
+        &__el{
+            font-size: 21px;
+            font-weight: 400;
+            overflow: hidden;
+            opacity: 0;
+            animation: openLink 0.6s ease-out both;
+
+            &:nth-child(2){
+                animation-delay: 0.4s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.8s;
+            }
+            &:nth-child(4){
+                animation-delay: 1.2s;
+            }
+        }
+
+        &__btn{
+            display: none;
+        }
+    }
+}
+
+@keyframes openLink{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
