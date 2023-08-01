@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider} from 'react-router-dom';
 import ErrorP from './pages/ErrorP';
-import Root from './routes/root';
 import TonAventure from './pages/TonAventure';
 import PlusDInfo from './pages/PlusDInfo';
 import StylePB from './pages/StylePB';
