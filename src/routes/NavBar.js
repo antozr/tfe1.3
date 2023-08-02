@@ -5,12 +5,12 @@ import { Link, NavLink } from "react-router-dom";
 function NavBar() {
   let allDataLink = [
     {
-      name: "La découverte",
+      name: <>La&nbsp;découverte</>,
       link: "/",
       id: 1,
     },
     {
-      name: "Les styles",
+      name: <>Les&nbsp;styles</>,
       link: "styles",
       id: 2,
     },
@@ -20,23 +20,30 @@ function NavBar() {
       id: 3,
     },
     {
-      name: "Mon aventure",
+      name: <>Mon&nbsp;aventure</>,
       link: "mon-aventure",
       id: 4,
     },
   ];
 
   ////* Function to open / close tne nav in mobile */
+  let listLien = useRef(document.querySelector(".nav__list"));
   let btnNav = useRef(document.querySelector(".nav__btn"))
 function openNav(e){
-    alert('open')
+  if(!listLien.current.classList.contains("nav__list--open")){
+    listLien.current.classList.add("nav__list--open");
+  }else{
+    listLien.current.classList.remove("nav__list--open");
+  }
+  
 }
   return (
     <header className={window.innerWidth > 600 ? "head" : "head head--mobile"}>
       <nav className="head__nav">
-        <ul className="nav__list">
+        <ul className="nav__list" ref={listLien}>
           {allDataLink.map((el, key) => (
-            <li className="nav__el" key={el.id}>
+            <li className="nav__el 
+            " key={el.id}>
               <NavLink
                 key={el.id}
                 to={el.link}
@@ -44,10 +51,10 @@ function openNav(e){
                 aria-label="Je redirige vers la home"
                 className={({ isActive, isPending }) =>
                   isPending
-                    ? "nav__a"
+                    ? "nav__a sect__txt"
                     : isActive
-                    ? "nav__a nav__a--active"
-                    : "nav__a"
+                    ? "nav__a nav__a--active sect__txt"
+                    : "nav__a sect__txt"
                 }
               >
                 {el.name}
