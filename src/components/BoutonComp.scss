@@ -24,12 +24,13 @@
 
         &--yellow{
             background-color: #F9B949;
-            color: #FFF5E2;
+            
+            color: #1d1d1d;
 
             &:hover{
                 background-color: #1d1d1d;
                
-                color: #1d1d1d;
+                color: #FFF5E2;
             }
         }
         &--small{
