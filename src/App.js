@@ -1,7 +1,6 @@
 
 import { Outlet } from 'react-router';
 import './App.scss';
-import StylePB from './pages/StylePB';
 import NavBar from './routes/NavBar';
 
 function App() {

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./Navbar.scss";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 function NavBar() {
   let allDataLink = [

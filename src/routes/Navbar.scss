@@ -11,7 +11,11 @@
   z-index: 10;
   color: #1d1d1d;
   padding: 14px 3vw;
-
+  background-image: url(../assets/images/fondPapierBig.jpg);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
   &--mobile {
     background-image: url(../assets/images/oldamerica/fondPeauNoir.webp);
     background-position: center;

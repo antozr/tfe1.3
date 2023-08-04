@@ -8,7 +8,7 @@ import ErrorP from './pages/ErrorP';
 import TonAventure from './pages/TonAventure';
 import PlusDInfo from './pages/PlusDInfo';
 import StylePB from './pages/StylePB';
-import NavBar from './routes/NavBar';
+
 import HomeP from './pages/HomeP';
 import LayoutTattoo from './pages/LayoutTattoo';
 
