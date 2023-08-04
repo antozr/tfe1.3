@@ -54,6 +54,9 @@
         transition: 0.3s;
       }
     }
+    &--ecart {
+      margin: 0 0 38px 0;
+    }
   }
 
   &__txt {
@@ -62,6 +65,21 @@
     font-size: 16px;
     line-height: 160%;
     display: inline-block;
-    width: max(100%, 60ch);
+    width: max(100%, 50ch);
+
+
+    &--ecart {
+      margin: 28px 0 0 0;
+    }
+  }
+}
+
+
+
+@media (min-width: 600px) {
+  .sect {
+    &__title {
+      font-size: 3dvw;
+    }
   }
 }
