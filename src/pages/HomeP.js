@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomeP.scss";
-import BoutonNormal from "../components/BoutonComp";
+// import BoutonNormal from "../components/BoutonComp";
 import FirstSection from "../components/FirstSection";
 
 ///img import
