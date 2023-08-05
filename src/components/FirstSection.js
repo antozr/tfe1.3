@@ -13,6 +13,7 @@ function FirstSection({
   linkHrefbtn,
   h2Switch,
   h2Title,
+  bgBlack
 }) {
   return (
     <>
@@ -21,7 +22,7 @@ function FirstSection({
           className="sect__boxImg--big sect__boxImg"
           style={{ backgroundImage: `url(${BGImg})` }}
         >
-          <div className="sect__boxTxt sect__boxTxt--bgNoir  ">
+          <div className={bgBlack?"sect__boxTxt sect__boxTxt--bgNoir  ":"sect__boxTxt"}>
             {/* Changer le titre  */}
             <h1 className="sect__title sect__title--ecart">{title1}</h1>
             {h2Switch ? (

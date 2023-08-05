@@ -37,10 +37,10 @@ function HomeP() {
   ];
   return (
     <>
-      <div className="homepage__sect1 homepage__sect1--bgImg sect">
+      {/* <div className="homepage__sect1 homepage__sect1--bgImg sect">
         <div className="sect__boxImg--big sect__boxImg">
           <div className="sect__boxTxt ">
-            {/* Changer le titre  */}
+           
             <h1 className="sect__title sect__title--ecart">
             Tattoo<span className="sect__title--druzok ">Explore</span>
             </h1>
@@ -75,7 +75,7 @@ function HomeP() {
             />
           </div>
         </div>
-      </div>
+      </div> */}
       <FirstSection
         BGImg={BGFirstSection}
         title1={allTitle[0]}
@@ -88,6 +88,7 @@ function HomeP() {
         linkHrefbtn={true}
         h2Switch={true}
         h2Title={allTitle[1]}
+        
       />
     </>
   );
