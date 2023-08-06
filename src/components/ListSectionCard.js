@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import CardInfoStyle from "./CardInfoStyle";
 
-function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack, bgBlackF }) {
+function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack, bgBlackF, smallB, firstBtnName}) {
   /// function to change data card
-  
+  const [reduct, setReuct] = useState(firstBtnName)
   const cardList = dataCard.map((el) =>
     el.book.map((ell, key) => (
       <CardInfoStyle
@@ -48,13 +48,19 @@ function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack, bgBlackF }) 
     );
     e.target.children[0].classList.toggle("stylePage__svgArrow--click");
 
+    if(reduct === "Réduire"){
+      setReuct("Découvrir")
+    }else{
+      setReuct("Réduire")
+    }
     
   }
-
+ 
+ 
 
   return (
     <>
-      <div className="stylePage__sect " style={bgBlack}>
+      <div className={smallB ? "stylePage__sect stylePage__sect--small":"stylePage__sect "} style={bgBlack}>
         <div className={bgBlackF=== true ? "stylePage__boxTitle stylePage__boxTitle--black": "stylePage__boxTitle"}>
           <h2 className="sect__title sect__title--2">{titleSection}</h2>
           <p
@@ -67,11 +73,11 @@ function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack, bgBlackF }) 
               width="18"
               height="18"
               viewBox="0 0 24 24"
-              fill="#010101"
+              fill={bgBlackF=== true ? "#f9b949":"#010101"}
             >
               <path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
             </svg>{" "}
-            <span>Réduire</span>{" "}
+            <span>{reduct}</span>{" "}
           </p>
         </div>
         <ul className={bgBlackF=== true ? "stylePage__listBox stylePage__listBox--black": "stylePage__listBox"}>{

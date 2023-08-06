@@ -120,11 +120,14 @@ function PlusDInfo() {
           titleSection={"Des artistes :"}
           bgBlackF={true}
           bgBlack={{ backgroundImage: `url(${BGBlackInter})` }}
+          firstBtnName={"Réduire"}
         />
         <ListSectionCard
           dataCard={dataCard}
           dataInfo={"film"}
           titleSection={"Des documentaires :"}
+          smallB={true}
+          firstBtnName={"Découvrir"}
         />
         <ListSectionCard
           dataCard={dataCard}
@@ -132,6 +135,8 @@ function PlusDInfo() {
           titleSection={"Des ouvrages :"}
           bgBlackF={true}
           bgBlack={{ backgroundImage: `url(${BGBlackInter})` }}
+          smallB={true}
+          firstBtnName={"Découvrir"}
         />
       </section>
     </>
