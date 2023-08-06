@@ -92,6 +92,7 @@
   
       &--black{
         color: #FFF5E2;
+        
       }
     }
   
@@ -137,6 +138,10 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
+
+      &--black{
+        color: #FFF5E2;
+      }
       
       
     }

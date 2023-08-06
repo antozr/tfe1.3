@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FirstSection from "../components/FirstSection";
 import InterSectionBox from "../components/InterSectionBox";
 
@@ -10,6 +10,8 @@ import ListSectionCard from "../components/ListSectionCard";
 
 function PlusDInfo() {
   console.log("je suis olus info");
+  const [navSecondActif, setNavSecondActif] = useState("Tous");
+  const [dataCard, setDataCard] = useState(dataStyle);
 
   let allTitle = [
     <>
@@ -45,13 +47,46 @@ function PlusDInfo() {
   ];
 
   const linkLandEl = allLink.map((el) => (
-    <li className="stylePage__el" onClick={console.log('hello')} key={el}>
+    <li className="stylePage__el" onClick={changestatNavSecond} key={el}>
       <p className="stylePage__link sect__txt sect__txt--bold" title={el}>
         {el}
       </p>
     </li>
   ));
-  
+  //// set de la nav 
+    useEffect(() => {
+    if (navSecondActif === "Tous") {
+      let firstLink = document.querySelectorAll(".stylePage__link");
+      firstLink[0].classList.add("stylePage__link--actif");
+    }
+  });
+
+  function changestatNavSecond(e) {
+    setNavSecondActif(e.target.title.toLowerCase());
+
+    if (e.target.title === "Tous") {
+      setDataCard(dataStyle);
+      
+    } else if (e.target.title === "Celtique") {
+      setDataCard(
+        dataStyle.filter((card) => card.name.toLowerCase() === "nordique")
+      );
+      
+    } else {
+      setDataCard(
+        dataStyle.filter(
+          (card) => card.name.toLowerCase() === e.target.title.toLowerCase()
+        )
+      );
+    }
+
+    let allLink = document.querySelectorAll(".stylePage__link");
+    allLink.forEach((el) => {
+      el.classList.remove("stylePage__link--actif");
+    });
+    e.target.classList.add("stylePage__link--actif");
+  }
+
   return (
     <>
       <FirstSection
@@ -75,29 +110,30 @@ function PlusDInfo() {
             Choisis un style pour + d'infos
           </h2>
         </div>
-        <div className="stylePage__boxLink">
-              <ul className="boxLink__ul">{linkLandEl}</ul>
-            </div>
+        <div className="stylePage__boxLink ">
+          <ul className="boxLink__ul">{linkLandEl}</ul>
+        </div>
 
-            <ListSectionCard  
-  dataCard={dataStyle}
-  dataInfo={"artist"}
-  titleSection={"Des ouvrages :"}
-  bgBlack={{backgroundImage :`url(${BGBlackInter})` }}
-            />
-            <ListSectionCard  
-  dataCard={dataStyle}
-  dataInfo={"film"}
-  titleSection={"Des ouvrages :"}
-            />
-            <ListSectionCard  
-  dataCard={dataStyle}
-  dataInfo={"book"}
-  titleSection={"Des ouvrages :"}
-  bgBlack={{backgroundImage :`url(${BGBlackInter})` }}
-            />
+        <ListSectionCard
+          dataCard={dataCard}
+          dataInfo={"artist"}
+          titleSection={"Des artistes :"}
+          bgBlackF={true}
+          bgBlack={{ backgroundImage: `url(${BGBlackInter})` }}
+        />
+        <ListSectionCard
+          dataCard={dataCard}
+          dataInfo={"film"}
+          titleSection={"Des documentaires :"}
+        />
+        <ListSectionCard
+          dataCard={dataCard}
+          dataInfo={"book"}
+          titleSection={"Des ouvrages :"}
+          bgBlackF={true}
+          bgBlack={{ backgroundImage: `url(${BGBlackInter})` }}
+        />
       </section>
-
     </>
   );
 }

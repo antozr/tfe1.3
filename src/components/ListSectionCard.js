@@ -1,7 +1,7 @@
 import React from "react";
 import CardInfoStyle from "./CardInfoStyle";
 
-function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack }) {
+function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack, bgBlackF }) {
   /// function to change data card
   
   const cardList = dataCard.map((el) =>
@@ -55,7 +55,7 @@ function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack }) {
   return (
     <>
       <div className="stylePage__sect " style={bgBlack}>
-        <div className="stylePage__boxTitle">
+        <div className={bgBlackF=== true ? "stylePage__boxTitle stylePage__boxTitle--black": "stylePage__boxTitle"}>
           <h2 className="sect__title sect__title--2">{titleSection}</h2>
           <p
             className="sect__txt stylePage__btnToggle"
@@ -74,7 +74,7 @@ function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack }) {
             <span>Réduire</span>{" "}
           </p>
         </div>
-        <ul className="stylePage__listBox">{
+        <ul className={bgBlackF=== true ? "stylePage__listBox stylePage__listBox--black": "stylePage__listBox"}>{
             dataInfo === "artist" ? <>{cardArtiste}</> : ""
         }
         {

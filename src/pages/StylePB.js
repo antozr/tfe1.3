@@ -3,7 +3,7 @@ import FirstSection from "../components/FirstSection";
 
 //import image
 
-import BGFirstSection from '../assets/images/japon/arrierePlanYakuza.webp';
+import BGFirstSection from '../assets/images/japon/compressed/arrierePlanYakuza.webp';
 function StylePB() {
 
   let allTitle=[
