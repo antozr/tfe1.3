@@ -4,6 +4,7 @@ import FirstSection from "../components/FirstSection";
 //import image
 
 import BGFirstSection from '../assets/images/japon/compressed/arrierePlanYakuza.webp';
+import SmallCardList from "../components/SmallCardList";
 function StylePB() {
 
   let allTitle=[
@@ -30,6 +31,11 @@ function StylePB() {
         h2Switch={false}
         bgBlack={true}
       />
+
+      <SmallCardList
+
+      />
+
     </>
   );
 }
