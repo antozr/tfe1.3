@@ -1,10 +1,16 @@
 import React from "react";
 import "./HomeP.scss";
+import { motion } from "framer-motion";
 // import BoutonNormal from "../components/BoutonComp";
 import FirstSection from "../components/FirstSection";
 
 ///img import
 import BGFirstSection from "../assets/images/homeImg.webp";
+import BateauHome from '../assets/images/oldamerica/bateauHome.webp';
+import MusicHome from '../assets/images/oldamerica/musicHome.webp';
+import BoutonNormal from "../components/BoutonComp";
+import { Link } from "react-router-dom";
+import TextColDroite from "../components/TextColDroite";
 
 function HomeP() {
   let allTitle = [
@@ -18,6 +24,8 @@ function HomeP() {
       <br />
       <i>monde</i>
     </>,
+    <>Comment&nbsp;visiter le&nbsp;monde&nbsp;? </>,
+    <>Un&nbsp;plus musical</>,
     <></>,
   ];
   let allTxt = [
@@ -33,6 +41,40 @@ function HomeP() {
       apprendre plus sur les codes et les bases de ces styles venant des 4 coins
       du monde.
     </>,
+    <>
+    Rends-toi sur la carte du monde pour choisir un pays que tu aimerais
+    visiter, que tu connais l’histoire ou bien que tu veux en savoir un peu
+    plus sur lui, je te propose de le visiter et d’en découvrir la culture du
+    pays en lien avec le tatouage. De la naissance, l’évolution ainsi que les
+    répercussions sur la vision du tatouage. Viens découvrir cela en étayant
+    ta curiosité, pour avoir une vision des motifs emblématiques.{" "}
+  </>,
+  <>
+    <br />
+    <br />
+    <span
+      className="sect__txt--thin sect__txt--italic"
+      style={{ display: "inline-block" }}
+    >
+      Tu pourras aussi suivre le suivi de tes explorations dans la page, “
+      <span>
+        <Link
+          to="ton-aventure"
+          className=""
+          style={{ cursor: "pointer", color: "inherit" }}
+          aria-label="Vers la carte"
+        >
+          <b>Ton explorations</b>
+        </Link>
+      </span>
+      “, et venir découvrir si tu as découvert tous les motifs d’une région.{" "}
+    </span>{" "}
+  </>,
+  <>
+    Agrémentez votre expérience par une touche musicale, en ayant des musiques
+    qui sont en lien avec les styles de tatouage que vous pourrez rencontrer.
+    Si vous le souhaitez, alors explorez ceci en musique.
+  </>,
     <></>,
   ];
   return (
@@ -90,6 +132,59 @@ function HomeP() {
         h2Title={allTitle[1]}
         
       />
+
+<div className="homepage__boxContent">
+          <div className="homepage__boxTxt">
+            <h2 className="sect__title sect__title--jaune sect__title--druzok ">
+              {allTitle[2]}
+            </h2>
+            <div className="homepage__colTxt">
+              <TextColDroite
+                // title1={titleArray[0]}
+                txt1={allTxt[2]}
+                txt3={allTxt[3]}
+              />
+            </div>
+          </div>
+          <div className="homepage__boxImgRow">
+          <motion.img
+            src={BateauHome}
+            initial={{ x: 0, opacity: 0.8 }}
+            whileInView={{ x: 0, opacity: 1}}
+            transition={{type: "spring",delay:0.2}}
+            className="homepage__imgBox"
+            alt="Tatouage old school sur la musique "
+          ></motion.img>
+          {window.innerWidth >= 900 ? <motion.img
+            src={MusicHome}
+            initial={{ x: 300, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{type: "ease",delay:0.6}}
+            className="homepage__imgBox"
+            alt="Tatouage old school sur la musique "
+          ></motion.img> : <></>}
+          </div>
+        
+        </div>
+        <div className="homepage__boxContent homepage__boxContent--reverse">
+          
+          <h2 className="sect__title sect__title--jaune sect__title--druzok homepage__titleHome">
+            {allTitle[3]}
+          </h2>
+          <div className="homepage__colTxt">
+            <TextColDroite 
+           
+            txt1={allTxt[4]} />
+            <BoutonNormal
+              linkHref={true}
+              nameBtn={"Tous en musique"}
+              linkBtn={
+                "https://open.spotify.com/playlist/5bdQoZomjCWxHB5wbNYM4w?si=5f7fea90088f4991"
+              }
+              ClassColor={"sect__btn sect__btn--yellow sect__btn--small"}
+            />
+          </div>
+        </div>
     </>
   );
 }
