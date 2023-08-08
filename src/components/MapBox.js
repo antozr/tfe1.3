@@ -90,7 +90,7 @@ function MapBox() {
         stateMove(idRussie, 'Prison russe & URSS', '/styles/russie', 5, 5);
         //stateMove(idEurope, 'Traditionnel européen', '/styles/europe', 2, 1);
         stateMove(idCeltique, 'Celtique', '/styles/celtic', 8, 9);
-    }, [])
+    });
 
 
     var ArrayLinkSvg = ["", Hirondelle, Ancre, RyuHand, KoiFish, EtoileRusse, nordicSvg, nordicSvg2, crossSvg, crossSvg2]
