@@ -7,6 +7,7 @@ import dataStyle from "../assets/data/StylesData.json";
 import BGFirstSection from "../assets/images/russie/prisonnier4.webp";
 import BGBlackInter from "../assets/images/oldamerica/fondPeauNoir.webp";
 import ListSectionCard from "../components/ListSectionCard";
+import BGCelte from "../assets/images/celte/backCelt2.webp";
 
 function PlusDInfo() {
   console.log("je suis olus info");
@@ -103,7 +104,7 @@ function PlusDInfo() {
         h2Title={allTitle[1]}
         bgBlack={true}
       />
-      <InterSectionBox backImg={{ backgroundImage: `url(${BGBlackInter})` }} />
+      <InterSectionBox backImg={{ backgroundImage: `url(${BGCelte})` }} />
       <section className="sect__contenu" id="infoContent">
         <div className="homepage__boxContent ">
           <h2 className="sect__title sect__title--center sect__title--big  sect__title--druzok">
