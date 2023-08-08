@@ -14,7 +14,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Timeline } from 'gsap/gsap-core';
 gsap.registerPlugin(ScrollTrigger, Timeline);
 
-function MapBox() {
+function MapBox({withBG}) {
 
     // les animations 
     useEffect(() => {
@@ -164,7 +164,7 @@ function MapBox() {
     }
    
     return (
-        <section className="sect__map ">
+        <section className={withBG === true ? " sect__map homepage__sect1--bgImg":"sect__map "}>
             <div className="sect__boxTitle sect__boxTitle--home">
                 <p className="sect__txt sect__txt--big sect__txt--jaune">
                     &

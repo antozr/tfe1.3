@@ -9,8 +9,12 @@ import BGFirstSection from "../assets/images/homeImg.webp";
 import BateauHome from "../assets/images/oldamerica/bateauHome.webp";
 import MusicHome from "../assets/images/oldamerica/musicHome.webp";
 import BoutonNormal from "../components/BoutonComp";
+import BGImg from "../assets/images/japon/compressed/newHoroshi-min.webp";
 import { Link } from "react-router-dom";
 import TextColDroite from "../components/TextColDroite";
+import MapBox from "../components/MapBox";
+import SmallCardList from "../components/SmallCardList";
+import InterSectionBox from "../components/InterSectionBox";
 
 function HomeP() {
   let allTitle = [
@@ -182,6 +186,8 @@ function HomeP() {
           />
         </div>
       </div>
+      <InterSectionBox backImg={{ backgroundImage: `url(${BGImg})` }} />
+      {window.innerWidth > 900 ? <MapBox withBG={true} /> : <SmallCardList />}
     </>
   );
 }
