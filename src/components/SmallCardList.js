@@ -60,11 +60,16 @@ function SmallCardList() {
 
   return (
     <>
-      
-        <div className="styleTT__box">
-          <ul className="styleTT__boxUL">{allBoxLink}</ul>
-        </div>
-      
+      <div className="styleTT__boxTitle">
+        <h2 className="sect__title sect__title--2">
+          Choisis ton style
+          <br /> <span style={{color:"#f9b949",margin:"0 0 0 -40px"}}>&</span>
+           Parts à la découverte !
+        </h2>
+      </div>
+      <div className="styleTT__box">
+        <ul className="styleTT__boxUL">{allBoxLink}</ul>
+      </div>
     </>
   );
 }
