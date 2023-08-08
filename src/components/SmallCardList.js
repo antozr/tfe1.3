@@ -60,11 +60,11 @@ function SmallCardList() {
 
   return (
     <>
-      <section className="styleTT__sect">
+      
         <div className="styleTT__box">
           <ul className="styleTT__boxUL">{allBoxLink}</ul>
         </div>
-      </section>
+      
     </>
   );
 }

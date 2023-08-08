@@ -164,7 +164,7 @@ function MapBox() {
     }
    
     return (
-        <section className="sect__map homepage__sect1--bgImg">
+        <section className="sect__map ">
             <div className="sect__boxTitle sect__boxTitle--home">
                 <p className="sect__txt sect__txt--big sect__txt--jaune">
                     &
