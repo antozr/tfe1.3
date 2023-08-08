@@ -13,6 +13,7 @@
     &__state {
         cursor: pointer;
         transition: 0.3s;
+        stroke: #1d1d1d;
 
         &:hover {
             transition: 0.6s;
@@ -30,7 +31,6 @@
         z-index: 0;
         bottom: 0px;
         left: 25%;
-        font-family: "JosefinVariable";
         font-weight: 600;
         line-height: 110%;
         font-size: 28px;

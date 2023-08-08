@@ -5,6 +5,7 @@ import FirstSection from "../components/FirstSection";
 
 import BGFirstSection from '../assets/images/japon/compressed/arrierePlanYakuza.webp';
 import SmallCardList from "../components/SmallCardList";
+import MapBox from "../components/MapBox";
 function StylePB() {
 
   let allTitle=[
@@ -35,6 +36,7 @@ function StylePB() {
       <SmallCardList
 
       />
+      <MapBox />
 
     </>
   );
