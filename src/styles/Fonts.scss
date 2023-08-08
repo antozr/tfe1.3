@@ -14,6 +14,17 @@
   font-display: swap;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #1d1d1d;
+  background: #f9b949;
+}
+
+::selection {
+  color: #1d1d1d;
+  background: #f9b949;
+}
+
 .sect {
   &__title {
     font-family: "Josefin";
@@ -58,8 +69,17 @@
         transition: 0.3s;
       }
     }
+    &--jaune {
+      color: #f9b949;
+    }
     &--ecart {
       margin: 0 0 38px 0;
+    }
+    &--druzokh {
+      font-family: "Druzok";
+      font-size: 10dvw;
+      text-align: center;
+      opacity: 0.9;
     }
   }
 
@@ -91,6 +111,12 @@
       &--3{
         font-size: 18px;
         font-weight: 700;
+      }
+      &--druzokh {
+        font-family: "Druzok";
+        font-size: 10dvw;
+        text-align: center;
+        opacity: 0.9;
       }
     }
   }
