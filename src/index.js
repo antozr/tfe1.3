@@ -11,6 +11,7 @@ import StylePB from './pages/StylePB';
 
 import HomeP from './pages/HomeP';
 import LayoutTattoo from './pages/LayoutTattoo';
+import StyleLayout from './routes/StyleLayout';
 
 
 const router = createBrowserRouter([
@@ -24,9 +25,10 @@ const router = createBrowserRouter([
         element:<StylePB />,
         children:[
           {
-            path:'oldschool',
+            path:'/styles/:styleName',
             element: <LayoutTattoo />
-          }
+          },
+          
         ]},
         
       

@@ -6,6 +6,7 @@ import FirstSection from "../components/FirstSection";
 import BGFirstSection from "../assets/images/japon/compressed/arrierePlanYakuza.webp";
 import SmallCardList from "../components/SmallCardList";
 import MapBox from "../components/MapBox";
+import { Outlet } from "react-router";
 function StylePB() {
   const [mapShox, setMapShow] = useState(false);
   let allTitle = [<>Explore les styles</>, <></>, <></>];
@@ -79,6 +80,7 @@ function StylePB() {
           </>
         )}
       </section>
+      <Outlet />
     </>
   );
 }
