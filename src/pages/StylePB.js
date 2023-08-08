@@ -33,7 +33,12 @@ function StylePB() {
     allLink.forEach((el) => {
       el.classList.remove("styleTT__elActif");
     });
-    e.target.classList.add("styleTT__elActif");
+    
+    if(e.target.tagName === "P"){
+      e.target.parentElement.classList.add("styleTT__elActif");
+    }else{
+      e.target.classList.add("styleTT__elActif");
+    }
   }
   return (
     <>
