@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 function SmallCardList() {
   let allLink = [
     {
-      link: "/styles/japon",
+      link: "/japon",
       img: backImgjap02,
       name: "Japon, l'irezumi",
     },

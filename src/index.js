@@ -21,11 +21,17 @@ const router = createBrowserRouter([
     errorElement: <ErrorP />,
     children:[
       {
-        path:'styles',
-        element:<StylePB />,
+        path:'styles/',
+        element:<StyleLayout />,
         children:[
           {
-            path:'/styles/:styleName',
+            path:'/styles/oldschool',
+            element: <LayoutTattoo />
+          },{
+            path:'/styles/',
+            element:<StylePB/>
+          },{
+            path:'/styles/japon',
             element: <LayoutTattoo />
           },
           
