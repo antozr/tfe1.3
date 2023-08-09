@@ -199,6 +199,7 @@
         align-items: center;
         justify-content: space-between;
         overflow: hidden;
+        min-height: 95vh;
 
     }
 
@@ -231,6 +232,7 @@
         align-items: center;
         overflow: hidden;
         height: auto;
+        max-height: 60vh;
 
         &--minHeigt {
             margin: -250px 0 0 0;
@@ -372,6 +374,23 @@
     
     
 }
+.boxIntro{
+
+    &__boxContent{
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        column-gap: 2vw;
+        row-gap: 1vh;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        &>p{
+            max-width: 50ch;
+        }
+
+    }
+}
 
 
 
@@ -446,20 +465,24 @@
         }
 
         &__imgDecor {
-            width: 689px;
-            height: 857px;
+            //width: 689px;
+            //height: 857px;
+            width: 30vw;
+            height: auto;
 
             &--marginLeftMin {
                 margin: 0 -120px 0 0;
             }
 
             &--min {
-                width: 488px;
-                height: 607px;
+                // width: 488px;
+                // height: 607px;
+                width: 25vw;
+                height: auto;
             }
 
             &--spaceLeft {
-                margin: 26vh 8vw 0 0;
+                margin: 26vh 3vw 0 0;
             }
         }
         &__map{
