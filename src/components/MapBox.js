@@ -68,7 +68,7 @@ function MapBox({withBG}) {
     const routChange = (NamePath) => {
         let path = NamePath;
         navigate(path, { replace: true })
-    }
+    };
 
 
     /// les elements de la carte 
@@ -144,8 +144,8 @@ function MapBox({withBG}) {
         mapName.addEventListener('click', () => {
             //routChange(NamePath);
             // recuperation item changement page 
-            let blocChangePage = document.querySelector('.sect__changePage');
-            blocChangePage.classList.add('sect__changePage--close');
+            // let blocChangePage = document.querySelector('.sect__changePage');
+            // blocChangePage.classList.add('sect__changePage--close');
             setTimeout(() => {
                 window.scrollTo(100, 0);
             }, 100)
@@ -154,9 +154,9 @@ function MapBox({withBG}) {
                 routChange(NamePath);
                 window.scrollTo(0, 0);
             }, 1100);
-            blocChangePage.addEventListener('animationend', (e) => {
-                e.target.classList.remove("sect__changePage--close")
-            })
+            // blocChangePage.addEventListener('animationend', (e) => {
+            //     e.target.classList.remove("sect__changePage--close")
+            // })
 
         });
 

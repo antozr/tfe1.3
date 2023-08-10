@@ -37,7 +37,7 @@ function FirstSectionStyles({ BTD1, BTD2, Img01, Img02, title, txt }) {
             <h2 className="sect__title sect__title--thin  sect__title--2 sect__title--italic">
               {title}
             </h2>
-            <p className="sect__txt sect__txt--smallLength sect__txt--margeRight sect__txt--margeTop">
+            <p className="sect__txt ">
               {txt}
             </p>
           </div>
