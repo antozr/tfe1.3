@@ -26,13 +26,13 @@ const router = createBrowserRouter([
         children:[
           {
             path:'/styles/oldschool',
-            element: <LayoutTattoo />
+            element: <LayoutTattoo USColG={true} styleNum={0}/>
           },{
             path:'/styles/',
             element:<StylePB/>
           },{
             path:'/styles/japon',
-            element: <LayoutTattoo />
+            element: <LayoutTattoo styleNum={1} />
           },
           
         ]},
