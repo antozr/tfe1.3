@@ -51,7 +51,7 @@ function HistoryLandRow({
             colorTxt={colTxt01}
           />
         </div>
-        <div className="hori__grid hori__box--black  ">
+        <div className="hori__grid hori__box--bigHeight ">
           <ContentBoxHori
             title01={title2}
             text01={txt2}
@@ -61,6 +61,7 @@ function HistoryLandRow({
             linkImg01={img03}
             linkImg02={img04}
             colorTxt={colTxt02}
+            fullImg={true}
           />
         </div>
         <div className="hori__grid hori__box--black  ">

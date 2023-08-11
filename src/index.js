@@ -12,6 +12,7 @@ import StylePB from './pages/StylePB';
 import HomeP from './pages/HomeP';
 import LayoutTattoo from './pages/LayoutTattoo';
 import StyleLayout from './routes/StyleLayout';
+import LayoutStyle2 from './pages/LayoutStyle2';
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
             element:<StylePB/>
           },{
             path:'/styles/japon',
-            element: <LayoutTattoo styleNum={1} />
+            element: <LayoutStyle2 styleNum={0} />
           },
           
         ]},
