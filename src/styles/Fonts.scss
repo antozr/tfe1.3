@@ -95,7 +95,8 @@
     font-size: 16px;
     line-height: 160%;
     display: inline-block;
-    width: max(40ch, 100%);
+    width: auto;
+    max-width: 60ch;
 &--auto{
   width: auto;
   max-width: 50ch;

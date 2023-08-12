@@ -270,8 +270,8 @@ function LayoutStyle2({ styleNum }) {
         txt22={""}
         animImg2={true}
         HB2={false}
-        img03={allTxt[styleNum][0]}
-        img04={allTxt[styleNum][0]}
+        img03={imgBg}
+        img04={imgBg}
         colTxt02={{ color: '#FDF2DE' }}
 
         title3={allTitle[styleNum][11]}
@@ -279,8 +279,8 @@ function LayoutStyle2({ styleNum }) {
         txt32={""}
         animImg3={false}
         HB3={true}
-        img05={allTxt[styleNum][0]}
-        img06={allTxt[styleNum][0]}
+        img05={imgBg}
+        img06={imgBg}
         colTxt03={{ color: '#FDF2DE' }}
 
         title4={allTitle[styleNum][12]}
