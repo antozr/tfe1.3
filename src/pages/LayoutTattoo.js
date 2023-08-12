@@ -22,6 +22,7 @@ import AnimColGauche from "../components/AnimColGaucheUs";
 import HistoryLandRow from "../components/HistoryLandRow";
 import TextColDroite from "../components/TextColDroite";
 import SectHoriFull from "../components/SectMaitreHori";
+import BoxMotif from "../components/BoxMotif";
 
 function LayoutTattoo({ USColG, styleNum }) {
   gsap.registerPlugin(ScrollTrigger);
@@ -121,9 +122,9 @@ function LayoutTattoo({ USColG, styleNum }) {
         et une seconde aux{" "}
         <span className="sect__txt--italic sect__txt--bold">
           {" "}
-          10.000 milles marins
+          10.000 milles marins.<br/><br/>
         </span>
-        .Elles représentent les voyages et les expériences de ces derniers dans
+        Elles représentent les voyages et les expériences de ces derniers dans
         leur aventure sur les mers. Partant sur de longues traversées, mais
         revenant toujours à leur point de départ, ces oiseaux représentent le
         retour chez soi malgré les problèmes et la distance. 
@@ -208,6 +209,22 @@ function LayoutTattoo({ USColG, styleNum }) {
         backImg={{ backgroundImage: `url(${DarkSkin})` }}
       />
 
+<div className="sect__listMotif">
+  <BoxMotif 
+  motifImg01={DarkSkin} motifImg02={SailorJerry02}
+  motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
+  />
+  <BoxMotif 
+  blackMotif={true} noAnim={true}
+  motifImg01={DarkSkin} motifImg02={SailorJerry02}
+  motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
+  />
+  <BoxMotif 
+  blackMotif={true}
+  motifImg01={DarkSkin} motifImg02={SailorJerry02}
+  motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
+  />
+</div>
       
     </>
   );

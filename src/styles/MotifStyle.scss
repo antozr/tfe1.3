@@ -10,6 +10,21 @@
       height: auto;
       min-height: 50vh;
     }
+
+    &--noAnim{
+        width: 60vw;
+        transform: translateX(35vw) translateY(10vh);
+
+    }
+    &--noAnim2{
+        position: relative;
+        z-index: 2;
+        transform: translateX(0) translateY(-30vh);
+        max-width: 45vw;
+        width: auto;
+        height: auto;
+        min-height: 50vh;
+    }
   }
   &__img {
     width: 100%;
@@ -20,6 +35,10 @@
   &__boxContent{
     padding: 5vh 5vw;
     width: 100%;
+
+    &--noAnim{
+        margin: 5vh 0 0 45vw;
+    }
 
   }
   &__boxImgAnim{
@@ -36,10 +55,13 @@
         min-height: 100vh;
         height: auto;
         width: 100vw;
-        padding: 0 0 10vh;
+        padding: 0 0 20vh;
+        display: flex;
+        flex-direction: column;
+        
 
         &--black{
-            background-color: #1d1d1d;
+            background-color: #000;
             color: #fdf2de;
         }
     }
