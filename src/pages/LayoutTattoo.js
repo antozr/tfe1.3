@@ -9,7 +9,18 @@ import HeartHolly from "../assets/images/svgs/coeur001.svg";
 import InterSectionBox from "../components/InterSectionBox";
 import PaternUS from "../assets/images/svgs/oldSchool/paternOldSchool.svg";
 import AncreSvg from "../assets/images/svgs/oldSchool/ancre.svg";
-import DarkSkin from '../assets/images/oldamerica/fondPeauNoir.webp'
+import DarkSkin from '../assets/images/oldamerica/fondPeauNoir.webp';
+
+
+import SailorJerry02 from '../assets/images/oldamerica/sailor02.webp';
+import DonEdHardy01 from '../assets/images/oldamerica/donEdHardy01.webp';
+
+
+import PinUp01 from '../assets/images/oldamerica/pinup1.webp';
+import Pinup2 from '../assets/images/oldamerica/pinup2.webp'
+import Navire from '../assets/images/oldamerica/marinBat.webp'
+
+
 import AnimColGauche from "../components/AnimColGaucheUs";
 import HistoryLandRow from "../components/HistoryLandRow";
 import TextColDroite from "../components/TextColDroite";
@@ -183,17 +194,15 @@ function LayoutTattoo({ USColG, styleNum }) {
         <SectHoriFull
           BigTitle1={allTitle[styleNum][5]}
           BigTitle12={"artists"}
-          BigTitle2={allTitle[styleNum][6]}
-          imgArtiste1={""}
-          imgArtiste2={""}
+          BigTitle2={allTitle[styleNum][9]}
+          imgArtiste1={SailorJerry02}
+          imgArtiste2={DonEdHardy01}
           textcol1={allTxt[styleNum][4]}
-          textcol2={allTxt[styleNum][5]}
-          textcol3={""}
+          textcol2={ allTxt[styleNum][5]}
           textcol4={allTxt[styleNum][6]}
-          textcol5={""}
-          textcol6={""}
-          smallTitle1={allTxt[styleNum][7]}
-          smallTitle2={""}
+
+          smallTitle1={allTitle[styleNum][9]}
+          
           smallTitle3={"L'apprenti "}
           smallTitle4={"du marin"}
         />

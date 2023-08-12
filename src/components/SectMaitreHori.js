@@ -47,7 +47,7 @@ function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtist
                     <h2 className='sect__title sect__title--big '>
                         {BigTitle1}
                     </h2>
-                    <p className="sect__txt sect__txt--japTxt sect__txt--margeTop sect__txt--jaune" style={{margin: "50vh 0 0 0"}}>
+                    <p className="sect__txt sect__txt--japTxt  sect__title--jaune" >{/* style={{margin: "50vh 0 0 0"}} */}
                         {BigTitle12}
                     </p>
 

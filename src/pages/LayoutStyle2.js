@@ -243,7 +243,7 @@ function LayoutStyle2({ styleNum }) {
           textcol5={""}
           textcol6={""}
           smallTitle1={allTitle[styleNum][6]}
-          smallTitle2={""}
+          smallTitle2={allTitle[styleNum][6]}
           smallTitle3={allTitle[styleNum][7]}
           smallTitle4={allTitle[styleNum][8]}
         />
