@@ -6,6 +6,7 @@
     flex-direction: column-reverse;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
     //padding: 2vh 5vw;
     padding: 2vh 5vw 0 ;
     background-color: #fdf2de;
@@ -89,7 +90,7 @@
     align-items: center;
     position: relative;
     margin: 0 2vw;
-    width: 120%;
+    width: 100%;
     height: 80vh;
     overflow: hidden;
   }

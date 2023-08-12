@@ -7,6 +7,7 @@ import HistoryLandRow from "../components/HistoryLandRow";
 /// import img 
 import imgBg from "../assets/images/japon/compressed/arrierePlanYakuza.webp"
 import SectHoriFull from "../components/SectMaitreHori";
+import FirstSectionStyles from "../components/FirstSectionStyles";
 
 function LayoutStyle2({ styleNum }) {
 
@@ -215,14 +216,15 @@ function LayoutStyle2({ styleNum }) {
 
   return (
     <>
-      <FirstSection
-        BTD1={allTitle[0][0]}
-        BTD2={allTitle[0][1]}
-        title={allTitle[0][2]}
-        txt={allTxt[0][0]}
+       <FirstSectionStyles
+        BTD1={allTitle[styleNum][0]}
+        BTD2={allTitle[styleNum][1]}
+        title={allTitle[styleNum][2]}
+        txt={allTxt[styleNum][0]}
         Img01={""}
         Img02={""}
       />
+
 
       <InterSectionBox
         WhitThext={true}

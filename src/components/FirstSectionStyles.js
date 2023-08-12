@@ -13,11 +13,11 @@ function FirstSectionStyles({ BTD1, BTD2, Img01, Img02, title, txt }) {
             sizeDecor={
               window.innerWidth <= 900
                 ? { fontSize: "160px", width: "auto" }
-                : { fontSize: "200px" }
+                : { fontSize: "100px" }
             }
             positionBox={
               window.innerWidth <= 900
-                ? { margin: "-13px 0 44px -20vw" }
+                ? { margin: "-13px 0 44px -10vw" }
                 : { margin: "5vh 0 0 20vw" }
             }
           />
