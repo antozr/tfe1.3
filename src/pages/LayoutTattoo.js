@@ -9,17 +9,14 @@ import HeartHolly from "../assets/images/svgs/coeur001.svg";
 import InterSectionBox from "../components/InterSectionBox";
 import PaternUS from "../assets/images/svgs/oldSchool/paternOldSchool.svg";
 import AncreSvg from "../assets/images/svgs/oldSchool/ancre.svg";
-import DarkSkin from '../assets/images/oldamerica/fondPeauNoir.webp';
+import DarkSkin from "../assets/images/oldamerica/fondPeauNoir.webp";
 
+import SailorJerry02 from "../assets/images/oldamerica/sailor02.webp";
+import DonEdHardy01 from "../assets/images/oldamerica/donEdHardy01.webp";
 
-import SailorJerry02 from '../assets/images/oldamerica/sailor02.webp';
-import DonEdHardy01 from '../assets/images/oldamerica/donEdHardy01.webp';
-
-
-import PinUp01 from '../assets/images/oldamerica/pinup1.webp';
-import Pinup2 from '../assets/images/oldamerica/pinup2.webp'
-import Navire from '../assets/images/oldamerica/marinBat.webp'
-
+import PinUp01 from "../assets/images/oldamerica/pinup1.webp";
+import Pinup2 from "../assets/images/oldamerica/pinup2.webp";
+import Navire from "../assets/images/oldamerica/marinBat.webp";
 
 import AnimColGauche from "../components/AnimColGaucheUs";
 import HistoryLandRow from "../components/HistoryLandRow";
@@ -28,7 +25,7 @@ import SectHoriFull from "../components/SectMaitreHori";
 
 function LayoutTattoo({ USColG, styleNum }) {
   gsap.registerPlugin(ScrollTrigger);
-
+ 
   let allTitle = [
     [
       <>L’old&nbsp;school</>,
@@ -150,7 +147,7 @@ function LayoutTattoo({ USColG, styleNum }) {
     ],
     [],
   ];
- 
+
   /**/
   return (
     <>
@@ -198,16 +195,20 @@ function LayoutTattoo({ USColG, styleNum }) {
           imgArtiste1={SailorJerry02}
           imgArtiste2={DonEdHardy01}
           textcol1={allTxt[styleNum][4]}
-          textcol2={ allTxt[styleNum][5]}
+          textcol2={allTxt[styleNum][5]}
           textcol4={allTxt[styleNum][6]}
-
           smallTitle1={allTitle[styleNum][9]}
-          
           smallTitle3={"L'apprenti "}
           smallTitle4={"du marin"}
         />
       </div>
-      <InterSectionBox WhitThext={true} textTitle={"Les motifs amblematiques"} backImg={{ backgroundImage: `url(${DarkSkin})` }} />
+      <InterSectionBox
+        WhitThext={true}
+        textTitle={"Les motifs amblematiques"}
+        backImg={{ backgroundImage: `url(${DarkSkin})` }}
+      />
+
+      
     </>
   );
 }

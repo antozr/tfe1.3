@@ -46,7 +46,8 @@ function ContentBoxHori({ linkImg01, title01, title02, text01, text02, text03, c
                             <motion.div className="hori__colDroite hori__colDroite--full " style={colorTxt} initial={{ opacity: 0.6 ,x:'100%', color:"#FDF2DE"}}
                                 whileInView=
                                     
-                                    {window.innerWidth > 900? {opacity: 1,x:'0%', color: "#000"}:{ opacity: 1,x:'5%', color: "#000"}}
+                                    {window.innerWidth > 900? {opacity: 1,x:'0%', color: "#000"}:{ opacity: 1,x:'5%', color: "#000"}} 
+                                    viewport={{ once: true }}
                                 >
                                 <TextColDroite title1={title01} title2={title02} txt1={text01} txt2={text02} txt3={text03} />
 

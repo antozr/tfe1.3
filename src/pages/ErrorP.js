@@ -1,26 +1,32 @@
-import React from 'react'
+import React from "react";
 import { Link, useRouteError } from "react-router-dom";
+import InterSectionBox from "../components/InterSectionBox";
+
+import backInterOld from "../assets/images/nordic/interNordicnoir.webp"
 
 function ErrorP() {
-    const error = useRouteError();
-    console.error(error);
+  const error = useRouteError();
+  console.error(error);
 
   return (
-    <div id="error-page">
+    <>
+      <section className="sect sect__attente" id="error-page">
+        <h1 className="sect__title">Vous vous êtes perdus.</h1>
+        <h2 className="sect__title sect__title--2">Retourner en lieu sûr.</h2>
+        <p>
+          <i>{error.statusText || error.message}</i>
+        </p>
+        <Link to="/" className="error__link">
+          Go to home
+        </Link>
+      </section>
+      <InterSectionBox
+        backImg={{ backgroundImage: `url(${backInterOld})`, height: "20vh" }}
+      />
 
-        <h1>
-            Opps !
-        </h1>
-        <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
-      <Link to='/' className='error__link'>
-
-        Go to home
-      </Link>
-    </div>
-  )
+      
+    </>
+  );
 }
 
-export default ErrorP
+export default ErrorP;
