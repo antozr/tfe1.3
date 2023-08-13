@@ -72,6 +72,16 @@
         transition: 0.3s;
       }
     }
+    &--linkJaune{
+      transition: 0.3s;
+      padding: 2vh 2vw;
+
+      &:hover {
+        color: #fdf2de;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+    }
     &--jaune {
       color: #f9b949;
     }

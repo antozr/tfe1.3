@@ -23,6 +23,7 @@ import HistoryLandRow from "../components/HistoryLandRow";
 import TextColDroite from "../components/TextColDroite";
 import SectHoriFull from "../components/SectMaitreHori";
 import BoxMotif from "../components/BoxMotif";
+import BoxMessageEnd from "../components/BoxMessageEnd";
 
 function LayoutTattoo({ USColG, styleNum }) {
   gsap.registerPlugin(ScrollTrigger);
@@ -225,6 +226,7 @@ function LayoutTattoo({ USColG, styleNum }) {
   motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
   />
 </div>
+<BoxMessageEnd />
       
     </>
   );

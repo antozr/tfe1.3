@@ -65,4 +65,17 @@
             color: #fdf2de;
         }
     }
+
+    &__endBoxMes{
+        width: 100vw;
+       background-image: url(../assets/images/oldamerica/fondPeauNoir.webp);
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
