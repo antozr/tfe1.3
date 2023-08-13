@@ -1,9 +1,9 @@
 import React from "react";
 import "./HomeP.scss";
-import { motion } from "framer-motion";
+
 // import BoutonNormal from "../components/BoutonComp";
 import FirstSection from "../components/FirstSection";
-
+import { motion, useIsPresent } from "framer-motion";
 ///img import
 import BGFirstSection from "../assets/images/homeImg.webp";
 import BateauHome from "../assets/images/oldamerica/bateauHome.webp";
@@ -17,6 +17,7 @@ import SmallCardList from "../components/SmallCardList";
 import InterSectionBox from "../components/InterSectionBox";
 
 function HomeP() {
+  const isPresent = useIsPresent();
   let allTitle = [
     <>
       Tattoo<span className="sect__title--druzok ">Explore</span>
@@ -188,6 +189,13 @@ function HomeP() {
       </div>
       <InterSectionBox backImg={{ backgroundImage: `url(${BGImg})` }} />
       {window.innerWidth > 900 ? <MapBox withBG={true} /> : <SmallCardList />}
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="changePage"
+      />
     </>
   );
 }

@@ -1,60 +1,59 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider} from 'react-router-dom';
-import ErrorP from './pages/ErrorP';
-import TonAventure from './pages/TonAventure';
-import PlusDInfo from './pages/PlusDInfo';
-import StylePB from './pages/StylePB';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorP from "./pages/ErrorP";
+import TonAventure from "./pages/TonAventure";
+import PlusDInfo from "./pages/PlusDInfo";
+import StylePB from "./pages/StylePB";
 
-import HomeP from './pages/HomeP';
-import LayoutTattoo from './pages/LayoutTattoo';
-import StyleLayout from './routes/StyleLayout';
-import LayoutStyle2 from './pages/LayoutStyle2';
+import { AnimatePresence } from "framer-motion";
 
+import HomeP from "./pages/HomeP";
+import LayoutTattoo from "./pages/LayoutTattoo";
+import StyleLayout from "./routes/StyleLayout";
+import LayoutStyle2 from "./pages/LayoutStyle2";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <ErrorP />,
-    children:[
+    children: [
       {
-        path:'styles/',
-        element:<StyleLayout />,
-        children:[
+        path: "styles/",
+        element: <StyleLayout />,
+        children: [
           {
-            path:'/styles/oldschool',
-            element: <LayoutTattoo USColG={true} styleNum={0}/>
-          },{
-            path:'/styles/',
-            element:<StylePB/>
-          },{
-            path:'/styles/japon',
-            element: <LayoutStyle2 styleNum={0} />
+            path: "/styles/oldschool",
+            element: <LayoutTattoo USColG={true} styleNum={0} />,
           },
-          
-        ]},
-        
-      
+          {
+            path: "/styles/",
+            element: <StylePB />,
+          },
+          {
+            path: "/styles/japon",
+            element: <LayoutStyle2 styleNum={0} />,
+          },
+        ],
+      },
+
       {
-        path:'plus-d-infos',
-        element:<PlusDInfo />,
-        
+        path: "plus-d-infos",
+        element: <PlusDInfo />,
       },
       {
-        path:'mon-aventure',
-        element:<TonAventure />,
-        
+        path: "mon-aventure",
+        element: <TonAventure />,
       },
       {
-        path:'',
-        element:<HomeP />,
-        
-      }
-    ]
+        path: "",
+        element: <HomeP />,
+      },
+    ],
   },
   // {
   //   path:'/styles',
@@ -71,13 +70,14 @@ const router = createBrowserRouter([
   //   element:<TonAventure/>,
   //   errorElement: <ErrorP/>
   // }
-])
+]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    
-    <RouterProvider router={router} />
+    <AnimatePresence mode="wait" initial={false}>
+      <RouterProvider router={router} />
+    </AnimatePresence>
   </React.StrictMode>
 );
 
