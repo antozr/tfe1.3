@@ -11,20 +11,26 @@
 
       height: auto;
       max-width: 70vh;
+      position: sticky;
+      top: 60px;
     }
 
     &--noAnim {
       width: 65vw;
-      transform: translateX(35vw) translateY(10vh);
+      transform: translateX(35vw) translateY(0vh);
+      margin: 15vh 0 0 0 ;
+     
     }
     &--noAnim2 {
-      position: relative;
+      //position: relative;
       z-index: 2;
       transform: translateX(0) translateY(-30vh);
       max-width: 45vw;
       width: auto;
       height: auto;
-      min-height: 50vh;
+      max-height: 80vh;
+      position: sticky;
+      top: 10vh;
     }
   }
   &__img {
@@ -54,7 +60,7 @@
     min-height: 100vh;
     height: auto;
     width: 100vw;
-    padding: 0 0 30vh;
+    padding: 0 0 20vh;
     display: flex;
     flex-direction: column;
 

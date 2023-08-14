@@ -36,6 +36,10 @@ const router = createBrowserRouter([
             path: "/styles/japon",
             element: <LayoutStyle2 styleNum={0} />,
           },
+          {
+            path: "/styles/nordic",
+            element: <LayoutStyle2 styleNum={1} />,
+          },
         ],
       },
 

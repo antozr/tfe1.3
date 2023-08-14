@@ -70,7 +70,7 @@ function BoxMotif({
                 whileInView={{
                   width: "65vw",
                   opacity: 0.9,
-                  margin: "5vh 0 0 0 ",
+                  margin: "10vh 0 0 0 ",
                 }}
                 transition={{
                   duration: 0.4,
