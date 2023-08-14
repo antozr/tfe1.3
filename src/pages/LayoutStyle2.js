@@ -19,7 +19,7 @@ import Jigoku2 from "../assets/images/japon/compressed/jigoku2-min.webp";
 
 /// nordic image
 
-function LayoutStyle2({ styleNum }) {
+function LayoutStyle2({ styleNum, boxH4 }) {
   let allTitle = [
     [
       "日本",
@@ -71,6 +71,26 @@ function LayoutStyle2({ styleNum }) {
       <>Direction le Goulag.<br /> честь ,боль!</>,
       "Le collecteur", "Коллектор", "вор в законе","","","",
       <>Le signe de la&nbsp;répression</>, <>Leur&nbsp;iconographie</>, "L’hygiène, une autre histoire", "La fin d'une ère", "Les épaulettes", <>L'étoiles&nbsp;à 8&nbsp;branches</>, <>La Vierge&nbsp;à l’enfant</>
+    ],
+    [
+      <>Peuple&nbsp;celtes</>,
+      "nature",
+      <>Rencontre en forêt</>,
+      <>La&nbsp;technique</>,
+    <>teknikel</>,
+    <>L’origine des motifs </>,
+    "Du point fait main",
+    
+    "Des motifs ",
+    "riche de mythologie",
+   
+    <>Les origines</>,
+    <>Les récits étrangers</>,
+    <>Leur utilisation</>,
+    "",
+    <>Le triskel </>,
+    <>Le cheval</>,
+    <>La triketra</>,
     ]
   ];
 
@@ -389,6 +409,133 @@ function LayoutStyle2({ styleNum }) {
         La vierge représente la protection maternelle et divine avec la loyauté de son porteur envers Dieu et son groupe. L’enfant a une signification un peu plus sombre, car il représente une vie de crime présente depuis l’enfance et dans certains cas un emprisonnement à un jeune âge.
       </span>
     </>
+    ],
+    [
+      <>
+      Nous allons voyager dans le temps et dans les plaines verdoyantes des
+      tribus celtes, afin de découvrir la tradition qui les lies aux tatouages
+      ainsi que la symbolique qu’a pris place la nature dans leur art.{" "}
+    </>,
+      
+    <>
+      Les motifs, le design tire son esprit, dans la mer nature et la beauté
+      qu'elle a créée, a la différence des nordiques, qui se tourne vers la
+      guerre et l'humain. Même si on peut retrouver des similitudes dans la
+      conception des motifs due à leur différend échange. Ce qu'on retrouve chez
+      les deux sont des formes qui s'entrelacent, qui se lie pour donner
+      naissance à tous autre chose en fonction de la région. 
+    </>,
+    <>
+      <br />
+      <br />{" "}
+      <span className="sect__txt--thin sect__txt--italic">
+        On sait que le liquide utilisé comme encre était une poudre aux
+        propriétés médicinales de couleur bleu verte une fois encrée. Et
+        l'artiste utilisait une pointe en fer, pour la réalisation des motifs,
+        mais qu'en est-il d'eux ?
+      </span>
+    </>,
+    <>
+      On retrouve des motifs sur l’art celtes ainsi que sur des abjects du
+      quotidien, comme sur des poutres, des rochers, de l’orfèvrerie et sur des
+      armes. On peut noter une ressemblance avec l’art des peuples nordiques,
+      mais cela est dû à leurs nombreuses rencontre et échange lors des
+      expéditions de ces derniers.{" "}
+    </>,
+    <>
+    On peut dire que ces origines remontent aux débuts de la civilisation
+    celte, même si on ne connaît pas la date précise, avec des traces écrites
+    du 2e siècle.  Sur les plus de 200 peuplades, on retrouve le peuple tatoué
+    le plus connu : les pics. 
+    <br />
+    <br />
+    <span className="sect__txt--italic sect__txt--thin">
+      Leur nom signifie : ceux qui sont peints. Mais ils ne sont pas seuls, on
+      retrouve aussi des peuples gaulois et germains ou une partie du clan
+      était tatouée,  avec pour but d'effrayer les Romains. 
+    </span>
+  </>,
+     <>
+     Nous allons voyager dans le temps et dans les plaines verdoyantes des
+     tribus celtes, afin de découvrir la tradition qui les lies aux tatouages
+     ainsi que la symbolique qu’a pris place la nature dans leur art.{" "}
+   </>,
+   <>
+   Vers la moitié du 2e siècle, Claude Ptolémée va décrire la tribu des pics
+   ( breton) de smirtaée. De plus Isidore de Séville,  les décrit comme un
+   peuple couvert de décoration fait par un artiste avec une aiguille. Qui
+   par ces marques montre la position dans la société de ce dernier. 
+   <br />
+   <br />
+   <span className="sect__txt--italic">
+     Chez les Scots(irlandais) , on remarque leur corps peint de différentes
+     figures par une pointe de fer et une encre. Même si on a peu de trace
+     écrite de présence de tatouage dans les récits celtes,  on en retrouve
+     chez les observateurs étrangers. 
+   </span>
+ </>,
+ 
+   <></>,
+   "",
+   
+
+ <>
+      Les tatouages avaient plusieurs significations,  rôle. Premièrement, de
+      définir leur rang social ainsi que leur fonction dans la société. Mais
+      comme aujourd’hui, elle servait à montrer la personnalité de leur
+      porteur. 
+      <br />
+      <br />{" "}
+      <span className="sect__txt--thin sect__thin--italic">
+        On a retrouvé différentes sculptures représentant des celtes, mais il
+        est difficile d'affirmer si c'était vraiment des tatouages ou bien des
+        peintures corporelles. Mais ce qui est sûr, c'est que la disparition des
+        peuples celtiques et de la plupart de leur tradition avec l'arrivée du
+        christianisme.
+      </span>
+    </>,
+     "",
+ "",
+ 
+ "",
+ 
+ //
+ <>
+      On lui attribue plusieurs symboliques comme les différentes positions du
+      soleil,  les 3 mondes ( physique, des cieux avec les astres et le monde
+      spirituel avec les dieux, esprit et les morts).
+      <br />{" "}
+      <span className="sect__txt--thin">
+        Le sens des spirales indiquent une signification différente, vers la
+        gauche : la lutte et le combat & vers la droite : la paix & la
+        tranquillité.
+      </span>{" "}
+    </>,
+    <>
+      Les animaux ont une grande importance dans la vie et le culte des celtes
+      car d'une part ils étaient utiles lors des batailles et des travaux de
+      champs. Et montrer l'importance de la personne qui le porte avec son rang
+      social. <br />{" "}
+      <span className="sect__txt--thin">
+        On retrouve aussi le cheval divin, Epona, qui est liée à la terre Mère
+        et instaure le pouvoir de régner sur ses terres en donnant autorité et
+        puissance à son porteur.{" "}
+      </span>
+    </>,
+    <>
+      On retrouve diverse signification en fonction des peuples et des cultes,
+      mais pour les chrétiens, il représente la Sainte trinité et chez les
+      Celtes les différentes étapes de la vie d’un homme ( l’enfance, la vie
+      adulte et la vieillesse). <br />{" "}
+      <span className="sect__txt--thin sect__txt--italic">
+        {" "}
+        Mais comme pour les autres symboles, on retrouve surtout l’importance du
+        3, qui est un chiffre important dans la culture celtes et bon nombre
+        d’autre cultes, car il se rapproche du nombre divin, celui qui nous lie
+        aux cieux et aux 3 mondes. C’est un symbole fort utilisé mais qui se
+        compose toujours de 3 cercles pour le créer.
+      </span>
+    </>,
     ]
   ];
 
@@ -412,6 +559,11 @@ function LayoutStyle2({ styleNum }) {
       <>Insalubrite &&nbsp;Beaute</>,
       <>Au&nbsp;goulag en&nbsp;noir</>,
       "Les motifs amblematiques"
+    ],
+    [
+      <>Dans&nbsp;les plaines&nbsp;celtes</>,
+      <>Des&nbsp;plantes a&nbsp;l'encre</>,
+      <>Des&nbsp;plantes a&nbsp;l'encre</>
     ]
   ];
 
@@ -488,7 +640,8 @@ function LayoutStyle2({ styleNum }) {
         img07={imgBg}
         img08={imgBg}
         colTxt04={{ color: "#FDF2DE" }}
-        actifB4={true}
+        actifB4={boxH4}
+        
       />
       <InterSectionBox
         WhitThext={true}

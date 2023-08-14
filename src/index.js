@@ -34,7 +34,7 @@ const router = createBrowserRouter([
           },
           {
             path: "/styles/japon",
-            element: <LayoutStyle2 styleNum={0} />,
+            element: <LayoutStyle2 styleNum={0} boxH4={false} />,
           },
           {
             path: "/styles/nordic",
@@ -43,6 +43,10 @@ const router = createBrowserRouter([
           {
             path: "/styles/russie",
             element: <LayoutStyle2 styleNum={2} />,
+          },
+          {
+            path: "/styles/celtic",
+            element: <LayoutStyle2 styleNum={3} boxH4={true} />,
           },
         ],
       },

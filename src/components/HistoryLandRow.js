@@ -77,6 +77,8 @@ function HistoryLandRow({
           />
         </div>
         {actifB4 === true ? (
+          ""
+        ) : (
           <>
             <div className="hori__grid hori__box--black  ">
               <ContentBoxHori
@@ -91,8 +93,6 @@ function HistoryLandRow({
               />
             </div>
           </>
-        ) : (
-          ""
         )}
       </div>
     </>
