@@ -2,16 +2,25 @@ import React from "react";
 import FirstSection from "../components/FirstSection";
 import InterSectionBox from "../components/InterSectionBox";
 import HistoryLandRow from "../components/HistoryLandRow";
-
-
-/// import img 
-import imgBg from "../assets/images/japon/compressed/arrierePlanYakuza.webp"
 import SectHoriFull from "../components/SectMaitreHori";
 import FirstSectionStyles from "../components/FirstSectionStyles";
+import BoxMotif from "../components/BoxMotif";
+import BoxMessageEnd from "../components/BoxMessageEnd";
+
+/// import img japon
+import imgBg from "../assets/images/japon/compressed/irezumiBack2-min.webp";
+import backImgjap02 from "../assets/images/japon/compressed/arrierePlanYakuza.webp";
+import Ryu01 from "../assets/images/japon/compressed/dragon02-min.webp";
+import Ryu02 from "../assets/images/japon/compressed/dragon2-min.webp";
+import Koi01 from "../assets/images/japon/compressed/koi1-min.webp";
+import Koi02 from "../assets/images/japon/compressed/koi2-min.webp";
+import Jigoku1 from "../assets/images/japon/compressed/jigoku1-min.webp";
+import Jigoku2 from "../assets/images/japon/compressed/jigoku2-min.webp";
+
+/// nordic image 
+
 
 function LayoutStyle2({ styleNum }) {
-
-
   let allTitle = [
     [
       "日本",
@@ -39,6 +48,9 @@ function LayoutStyle2({ styleNum }) {
       </>,
       "Les 108 héros",
     ],
+    [
+      
+    ]
   ];
 
   let allTxt = [
@@ -209,14 +221,20 @@ function LayoutStyle2({ styleNum }) {
 
   let interTxt = [
     [
-        <>Une transmission entre <br /><span className=" sect__title--thin sect__title--big">maitre & eleves</span></>,
-        "L'histoire de l'Irezumi",
-    ]
-  ]
+      <>
+        Une transmission entre <br />
+        <span className=" sect__title--thin sect__title--big">
+          maitre & eleves
+        </span>
+      </>,
+      "L'histoire de l'Irezumi",
+      "Les motifs amblematiques"
+    ],
+  ];
 
   return (
     <>
-       <FirstSectionStyles
+      <FirstSectionStyles
         BTD1={allTitle[styleNum][0]}
         BTD2={allTitle[styleNum][1]}
         title={allTitle[styleNum][2]}
@@ -224,7 +242,6 @@ function LayoutStyle2({ styleNum }) {
         Img01={""}
         Img02={""}
       />
-
 
       <InterSectionBox
         WhitThext={true}
@@ -255,7 +272,7 @@ function LayoutStyle2({ styleNum }) {
         textTitle={interTxt[styleNum][1]}
         backImg={{ backgroundImage: `url(${imgBg})` }}
       />
-      <HistoryLandRow 
+      <HistoryLandRow
         title1={allTitle[styleNum][9]}
         txt1={allTxt[styleNum][1]}
         txt12={""}
@@ -263,8 +280,7 @@ function LayoutStyle2({ styleNum }) {
         HB1={true}
         img01={imgBg}
         img02={imgBg}
-        colTxt01={{ color: '#FDF2DE' }}
-
+        colTxt01={{ color: "#FDF2DE" }}
         title2={allTitle[styleNum][10]}
         txt2={allTxt[styleNum][2]}
         txt22={""}
@@ -272,8 +288,7 @@ function LayoutStyle2({ styleNum }) {
         HB2={false}
         img03={imgBg}
         img04={imgBg}
-        colTxt02={{ color: '#FDF2DE' }}
-
+        colTxt02={{ color: "#FDF2DE" }}
         title3={allTitle[styleNum][11]}
         txt3={allTxt[styleNum][3]}
         txt32={""}
@@ -281,8 +296,7 @@ function LayoutStyle2({ styleNum }) {
         HB3={true}
         img05={imgBg}
         img06={imgBg}
-        colTxt03={{ color: '#FDF2DE' }}
-
+        colTxt03={{ color: "#FDF2DE" }}
         title4={allTitle[styleNum][12]}
         txt4={allTxt[styleNum][4]}
         txt42={""}
@@ -290,9 +304,36 @@ function LayoutStyle2({ styleNum }) {
         HB4={true}
         img07={imgBg}
         img08={imgBg}
-        colTxt04={{ color: '#FDF2DE' }}
+        colTxt04={{ color: "#FDF2DE" }}
         actifB4={true}
       />
+      <InterSectionBox
+        WhitThext={true}
+        textTitle={interTxt[styleNum][2]}
+        backImg={{ backgroundImage: `url(${backImgjap02})` }}
+      />
+      <BoxMotif
+        blackMotif={false}
+        motifImg01={Ryu01}
+        motifImg02={Ryu02}
+        motiftitle={allTitle[styleNum][13]}
+        motifTxt={allTxt[styleNum][7]}
+      />
+      <BoxMotif
+        blackMotif={true} noAnim={true}
+        motifImg01={Koi01}
+        motifImg02={Koi02}
+        motiftitle={allTitle[styleNum][14]}
+        motifTxt={allTxt[styleNum][8]}
+      />
+      <BoxMotif
+        blackMotif={false} noAnim={false}
+        motifImg01={Jigoku1}
+        motifImg02={Jigoku2}
+        motiftitle={allTitle[styleNum][15]}
+        motifTxt={allTxt[styleNum][9]}
+      />
+      <BoxMessageEnd />
     </>
   );
 }
