@@ -65,7 +65,13 @@ function LayoutStyle2({ styleNum }) {
       <>Yggdrasil</>,
       <>Vegvisir</>,
     ],
-    []
+    [
+      "Russie",
+      "ГУЛАГ",
+      <>Direction le Goulag.<br /> честь ,боль!</>,
+      "Le collecteur", "Коллектор", "вор в законе","","","",
+      <>Le signe de la&nbsp;répression</>, <>Leur&nbsp;iconographie</>, "L’hygiène, une autre histoire", "La fin d'une ère", "Les épaulettes", <>L'étoiles&nbsp;à 8&nbsp;branches</>, <>La Vierge&nbsp;à l’enfant</>
+    ]
   ];
 
   let allTxt = [
@@ -402,7 +408,11 @@ function LayoutStyle2({ styleNum }) {
       <>De&nbsp;l'ancien, maintenant</>,
       <>De&nbsp;la pierre a&nbsp;l'homme</>,
     ],
-    []
+    [
+      <>Insalubrite &&nbsp;Beaute</>,
+      <>Au&nbsp;goulag en&nbsp;noir</>,
+      "Les motifs amblematiques"
+    ]
   ];
 
   return (
