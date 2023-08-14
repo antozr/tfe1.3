@@ -17,8 +17,7 @@ import Koi02 from "../assets/images/japon/compressed/koi2-min.webp";
 import Jigoku1 from "../assets/images/japon/compressed/jigoku1-min.webp";
 import Jigoku2 from "../assets/images/japon/compressed/jigoku2-min.webp";
 
-/// nordic image 
-
+/// nordic image
 
 function LayoutStyle2({ styleNum }) {
   let allTitle = [
@@ -65,9 +64,7 @@ function LayoutStyle2({ styleNum }) {
       <>La toile de Wyrd </>,
       <>Yggdrasil</>,
       <>Vegvisir</>,
-      
-      
-    ]
+    ],
   ];
 
   let allTxt = [
@@ -235,23 +232,121 @@ function LayoutStyle2({ styleNum }) {
       </>,
     ],
     [
-      <>On retrouve des traces éparses d’hommes couvertes de peinture avec une peau pigmentée bleue pour les peuplades celtes et des hypothèses pour les vikings sur leurs pratiques. Mais ces styles ont su renaître par des artisans représentant les forces de la nature et des dieux sur nous, pauvres mortels. </>,
-      <>Il y a une controverse sur si oui ou non les vikings <i>( et les gens des pays du Nord)</i> possédaient des tatouages vu le peu de preuve historique qui nous est parvenue. Avec un faible aperçu, encore de nos jours, des motifs tatoués à l’époque . </>,
-      <>Selon ses récits, il donne le fait que les vikings étaient tatoués, avec le corps recouvert de motifs de couleur verdâtre de motifs d’arbre entrelacés. Mais ces récits sont mis en doute par le fait que le mot en arabe qu’il utilise est le même  qui est utilisé pour désigner les peintures murales. De ce point de vue, on pourrait se dire que faute de mot pour désigner, il a utilisé un mot générique pour donner une explication sur le corps de ces hommes . </>,
-      <><br/><br/> <span className="sect__txt--thin"> De ce fait, on a une vision de ces personnes mais … </span> </>,
-      <>Mais le problème, c'est qu’aucune mention de ces tatouages ne sont faits mention dans les récits du nord, or que ces derniers sont très détaillés sur la façon dont étaient les personnes vivant dans le nord.</>,
-      <><br/><br/> <span className="sect__txt--thin sect__txt--italic">Comme avec des descriptions de leur façon de s’habiller, leurs coiffures, couleurs de cheveux … Cela ne veut pas dire que ces tatouages n’existaient pas, mais leurs origines restent inconnues.</span></>,
-      <>On a retrouvé une momie dans les glaces de Sibérie recouverte de tatouages, mais quel est le lien ? Ce peuple faisant du commerce avec les pays du nord, on peut supposer que ces derniers aiment aussi partager leurs traditions pour le tatouage. Comme on retrouve des traces chez les peuples celtes, saxe, germain. </>,
-      <> <br/><br/> <span className="sect__txt--thin">Des peuples que les nordiques ont rencontrés pour diverses raisons, et donc ces derniers importaient et s'approprient des éléments d’autres cultures, on peut se dire que certains membres des tribues nordiques étaient tatoués.        </span></>,
-      <> Il est une composition de 9 lignes, qui regrouperait toutes les runes . Signifiant le tout les possibilités du passé, du futur et du présent, montrant l'interconnexion entre nos actions passées répercutant notre présent et qui modifiera notre futur.        </>,
-      <>Plus connu sous ‘ l’arbre de la vie’, il représente l’arbre qui porte l’univers dans ses branches, en connectant notre monde à tous les autres mondes. Il permet de donner un point de vue plus spirituel sur notre vision de l’univers et de l’au-delà.</>,
-      <>Le compas runique, il sert à montrer d'où l’on vient et où on va, pouvant aussi servir d'amulette de protection, afin de retrouver son chemin.</>,//
-      <>On peut supposer que la technique utilisée est un style de handpoke ( du point à la main), où l’artiste prenait un manche ( en bois) avec une aiguille et venait encrer le motif sur la peau avec une encre noire à base de charbon.</>,
-      <><br/><br/><span className="sect__txt--thin sect__txt--italic">De nos jours, les artistes qui exercent ce style,  on explore les récits, les techniques, pour se rapprocher de comment c'était fait avant. Pour ce faire, comme leurs prédécesseurs, ils utilisent du handpoke & de l’encre noire pour réaliser les motifs inspirés de l’art nordique.</span> </>,
-      <>On retrouve les motifs qui tiennent une part importante dans la mythologie et leurs arts, représentés sur les armes, maisons, manuscrits, sculptures… Ces peuples avaient un ‘amour’ pour leur représentation.</>,
-      <><br/><br/> <span className="sect__txt--thin">Le style se veut plus agressif et montre une symbolique guerrière de son porteur qu’un côté doux / calme. On retrouve des entrelacs, des boucles, nœuds, … qui sert à représenter une armure pour protéger son hôte.</span> </>,
- 
-  ]
+      <>
+        On retrouve des traces éparses d’hommes couvertes de peinture avec une
+        peau pigmentée bleue pour les peuplades celtes et des hypothèses pour
+        les vikings sur leurs pratiques. Mais ces styles ont su renaître par des
+        artisans représentant les forces de la nature et des dieux sur nous,
+        pauvres mortels.{" "}
+      </>,
+      <>
+        On peut supposer que la technique utilisée est un style de handpoke ( du
+        point à la main), où l’artiste prenait un manche ( en bois) avec une
+        aiguille et venait encrer le motif sur la peau avec une encre noire à
+        base de charbon.
+      </>,
+      <>
+        <br />
+        <br />
+        <span className="sect__txt--thin sect__txt--italic">
+          De nos jours, les artistes qui exercent ce style, on explore les
+          récits, les techniques, pour se rapprocher de comment c'était fait
+          avant. Pour ce faire, comme leurs prédécesseurs, ils utilisent du
+          handpoke & de l’encre noire pour réaliser les motifs inspirés de l’art
+          nordique.
+        </span>{" "}
+      </>,
+      <>
+        On retrouve les motifs qui tiennent une part importante dans la
+        mythologie et leurs arts, représentés sur les armes, maisons,
+        manuscrits, sculptures… Ces peuples avaient un ‘amour’ pour leur
+        représentation.
+      </>,
+      <>
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin">
+          Le style se veut plus agressif et montre une symbolique guerrière de
+          son porteur qu’un côté doux / calme. On retrouve des entrelacs, des
+          boucles, nœuds, … qui sert à représenter une armure pour protéger son
+          hôte.
+        </span>{" "}
+      </>,
+      <>
+        Il y a une controverse sur si oui ou non les vikings{" "}
+        <i>( et les gens des pays du Nord)</i> possédaient des tatouages vu le
+        peu de preuve historique qui nous est parvenue. Avec un faible aperçu,
+        encore de nos jours, des motifs tatoués à l’époque .{" "}
+      </>,
+      "",
+      <>
+        Selon ses récits, il donne le fait que les vikings étaient tatoués, avec
+        le corps recouvert de motifs de couleur verdâtre de motifs d’arbre
+        entrelacés. Mais ces récits sont mis en doute par le fait que le mot en
+        arabe qu’il utilise est le même qui est utilisé pour désigner les
+        peintures murales. De ce point de vue, on pourrait se dire que faute de
+        mot pour désigner, il a utilisé un mot générique pour donner une
+        explication sur le corps de ces hommes .{" "}
+      </>,
+      <>
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin sect__txt--italic">
+          {" "}
+          De ce fait, on a une vision de ces personnes mais …{" "}
+        </span>{" "}
+      </>,
+      <>
+        Mais le problème, c'est qu’aucune mention de ces tatouages ne sont faits
+        mention dans les récits du nord, or que ces derniers sont très détaillés
+        sur la façon dont étaient les personnes vivant dans le nord.
+      </>,
+      <>
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin sect__txt--italic">
+          Comme avec des descriptions de leur façon de s’habiller, leurs
+          coiffures, couleurs de cheveux … Cela ne veut pas dire que ces
+          tatouages n’existaient pas, mais leurs origines restent inconnues.
+        </span>
+      </>,
+      <>
+        On a retrouvé une momie dans les glaces de Sibérie recouverte de
+        tatouages, mais quel est le lien ? Ce peuple faisant du commerce avec
+        les pays du nord, on peut supposer que ces derniers aiment aussi
+        partager leurs traditions pour le tatouage. Comme on retrouve des traces
+        chez les peuples celtes, saxe, germain.{" "}
+      </>,
+      <>
+        {" "}
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin">
+          Des peuples que les nordiques ont rencontrés pour diverses raisons, et
+          donc ces derniers importaient et s'approprient des éléments d’autres
+          cultures, on peut se dire que certains membres des tribues nordiques
+          étaient tatoués.{" "}
+        </span>
+      </>,
+      <>
+        {" "}
+        Il est une composition de 9 lignes, qui regrouperait toutes les runes .
+        Signifiant le tout les possibilités du passé, du futur et du présent,
+        montrant l'interconnexion entre nos actions passées répercutant notre
+        présent et qui modifiera notre futur.{" "}
+      </>,
+      <>
+        Le compas runique, il sert à montrer d'où l’on vient et où on va,
+        pouvant aussi servir d'amulette de protection, afin de retrouver son
+        chemin.
+      </>, //
+      <>
+        Plus connu sous ‘ l’arbre de la vie’, il représente l’arbre qui porte
+        l’univers dans ses branches, en connectant notre monde à tous les autres
+        mondes. Il permet de donner un point de vue plus spirituel sur notre
+        vision de l’univers et de l’au-delà.
+      </>,
+    ],
   ];
 
   let interTxt = [
@@ -263,13 +358,13 @@ function LayoutStyle2({ styleNum }) {
         </span>
       </>,
       "L'histoire de l'Irezumi",
-      "Les motifs amblematiques"
+      "Les motifs amblematiques",
     ],
     [
       <>Dans&nbsp;le froid&nbsp;nordique</>,
       <>De&nbsp;l'ancien, maintenant</>,
-      <>De&nbsp;la pierre a&nbsp;l'homme</>
-    ]
+      <>De&nbsp;la pierre a&nbsp;l'homme</>,
+    ],
   ];
 
   return (
@@ -295,13 +390,13 @@ function LayoutStyle2({ styleNum }) {
           BigTitle2={allTitle[styleNum][5]}
           imgArtiste1={""}
           imgArtiste2={""}
-          textcol1={allTxt[styleNum][5]}
-          textcol2={allTxt[styleNum][6]}
+          textcol1={allTxt[styleNum][1]}
+          textcol2={allTxt[styleNum][2]}
           textcol3={""}
-          textcol4={allTxt[styleNum][5]}
-          textcol5={""}
+          textcol4={allTxt[styleNum][3]}
+          textcol5={allTxt[styleNum][4]}
           textcol6={""}
-          smallTitle1={allTitle[styleNum][6]}
+          smallTitle1={""}
           smallTitle2={allTitle[styleNum][6]}
           smallTitle3={allTitle[styleNum][7]}
           smallTitle4={allTitle[styleNum][8]}
@@ -314,35 +409,35 @@ function LayoutStyle2({ styleNum }) {
       />
       <HistoryLandRow
         title1={allTitle[styleNum][9]}
-        txt1={allTxt[styleNum][1]}
-        txt12={""}
+        txt1={allTxt[styleNum][5]}
+        txt12={allTxt[styleNum][6]}
         animImg1={true}
         HB1={true}
         img01={imgBg}
         img02={imgBg}
         colTxt01={{ color: "#FDF2DE" }}
         title2={allTitle[styleNum][10]}
-        txt2={allTxt[styleNum][2]}
-        txt22={""}
+        txt2={allTxt[styleNum][7]}
+        txt22={allTxt[styleNum][8]}
         animImg2={true}
         HB2={false}
         img03={imgBg}
         img04={imgBg}
         colTxt02={{ color: "#FDF2DE" }}
         title3={allTitle[styleNum][11]}
-        txt3={allTxt[styleNum][3]}
-        txt32={""}
+        txt3={allTxt[styleNum][9]}
+        txt32={allTxt[styleNum][10]}
         animImg3={false}
         HB3={true}
         img05={imgBg}
         img06={imgBg}
         colTxt03={{ color: "#FDF2DE" }}
-        title4={allTitle[styleNum][12]}
-        txt4={allTxt[styleNum][4]}
+        title4={allTitle[styleNum][11]}
+        txt4={allTxt[styleNum][12]}
         txt42={""}
         animImg4={false}
         HB4={true}
-        img07={imgBg} 
+        img07={imgBg}
         img08={imgBg}
         colTxt04={{ color: "#FDF2DE" }}
         actifB4={true}
@@ -357,21 +452,23 @@ function LayoutStyle2({ styleNum }) {
         motifImg01={Ryu01}
         motifImg02={Ryu02}
         motiftitle={allTitle[styleNum][13]}
-        motifTxt={allTxt[styleNum][7]}
+        motifTxt={allTxt[styleNum][13]}
       />
       <BoxMotif
-        blackMotif={true} noAnim={true}
+        blackMotif={true}
+        noAnim={true}
         motifImg01={Koi01}
         motifImg02={Koi02}
         motiftitle={allTitle[styleNum][14]}
-        motifTxt={allTxt[styleNum][8]}
+        motifTxt={allTxt[styleNum][14]}
       />
       <BoxMotif
-        blackMotif={false} noAnim={false}
+        blackMotif={false}
+        noAnim={false}
         motifImg01={Jigoku1}
         motifImg02={Jigoku2}
         motiftitle={allTitle[styleNum][15]}
-        motifTxt={allTxt[styleNum][9]}
+        motifTxt={allTxt[styleNum][15]}
       />
       <BoxMessageEnd />
     </>
