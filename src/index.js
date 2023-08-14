@@ -9,8 +9,6 @@ import TonAventure from "./pages/TonAventure";
 import PlusDInfo from "./pages/PlusDInfo";
 import StylePB from "./pages/StylePB";
 
-import { AnimatePresence } from "framer-motion";
-
 import HomeP from "./pages/HomeP";
 import LayoutTattoo from "./pages/LayoutTattoo";
 import StyleLayout from "./routes/StyleLayout";
@@ -75,9 +73,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AnimatePresence mode="wait" initial={false}>
+    
       <RouterProvider router={router} />
-    </AnimatePresence>
+   
   </React.StrictMode>
 );
 

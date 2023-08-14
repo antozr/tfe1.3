@@ -68,7 +68,7 @@ function BoxMotif({
                 className="motif__boxImg motif__boxImg--full"
                 initial={{ width: "100vw" }}
                 whileInView={{
-                  width: "60vw",
+                  width: "65vw",
                   opacity: 0.9,
                   margin: "5vh 0 0 0 ",
                 }}
@@ -89,8 +89,8 @@ function BoxMotif({
 
               <motion.div
                 className="motif__boxImg motif__boxImg--second"
-                initial={{ opacity: 0, y: 200, x: "50vw" }}
-                whileInView={{ opacity: 1, y: "-40vh",  }}
+                initial={{ opacity: 0, y: 200, x: "60vw" }}
+                whileInView={{ opacity: 1, y: "-20vh",  }}
                 transition={{
                   duration: 0.4,
                   delay: 0.5,

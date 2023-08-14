@@ -1,29 +1,30 @@
 .motif {
   &__boxImg {
     width: 100%;
-    min-height: 60vh;
-
+    //min-height: 60vh;
+    max-height: 90vh;
+    //border: 2px solid red;
+    overflow: hidden;
     &--second {
       max-width: 45vw;
       width: auto;
-      
+
+      height: auto;
+      max-width: 70vh;
+    }
+
+    &--noAnim {
+      width: 65vw;
+      transform: translateX(35vw) translateY(10vh);
+    }
+    &--noAnim2 {
+      position: relative;
+      z-index: 2;
+      transform: translateX(0) translateY(-30vh);
+      max-width: 45vw;
+      width: auto;
       height: auto;
       min-height: 50vh;
-    }
-
-    &--noAnim{
-        width: 60vw;
-        transform: translateX(35vw) translateY(10vh);
-
-    }
-    &--noAnim2{
-        position: relative;
-        z-index: 2;
-        transform: translateX(0) translateY(-30vh);
-        max-width: 45vw;
-        width: auto;
-        height: auto;
-        min-height: 50vh;
     }
   }
   &__img {
@@ -32,51 +33,48 @@
     object-fit: cover;
   }
 
-  &__boxContent{
+  &__boxContent {
     padding: 5vh 5vw;
-    width: 100%;
+    width: 50%;
 
-    &--noAnim{
-        margin: 5vh 0 0 45vw;
+    &--noAnim {
+      margin: 5vh 0 0 45vw;
     }
-
   }
-  &__boxImgAnim{
+  &__boxImgAnim {
     height: auto;
-   // border: 2px solid red;
+    min-height: 80vh;
     max-height: 100vh;
+    // overflow: hidden;
   }
 }
 
-.sect{
+.sect {
+  &__motifZone {
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    padding: 0 0 30vh;
+    display: flex;
+    flex-direction: column;
 
-    &__motifZone{
-
-        min-height: 100vh;
-        height: auto;
-        width: 100vw;
-        padding: 0 0 20vh;
-        display: flex;
-        flex-direction: column;
-        
-
-        &--black{
-            background-color: #000;
-            color: #fdf2de;
-        }
+    &--black {
+      background-color: #000;
+      color: #fdf2de;
     }
+  }
 
-    &__endBoxMes{
-        width: 100vw;
-        height: 80vh;
-       background-image: url(../assets/images/oldamerica/fondPeauNoir.webp);
-       background-position: center;
-       background-repeat: no-repeat;
-       background-size: cover;
-        position: relative;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  &__endBoxMes {
+    width: 100vw;
+    height: 80vh;
+    background-image: url(../assets/images/oldamerica/fondPeauNoir.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
