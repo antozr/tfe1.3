@@ -8,14 +8,27 @@ import BoxMotif from "../components/BoxMotif";
 import BoxMessageEnd from "../components/BoxMessageEnd";
 
 /// import img japon
-import imgBg from "../assets/images/japon/compressed/irezumiBack2-min.webp";
+import imgBgJ1 from "../assets/images/japon/compressed/irezumiBack2-min.webp";
+import imgBgJ2 from "../assets/images/japon/compressed/horishiFullWork-min.webp";
 import backImgjap02 from "../assets/images/japon/compressed/arrierePlanYakuza.webp";
+import HistoJ11 from "../assets/images/japon/ainu1.webp";
+import HistoJ12 from "../assets/images/japon/compressed/ainu2.webp";
+import HistoJ21 from "../assets/images/japon/compressed/meiji1-min.webp";
+import HistoJ22 from "../assets/images/japon/compressed/meiji2-min.webp";
+import HistoJ31 from "../assets/images/japon/compressed/tebori-min.webp";
+import HistoJ32 from "../assets/images/japon/compressed/irezumiBack2-min.webp";
+import HistoJ41 from "../assets/images/japon/compressed/arrierePlanYakuza.webp";
+import HistoJ42 from "../assets/images/japon/compressed/horishiFullWork-min.webp";
 import Ryu01 from "../assets/images/japon/compressed/dragon02-min.webp";
 import Ryu02 from "../assets/images/japon/compressed/dragon2-min.webp";
 import Koi01 from "../assets/images/japon/compressed/koi1-min.webp";
 import Koi02 from "../assets/images/japon/compressed/koi2-min.webp";
 import Jigoku1 from "../assets/images/japon/compressed/jigoku1-min.webp";
 import Jigoku2 from "../assets/images/japon/compressed/jigoku2-min.webp";
+import HotifulJ1 from "../assets/images/japon/compressed/horiyoshi-III-min.webp";
+import HotifulJ2 from "../assets/images/tebori.webp";
+import INtroSvgJ1 from "../assets/images/svgs/japon/ryu01.svg";
+import INtroSvgJ2 from "../assets/images/svgs/japon/carpeNB.svg";
 
 /// nordic image
 
@@ -567,6 +580,34 @@ function LayoutStyle2({ styleNum, boxH4 }) {
     ]
   ];
 
+  let allImg=[
+    [
+      INtroSvgJ1,
+      INtroSvgJ2,
+      imgBgJ2,
+      HotifulJ1,
+      HotifulJ2,
+      imgBgJ1,
+      HistoJ11,
+      HistoJ12,
+      HistoJ21,
+      HistoJ22,
+      HistoJ31,
+      HistoJ32,
+      HistoJ41,
+      HistoJ42,
+      backImgjap02,
+      Ryu01,
+      Ryu02,
+      Koi01,
+      Koi02,
+      Jigoku1,
+      Jigoku2
+
+    ],
+
+  ];
+
   return (
     <>
       <FirstSectionStyles
@@ -574,22 +615,22 @@ function LayoutStyle2({ styleNum, boxH4 }) {
         BTD2={allTitle[styleNum][1]}
         title={allTitle[styleNum][2]}
         txt={allTxt[styleNum][0]}
-        Img01={""}
-        Img02={""}
+        Img01={allImg[styleNum][0]}
+        Img02={allImg[styleNum][1]}
       />
 
       <InterSectionBox
         WhitThext={true}
         textTitle={interTxt[styleNum][0]}
-        backImg={{ backgroundImage: `url(${imgBg})` }}
+        backImg={{ backgroundImage: `url(${allImg[styleNum][2]})` }}
       />
       <div className="sect--heigth100 sect--snapChild">
         <SectHoriFull
           BigTitle1={allTitle[styleNum][3]}
           BigTitle12={allTitle[styleNum][4]}
           BigTitle2={allTitle[styleNum][5]}
-          imgArtiste1={""}
-          imgArtiste2={""}
+          imgArtiste1={allImg[styleNum][3]}
+          imgArtiste2={allImg[styleNum][4]}
           textcol1={allTxt[styleNum][1]}
           textcol2={allTxt[styleNum][2]}
           textcol3={""}
@@ -605,7 +646,7 @@ function LayoutStyle2({ styleNum, boxH4 }) {
       <InterSectionBox
         WhitThext={true}
         textTitle={interTxt[styleNum][1]}
-        backImg={{ backgroundImage: `url(${imgBg})` }}
+        backImg={{ backgroundImage: `url(${allImg[styleNum][5]})` }}
       />
       <HistoryLandRow
         title1={allTitle[styleNum][9]}
@@ -613,32 +654,32 @@ function LayoutStyle2({ styleNum, boxH4 }) {
         txt12={allTxt[styleNum][6]}
         animImg1={true}
         HB1={true}
-        img01={imgBg}
-        img02={imgBg}
+        img01={allImg[styleNum][6]}
+        img02={allImg[styleNum][7]}
         colTxt01={{ color: "#FDF2DE" }}
         title2={allTitle[styleNum][10]}
         txt2={allTxt[styleNum][7]}
         txt22={allTxt[styleNum][8]}
         animImg2={true}
         HB2={false}
-        img03={imgBg}
-        img04={imgBg}
+        img03={allImg[styleNum][8]}
+        img04={allImg[styleNum][9]}
         colTxt02={{ color: "#FDF2DE" }}
         title3={allTitle[styleNum][11]}
         txt3={allTxt[styleNum][9]}
         txt32={allTxt[styleNum][10]}
         animImg3={false}
         HB3={true}
-        img05={imgBg}
-        img06={imgBg}
+        img05={allImg[styleNum][10]}
+        img06={allImg[styleNum][11]}
         colTxt03={{ color: "#FDF2DE" }}
         title4={allTitle[styleNum][12]}
         txt4={allTxt[styleNum][11]}
         txt42={allTxt[styleNum][12]}
         animImg4={false}
         HB4={true}
-        img07={imgBg}
-        img08={imgBg}
+        img07={allImg[styleNum][12]}
+        img08={allImg[styleNum][13]}
         colTxt04={{ color: "#FDF2DE" }}
         actifB4={boxH4}
         
@@ -646,28 +687,28 @@ function LayoutStyle2({ styleNum, boxH4 }) {
       <InterSectionBox
         WhitThext={true}
         textTitle={interTxt[styleNum][2]}
-        backImg={{ backgroundImage: `url(${backImgjap02})` }}
+        backImg={{ backgroundImage: `url(${allImg[styleNum][14]})` }}
       />
       <BoxMotif
         blackMotif={false}
-        motifImg01={Ryu01}
-        motifImg02={Ryu02}
+        motifImg01={allImg[styleNum][15]}
+        motifImg02={allImg[styleNum][16]}
         motiftitle={allTitle[styleNum][13]}
         motifTxt={allTxt[styleNum][13]}
       />
       <BoxMotif
         blackMotif={true}
         noAnim={true}
-        motifImg01={Koi01}
-        motifImg02={Koi02}
+        motifImg01={allImg[styleNum][17]}
+        motifImg02={allImg[styleNum][18]}
         motiftitle={allTitle[styleNum][14]}
         motifTxt={allTxt[styleNum][14]}
       />
       <BoxMotif
         blackMotif={false}
         noAnim={false}
-        motifImg01={Jigoku1}
-        motifImg02={Jigoku2}
+        motifImg01={allImg[styleNum][19]}
+        motifImg02={allImg[styleNum][20]}
         motiftitle={allTitle[styleNum][15]}
         motifTxt={allTxt[styleNum][15]}
       />
