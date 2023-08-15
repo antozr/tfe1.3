@@ -1,5 +1,4 @@
 import React from "react";
-import FirstSection from "../components/FirstSection";
 import InterSectionBox from "../components/InterSectionBox";
 import HistoryLandRow from "../components/HistoryLandRow";
 import SectHoriFull from "../components/SectMaitreHori";
@@ -28,9 +27,33 @@ import Jigoku2 from "../assets/images/japon/compressed/jigoku2-min.webp";
 import HotifulJ1 from "../assets/images/japon/compressed/horiyoshi-III-min.webp";
 import HotifulJ2 from "../assets/images/tebori.webp";
 import INtroSvgJ1 from "../assets/images/svgs/japon/ryu01.svg";
-import INtroSvgJ2 from "../assets/images/svgs/japon/carpeNB.svg";
+import INtroSvgJ2 from "../assets/images/svgs/japon/carpeColor.svg";
 
 /// nordic image
+import INtroSvgN1 from "../assets/images/svgs/nordic/valknut.svg";
+import INtroSvgN2 from "../assets/images/svgs/nordic/wyrd.svg";
+import imgBgN1 from "../assets/images/nordic/interNordicnoir.webp";
+import imgBgN2 from "../assets/images/oldamerica/fondPeauNoir.webp";
+import imgBgN3 from "../assets/images/nordic/vikingHome.webp";
+import HotifulN1 from "../assets/images/nordic/motifHori.webp";
+import HotifulN2 from "../assets/images/nordic/motifBighory.webp";
+import HistoN12 from "../assets/images/nordic/drakar.webp";
+import HistoN21 from "../assets/images/nordic/amad1.webp";
+import HistoN22 from "../assets/images/nordic/amad2.webp";
+import HistoN31 from "../assets/images/nordic/histpry1.webp";
+import HistoN32 from "../assets/images/nordic/history2.webp";
+import HistoN41 from "../assets/images/nordic/momie1.webp";
+import HistoN42 from "../assets/images/nordic/momie2.webp";
+import Wyrd1 from "../assets/images/nordic/wyrd.webp";
+import Wyrd2 from "../assets/images/nordic/wyrd2.webp";
+import Vegvisir1 from "../assets/images/nordic/vegvisir.webp";
+import Vegvisir2 from "../assets/images/nordic/vegvisir2.webp";
+import Ygdrazil1 from "../assets/images/nordic/ygdrazil1.webp";
+import Ygdrazil2 from "../assets/images/nordic/ygdrazil2.webp";
+
+
+
+
 
 function LayoutStyle2({ styleNum, boxH4 }) {
   let allTitle = [
@@ -604,7 +627,30 @@ function LayoutStyle2({ styleNum, boxH4 }) {
       Jigoku1,
       Jigoku2
 
-    ],
+    ],[
+      INtroSvgN1,
+      INtroSvgN2,
+      imgBgN1,
+      HotifulN1,
+      HotifulN2,
+      imgBgN2,
+      imgBgN3,
+      HistoN12,
+      HistoN21,
+      HistoN22,
+      HistoN31,
+      HistoN32,
+HistoN41,
+HistoN42,
+imgBgN3,
+      Wyrd1,
+      Wyrd2,
+      Vegvisir1,
+      Vegvisir2,
+      Ygdrazil1,
+      Ygdrazil2
+
+    ]
 
   ];
 
