@@ -17,6 +17,10 @@ import DonEdHardy01 from "../assets/images/oldamerica/donEdHardy01.webp";
 import PinUp01 from "../assets/images/oldamerica/pinup1.webp";
 import Pinup2 from "../assets/images/oldamerica/pinup2.webp";
 import Navire from "../assets/images/oldamerica/marinBat.webp";
+import hiro1 from "../assets/images/oldamerica/hiro1.jpg";
+import hiro2 from "../assets/images/oldamerica/hiro2.jpg";
+import bat1 from "../assets/images/oldamerica/bat1.jpg";
+import bat2 from "../assets/images/oldamerica/ancre1.jpg";
 
 import AnimColGauche from "../components/AnimColGaucheUs";
 import HistoryLandRow from "../components/HistoryLandRow";
@@ -212,18 +216,18 @@ function LayoutTattoo({ USColG, styleNum }) {
 
 <div className="sect__listMotif">
   <BoxMotif 
-  motifImg01={DarkSkin} motifImg02={SailorJerry02}
+  motifImg01={hiro1} motifImg02={hiro2}
   motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
   />
   <BoxMotif 
   blackMotif={true} noAnim={true}
-  motifImg01={DarkSkin} motifImg02={SailorJerry02}
-  motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
+  motifImg01={PinUp01} motifImg02={Pinup2}
+  motiftitle={allTitle[styleNum][7]} motifTxt={allTxt[styleNum][8]}
   />
   <BoxMotif 
   blackMotif={true}
-  motifImg01={DarkSkin} motifImg02={SailorJerry02}
-  motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
+  motifImg01={bat2} motifImg02={bat1}
+  motiftitle={allTitle[styleNum][8]} motifTxt={allTxt[styleNum][9]}
   />
 </div>
 <BoxMessageEnd />
