@@ -16,9 +16,11 @@ import LayoutStyle2 from "./pages/LayoutStyle2";
 
 const router = createBrowserRouter([
   {
+    
     path: "/",
     element: <App />,
     errorElement: <ErrorP />,
+    
     children: [
       {
         path: "styles/",
@@ -64,23 +66,11 @@ const router = createBrowserRouter([
         element: <HomeP />,
       },
     ],
-  },
-  // {
-  //   path:'/styles',
-  //   element:<StylePB />,
-  //   errorElement: <ErrorP/>
-  // },
-  // {
-  //   path:'/plus-d-infos',
-  //   element:<PlusDInfo />,
-  //   errorElement: <ErrorP/>
-  // },
-  // {
-  //   path:'/mon-aventure',
-  //   element:<TonAventure/>,
-  //   errorElement: <ErrorP/>
-  // }
-]);
+  }
+
+],{
+  // basename:'/projets/tfe/'
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

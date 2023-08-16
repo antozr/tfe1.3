@@ -51,9 +51,47 @@ import Vegvisir2 from "../assets/images/nordic/vegvisir2.webp";
 import Ygdrazil1 from "../assets/images/nordic/ygdrazil1.webp";
 import Ygdrazil2 from "../assets/images/nordic/ygdrazil2.webp";
 
+//// import Russian prisonner tattoo
+import INtroSvgR1 from "../assets/images/svgs/russie/EtoileRusse.svg";
+import INtroSvgR2 from "../assets/images/svgs/russie/kremlin.svg";
+import imgBgR1 from "../assets/images/oldamerica/fondPeauNoir.webp";
+import HotifulR1 from "../assets/images/russie/danzing.webp";
+import HotifulR2 from "../assets/images/russie/danzingh.webp";
+import HistoR11 from "../assets/images/russie/prissonierTsar.webp";
+import HistoR12 from "../assets/images/russie/prissonier1.webp";
+import HistoR21 from "../assets/images/russie/prisonnier4.webp";
+import HistoR22 from "../assets/images/russie/prisonnier5.webp";
+import HistoR31 from "../assets/images/russie/prisonnier2.webp";
+import HistoR32 from "../assets/images/russie/coilPrison.webp";
+import HistoR41 from "../assets/images/russie/endEre.webp";
+import HistoR42 from "../assets/images/russie/Caste.webp";
+import epaule1 from "../assets/images/russie/epaullette1.webp";
+import epaule2 from "../assets/images/russie/epaullette2.webp";
+import etoile1 from "../assets/images/russie/etoile1.webp";
+import etoile2 from "../assets/images/russie/etoile2.webp";
+import vierge1 from "../assets/images/russie/vierge1.webp";
+import vierge2 from "../assets/images/russie/vierge2.webp";
 
 
-
+/// import image celtic tattoo
+import INtroSvgC1 from "../assets/images/svgs/celtic/croixCelte.svg";
+import INtroSvgC2 from "../assets/images/svgs/celtic/triskel.svg";
+import imgBgC1 from "../assets/images/celte/backCelte1.webp";
+import imgBgC2 from "../assets/images/celte/backCelte2.webp";
+import HotifulC1 from "../assets/images/celte/backMotif.webp";
+import HotifulC2 from "../assets/images/celte/motifentrela.webp";
+import HistoC11 from "../assets/images/celte/pictsBig.webp";
+import HistoC12 from "../assets/images/celte/picts2.webp";
+import HistoC21 from "../assets/images/celte/ptolome1.webp";
+import HistoC22 from "../assets/images/celte/ptolome2.webp";
+import HistoC31 from "../assets/images/celte/util1.webp";
+import HistoC32 from "../assets/images/celte/util12.webp";
+import triskel1 from "../assets/images/celte/triskel1.webp";
+import triskel2 from "../assets/images/celte/triskel2.webp";
+import epona1 from "../assets/images/celte/epona1.webp";
+import epona2 from "../assets/images/celte/epona2.webp";
+import tri1 from "../assets/images/celte/TRIKETRA1.webp";
+import tri2 from "../assets/images/celte/triketra2.webp";
 
 function LayoutStyle2({ styleNum, boxH4 }) {
   let allTitle = [
@@ -104,30 +142,44 @@ function LayoutStyle2({ styleNum, boxH4 }) {
     [
       "Russie",
       "ГУЛАГ",
-      <>Direction le Goulag.<br /> честь ,боль!</>,
-      "Le collecteur", "Коллектор", "вор в законе","","","",
-      <>Le signe de la&nbsp;répression</>, <>Leur&nbsp;iconographie</>, "L’hygiène, une autre histoire", "La fin d'une ère", "Les épaulettes", <>L'étoiles&nbsp;à 8&nbsp;branches</>, <>La Vierge&nbsp;à l’enfant</>
+      <>
+        Direction le Goulag.
+        <br /> честь ,боль!
+      </>,
+      "Le collecteur",
+      "Коллектор",
+      "вор в законе",
+      "",
+      "",
+      "",
+      <>Le signe de la&nbsp;répression</>,
+      <>Leur&nbsp;iconographie</>,
+      "L’hygiène, une autre histoire",
+      "La fin d'une ère",
+      "Les épaulettes",
+      <>L'étoiles&nbsp;à 8&nbsp;branches</>,
+      <>La Vierge&nbsp;à l’enfant</>,
     ],
     [
       <>Peuple&nbsp;celtes</>,
       "nature",
       <>Rencontre en forêt</>,
       <>La&nbsp;technique</>,
-    <>teknikel</>,
-    <>L’origine des motifs </>,
-    "Du point fait main",
-    
-    "Des motifs ",
-    "riche de mythologie",
-   
-    <>Les origines</>,
-    <>Les récits étrangers</>,
-    <>Leur utilisation</>,
-    "",
-    <>Le triskel </>,
-    <>Le cheval</>,
-    <>La triketra</>,
-    ]
+      <>teknikel</>,
+      <>L’origine des motifs </>,
+      "Du point fait main",
+
+      "Des motifs ",
+      "riche de mythologie",
+
+      <>Les origines</>,
+      <>Les récits étrangers</>,
+      <>Leur utilisation</>,
+      "",
+      <>Le triskel </>,
+      <>Le cheval</>,
+      <>La triketra</>,
+    ],
   ];
 
   let allTxt = [
@@ -268,11 +320,44 @@ function LayoutStyle2({ styleNum, boxH4 }) {
         </span>
       </>,
       "",
-      <>Il symbolise la détermination, des forces, des résistances face à l’adversité. Selon la tradition, ils nagent à contre-courant de la rivière jaune, où seuls les plus forts pourront atteindre la porte du dragon. Et ils pourront se transformer en dragon avec la joie éternelle.<br/><br/><span className="sect__txt--thin">On retrouve différents types de Koi sur les motifs de leur écailles ainsi que sur sa position, la composition et sera souvent liée avec l’élément de l’eau.</span></>,
-      <>C'est une professionnelle des divertissements pour adultes, mais un jour, elle va rencontrer un moine qui l'aidera à atteindre l'éveil spirituel. On la représente avec une robe dont le dos est recouvert d'une imagerie des enfers et sur le devant avec une imagerie signifiant la miséricorde avec les fleurs de cerisier ( symbolisant l'éphémérité de la condition humaine et de la beauté).<br/><br/> <span className="sect__txt--thin">Elle symbolise la rédemption et le changement de cap dans la vie .</span>
-      </>    ,
-      <>Ce sont 108 brigands qui vont se retourner contre le pouvoir en place , qui est corrompu. Ils viennent du <b>Suikoden</b> illustré par <b>Utagawa Kuniyoshi </b> et qui servent depuis pour la réalisation des grosses pièces d'irezumi.<br/><br/> <span className="sect__txt--thin">Il représente le courage , la loyauté et d'autres valeurs en fonction des personnages. </span> </>,
-  
+      <>
+        Il symbolise la détermination, des forces, des résistances face à
+        l’adversité. Selon la tradition, ils nagent à contre-courant de la
+        rivière jaune, où seuls les plus forts pourront atteindre la porte du
+        dragon. Et ils pourront se transformer en dragon avec la joie éternelle.
+        <br />
+        <br />
+        <span className="sect__txt--thin">
+          On retrouve différents types de Koi sur les motifs de leur écailles
+          ainsi que sur sa position, la composition et sera souvent liée avec
+          l’élément de l’eau.
+        </span>
+      </>,
+      <>
+        C'est une professionnelle des divertissements pour adultes, mais un
+        jour, elle va rencontrer un moine qui l'aidera à atteindre l'éveil
+        spirituel. On la représente avec une robe dont le dos est recouvert
+        d'une imagerie des enfers et sur le devant avec une imagerie signifiant
+        la miséricorde avec les fleurs de cerisier ( symbolisant l'éphémérité de
+        la condition humaine et de la beauté).
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin">
+          Elle symbolise la rédemption et le changement de cap dans la vie .
+        </span>
+      </>,
+      <>
+        Ce sont 108 brigands qui vont se retourner contre le pouvoir en place ,
+        qui est corrompu. Ils viennent du <b>Suikoden</b> illustré par{" "}
+        <b>Utagawa Kuniyoshi </b> et qui servent depuis pour la réalisation des
+        grosses pièces d'irezumi.
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin">
+          Il représente le courage , la loyauté et d'autres valeurs en fonction
+          des personnages.{" "}
+        </span>{" "}
+      </>,
     ],
 
     [
@@ -392,187 +477,283 @@ function LayoutStyle2({ styleNum, boxH4 }) {
       </>,
     ],
     [
-      <>On se trouve dans le bloc soviétique, en voyageant de goulag à camp de travail dans la Sibérie. On part à la découverte des illustrations faites par les prisonniers sur d'autres par amour, haut-fait ou patriotisme.</>,
-      <>A la chute de l'URSS,  on a pu voir l'iconographie de ce côté-là du monde et surtout grâce à un gardien de prison, < b > Danzig Baldaev</b>  qui a recueilli les dessins sur les prisonniers ainsi que leur signification. Grâce à lui , on sait que le tatouage se faisait peu de temps après le crime et que plus la personne en avait,  plus elle avait fait de prison et plus elle était dangereuse.
-    </>,
-    <><br /><br />
-    <span className="sect__txt--thin sect__txt--italic"> De ce fait, on retrouve environ <b>65 %</b> des prisonniers de prison à sécurité minimale, <b> 80 % </b>des prisonniers à sécurité moyenne et <b>95 %</b> des prisonniers à sécurité élevée tatoués.</span>
-  </>,
-  <>
-    <span className="sect__title sect__title--2">Les voleurs dans la loi</span><br /><br />
-    Une organisation criminelle dans la prison , qui s'est vite hiérarchisée tout en créant une iconographie spécifique en mettant en lien leur passé,  leur pouvoir ainsi que leur tourment.
-  </>,
-  "",
-  
-  <>
-  L’époque Soviétique, de Staline à Gorbatchev : depuis au moins 1861, le prisonnier se faisait marquer /tatouer par la prison dans un but pratique,  afin de savoir leurs crimes  et leur dangerosité. Ainsi les voleurs recevaient un V au fer rouge sur le visage , les déserteurs un SP.<br /> Mais à un moment , dans le début du 20e siècle,  ces derniers ont pris possession de leur supplice pour le transformer en un art, en un moyen de défier le système.
-  <br /><br /><span className="sect__txt--thin">En se constituant en groupe rebelle, ils ont pris comme credo de respecter l’ancien système et de préserver ses traditions. Ils se sont couvert le corps de ces motifs, on les appelait les < b >vory v zakone</b> “ les voleurs dans la loi”.</span>
-</>,
-    "",
-    <>
-      Leur corps tatoué est une sorte de passeport servant à montrer à ceux qui savent le lire, ce qu'ils ont fait comme crimes , leur orientation sexuelle, leur rang dans "la mafia " de la prison ainsi que leurs idéaux politiques. Chacun était fier de les porter mais gare aux faux et aux menteurs, un traitement spécial leur était réservé.
-      <br /><br /><span className="sect__txt--thin sect__txt--italic">Les faux tatouages étaient au mieux enlevés au pire recouvert par des motifs non glorieux et ces personnes devenaient la victime des autres prisonniers. Car on ne ment pas sur son passé pour en avoir un plus glorieux, mais on l’accepte sinon on doit en subir les conséquences.</span>
-    </>,
-    "",
-    <>
-      Cela se faisait dans les cellules ou autre endroit disposant de l'intimité . Comme dermographe on retrouvait une construction avec des rasoirs électriques,  des brosses à dent custom avec un moteur , des boîtes en métal et 1 à 2 aiguilles.
-      <br /><br /><span className="sect__txt--thin sect__txt--italic">
-        Même avec les précautions prises les maladies n'étaient pas éloignées,  certains souffraient de fièvre post tatouage,  de la syphilis,  du SIDA,  d'hépatite…
-      </span>
-    </>,
-    "",
-    <>
-      A la chute de l’union soviétique, l’ouverture au monde occidental, la fin de la seconde guerre mondiale et diverses crises inter-prisonniers. Le tatouage de des <b>vor v zakone</b>, devient une marque de la zone, et ne fut plus “encensée” par le reste de la population.
-      <br /><br /><span className="sect__txt--thin sect__txt--italic sect__txt--jaune"> Ils ont perdu une partie de leur statut, et de nos jours plus grand monde continue ne perpétue ce style dans cet objectif-là. Même si on continue à se faire tatouer dans les prisons, les styles ont évolué, mais les traces du passé sont et resteront présentes.</span>
-    </>,
-    "",
-    
-    <>
-      Une iconographie reprenant le style, la forme et un réalisme des épaulettes des uniformes de l’armée rouge. Avec l’ajout de grade, de symbole, elles sont portées sur les deux épaules, comme sur un costume. On en retrouve certaines avec des crânes, elles font référence aux officiers de l'allemagne du 3e reich, dont le porteur approuve l’idéologie ou souhaite provoquer une fois de plus les dirigeants soviétiques.
-      <br /><br /><span className="sect__txt--thin">
-        Elles représentent le grade des criminelle dans la hiérarchie de la mafia, dont seul les plus haut gradé les portes, normalement. Mais elles représentent aussi la défiance envers la hiérarchie militaire en spoliant l’un de leur emblème et symbole de puissance.
-      </span>
-    </>,
-    <>
-      Une étoile semblable à un design de compas, de rose des vents, avec ses 8 branches. Elle est portée par paire sur le torse et / ou sur les genoux. On trouve une autre variante, celle-ci avec un nombre de branches différent qui représente le nombre d’années passées en prison, avec une branche par année.
-      <br /><br /><span className="sect__txt--thin sect__txt--italic">
-        Son design est simple et “disponible” pour tous les détenus, à condition de respecter certains préceptes. Comme celui qui les porte ne portera jamais l'uniforme ( pour le torse) et je ne s'agenouillera devant personne et surtout pas la justice.
-      </span>
-    </>,
-    <>
-      On peut retrouver différentes compositions, mais le principe reste le même, on aura une sainte Vierge tenant un enfant dans ses bras. Les Russes étant catholiques orthodoxes, on retrouve divers motifs religieux avec une signification double.
-      <br /><br /><span className="sect__txt--thin">
-        La vierge représente la protection maternelle et divine avec la loyauté de son porteur envers Dieu et son groupe. L’enfant a une signification un peu plus sombre, car il représente une vie de crime présente depuis l’enfance et dans certains cas un emprisonnement à un jeune âge.
-      </span>
-    </>
+      <>
+        On se trouve dans le bloc soviétique, en voyageant de goulag à camp de
+        travail dans la Sibérie. On part à la découverte des illustrations
+        faites par les prisonniers sur d'autres par amour, haut-fait ou
+        patriotisme.
+      </>,
+      <>
+        A la chute de l'URSS, on a pu voir l'iconographie de ce côté-là du monde
+        et surtout grâce à un gardien de prison, <b> Danzig Baldaev</b> qui a
+        recueilli les dessins sur les prisonniers ainsi que leur signification.
+        Grâce à lui , on sait que le tatouage se faisait peu de temps après le
+        crime et que plus la personne en avait, plus elle avait fait de prison
+        et plus elle était dangereuse.
+      </>,
+      <>
+        <br />
+        <br />
+        <span className="sect__txt--thin sect__txt--italic">
+          {" "}
+          De ce fait, on retrouve environ <b>65 %</b> des prisonniers de prison
+          à sécurité minimale, <b> 80 % </b>des prisonniers à sécurité moyenne
+          et <b>95 %</b> des prisonniers à sécurité élevée tatoués.
+        </span>
+      </>,
+      <>
+        <span className="sect__title sect__title--2">
+          Les voleurs dans la loi
+        </span>
+        <br />
+        <br />
+        Une organisation criminelle dans la prison , qui s'est vite hiérarchisée
+        tout en créant une iconographie spécifique en mettant en lien leur
+        passé, leur pouvoir ainsi que leur tourment.
+      </>,
+      "",
+
+      <>
+        L’époque Soviétique, de Staline à Gorbatchev : depuis au moins 1861, le
+        prisonnier se faisait marquer /tatouer par la prison dans un but
+        pratique, afin de savoir leurs crimes et leur dangerosité. Ainsi les
+        voleurs recevaient un V au fer rouge sur le visage , les déserteurs un
+        SP.
+        <br /> Mais à un moment , dans le début du 20e siècle, ces derniers ont
+        pris possession de leur supplice pour le transformer en un art, en un
+        moyen de défier le système.
+        <br />
+        <br />
+        <span className="sect__txt--thin">
+          En se constituant en groupe rebelle, ils ont pris comme credo de
+          respecter l’ancien système et de préserver ses traditions. Ils se sont
+          couvert le corps de ces motifs, on les appelait les{" "}
+          <b>vory v zakone</b> “ les voleurs dans la loi”.
+        </span>
+      </>,
+      "",
+      <>
+        Leur corps tatoué est une sorte de passeport servant à montrer à ceux
+        qui savent le lire, ce qu'ils ont fait comme crimes , leur orientation
+        sexuelle, leur rang dans "la mafia " de la prison ainsi que leurs idéaux
+        politiques. Chacun était fier de les porter mais gare aux faux et aux
+        menteurs, un traitement spécial leur était réservé.
+        <br />
+        <br />
+        <span className="sect__txt--thin sect__txt--italic">
+          Les faux tatouages étaient au mieux enlevés au pire recouvert par des
+          motifs non glorieux et ces personnes devenaient la victime des autres
+          prisonniers. Car on ne ment pas sur son passé pour en avoir un plus
+          glorieux, mais on l’accepte sinon on doit en subir les conséquences.
+        </span>
+      </>,
+      "",
+      <>
+        Cela se faisait dans les cellules ou autre endroit disposant de
+        l'intimité . Comme dermographe on retrouvait une construction avec des
+        rasoirs électriques, des brosses à dent custom avec un moteur , des
+        boîtes en métal et 1 à 2 aiguilles.
+        <br />
+        <br />
+        <span className="sect__txt--thin sect__txt--italic">
+          Même avec les précautions prises les maladies n'étaient pas éloignées,
+          certains souffraient de fièvre post tatouage, de la syphilis, du SIDA,
+          d'hépatite…
+        </span>
+      </>,
+      "",
+      <>
+        A la chute de l’union soviétique, l’ouverture au monde occidental, la
+        fin de la seconde guerre mondiale et diverses crises inter-prisonniers.
+        Le tatouage de des <b>vor v zakone</b>, devient une marque de la zone,
+        et ne fut plus “encensée” par le reste de la population.
+        <br />
+        <br />
+        <span className="sect__txt--thin sect__txt--italic sect__title--jaune">
+          {" "}
+          Ils ont perdu une partie de leur statut, et de nos jours plus grand
+          monde continue ne perpétue ce style dans cet objectif-là. Même si on
+          continue à se faire tatouer dans les prisons, les styles ont évolué,
+          mais les traces du passé sont et resteront présentes.
+        </span>
+      </>,
+      "",
+
+      <>
+        Une iconographie reprenant le style, la forme et un réalisme des
+        épaulettes des uniformes de l’armée rouge. Avec l’ajout de grade, de
+        symbole, elles sont portées sur les deux épaules, comme sur un costume.
+        On en retrouve certaines avec des crânes, elles font référence aux
+        officiers de l'allemagne du 3e reich, dont le porteur approuve
+        l’idéologie ou souhaite provoquer une fois de plus les dirigeants
+        soviétiques.
+        <br />
+        <br />
+        <span className="sect__txt--thin">
+          Elles représentent le grade des criminelle dans la hiérarchie de la
+          mafia, dont seul les plus haut gradé les portes, normalement. Mais
+          elles représentent aussi la défiance envers la hiérarchie militaire en
+          spoliant l’un de leur emblème et symbole de puissance.
+        </span>
+      </>,
+      <>
+        Une étoile semblable à un design de compas, de rose des vents, avec ses
+        8 branches. Elle est portée par paire sur le torse et / ou sur les
+        genoux. On trouve une autre variante, celle-ci avec un nombre de
+        branches différent qui représente le nombre d’années passées en prison,
+        avec une branche par année.
+        <br />
+        <br />
+        <span className="sect__txt--thin sect__txt--italic">
+          Son design est simple et “disponible” pour tous les détenus, à
+          condition de respecter certains préceptes. Comme celui qui les porte
+          ne portera jamais l'uniforme ( pour le torse) et je ne s'agenouillera
+          devant personne et surtout pas la justice.
+        </span>
+      </>,
+      <>
+        On peut retrouver différentes compositions, mais le principe reste le
+        même, on aura une sainte Vierge tenant un enfant dans ses bras. Les
+        Russes étant catholiques orthodoxes, on retrouve divers motifs religieux
+        avec une signification double.
+        <br />
+        <br />
+        <span className="sect__txt--thin">
+          La vierge représente la protection maternelle et divine avec la
+          loyauté de son porteur envers Dieu et son groupe. L’enfant a une
+          signification un peu plus sombre, car il représente une vie de crime
+          présente depuis l’enfance et dans certains cas un emprisonnement à un
+          jeune âge.
+        </span>
+      </>,
     ],
     [
       <>
-      Nous allons voyager dans le temps et dans les plaines verdoyantes des
-      tribus celtes, afin de découvrir la tradition qui les lies aux tatouages
-      ainsi que la symbolique qu’a pris place la nature dans leur art.{" "}
-    </>,
-      
-    <>
-      Les motifs, le design tire son esprit, dans la mer nature et la beauté
-      qu'elle a créée, a la différence des nordiques, qui se tourne vers la
-      guerre et l'humain. Même si on peut retrouver des similitudes dans la
-      conception des motifs due à leur différend échange. Ce qu'on retrouve chez
-      les deux sont des formes qui s'entrelacent, qui se lie pour donner
-      naissance à tous autre chose en fonction de la région. 
-    </>,
-    <>
-      <br />
-      <br />{" "}
-      <span className="sect__txt--thin sect__txt--italic">
-        On sait que le liquide utilisé comme encre était une poudre aux
-        propriétés médicinales de couleur bleu verte une fois encrée. Et
-        l'artiste utilisait une pointe en fer, pour la réalisation des motifs,
-        mais qu'en est-il d'eux ?
-      </span>
-    </>,
-    <>
-      On retrouve des motifs sur l’art celtes ainsi que sur des abjects du
-      quotidien, comme sur des poutres, des rochers, de l’orfèvrerie et sur des
-      armes. On peut noter une ressemblance avec l’art des peuples nordiques,
-      mais cela est dû à leurs nombreuses rencontre et échange lors des
-      expéditions de ces derniers.{" "}
-    </>,
-    <>
-    On peut dire que ces origines remontent aux débuts de la civilisation
-    celte, même si on ne connaît pas la date précise, avec des traces écrites
-    du 2e siècle.  Sur les plus de 200 peuplades, on retrouve le peuple tatoué
-    le plus connu : les pics. 
-    <br />
-    <br />
-    <span className="sect__txt--italic sect__txt--thin">
-      Leur nom signifie : ceux qui sont peints. Mais ils ne sont pas seuls, on
-      retrouve aussi des peuples gaulois et germains ou une partie du clan
-      était tatouée,  avec pour but d'effrayer les Romains. 
-    </span>
-  </>,
-     <>
-     Nous allons voyager dans le temps et dans les plaines verdoyantes des
-     tribus celtes, afin de découvrir la tradition qui les lies aux tatouages
-     ainsi que la symbolique qu’a pris place la nature dans leur art.{" "}
-   </>,
-   <>
-   Vers la moitié du 2e siècle, Claude Ptolémée va décrire la tribu des pics
-   ( breton) de smirtaée. De plus Isidore de Séville,  les décrit comme un
-   peuple couvert de décoration fait par un artiste avec une aiguille. Qui
-   par ces marques montre la position dans la société de ce dernier. 
-   <br />
-   <br />
-   <span className="sect__txt--italic">
-     Chez les Scots(irlandais) , on remarque leur corps peint de différentes
-     figures par une pointe de fer et une encre. Même si on a peu de trace
-     écrite de présence de tatouage dans les récits celtes,  on en retrouve
-     chez les observateurs étrangers. 
-   </span>
- </>,
- 
-   <></>,
-   "",
-   
+        Nous allons voyager dans le temps et dans les plaines verdoyantes des
+        tribus celtes, afin de découvrir la tradition qui les lies aux tatouages
+        ainsi que la symbolique qu’a pris place la nature dans leur art.{" "}
+      </>,
 
- <>
-      Les tatouages avaient plusieurs significations,  rôle. Premièrement, de
-      définir leur rang social ainsi que leur fonction dans la société. Mais
-      comme aujourd’hui, elle servait à montrer la personnalité de leur
-      porteur. 
-      <br />
-      <br />{" "}
-      <span className="sect__txt--thin sect__thin--italic">
-        On a retrouvé différentes sculptures représentant des celtes, mais il
-        est difficile d'affirmer si c'était vraiment des tatouages ou bien des
-        peintures corporelles. Mais ce qui est sûr, c'est que la disparition des
-        peuples celtiques et de la plupart de leur tradition avec l'arrivée du
-        christianisme.
-      </span>
-    </>,
-     "",
- "",
- 
- "",
- 
- //
- <>
-      On lui attribue plusieurs symboliques comme les différentes positions du
-      soleil,  les 3 mondes ( physique, des cieux avec les astres et le monde
-      spirituel avec les dieux, esprit et les morts).
-      <br />{" "}
-      <span className="sect__txt--thin">
-        Le sens des spirales indiquent une signification différente, vers la
-        gauche : la lutte et le combat & vers la droite : la paix & la
-        tranquillité.
-      </span>{" "}
-    </>,
-    <>
-      Les animaux ont une grande importance dans la vie et le culte des celtes
-      car d'une part ils étaient utiles lors des batailles et des travaux de
-      champs. Et montrer l'importance de la personne qui le porte avec son rang
-      social. <br />{" "}
-      <span className="sect__txt--thin">
-        On retrouve aussi le cheval divin, Epona, qui est liée à la terre Mère
-        et instaure le pouvoir de régner sur ses terres en donnant autorité et
-        puissance à son porteur.{" "}
-      </span>
-    </>,
-    <>
-      On retrouve diverse signification en fonction des peuples et des cultes,
-      mais pour les chrétiens, il représente la Sainte trinité et chez les
-      Celtes les différentes étapes de la vie d’un homme ( l’enfance, la vie
-      adulte et la vieillesse). <br />{" "}
-      <span className="sect__txt--thin sect__txt--italic">
-        {" "}
-        Mais comme pour les autres symboles, on retrouve surtout l’importance du
-        3, qui est un chiffre important dans la culture celtes et bon nombre
-        d’autre cultes, car il se rapproche du nombre divin, celui qui nous lie
-        aux cieux et aux 3 mondes. C’est un symbole fort utilisé mais qui se
-        compose toujours de 3 cercles pour le créer.
-      </span>
-    </>,
-    ]
+      <>
+        Les motifs, le design tire son esprit, dans la mer nature et la beauté
+        qu'elle a créée, a la différence des nordiques, qui se tourne vers la
+        guerre et l'humain. Même si on peut retrouver des similitudes dans la
+        conception des motifs due à leur différend échange. Ce qu'on retrouve
+        chez les deux sont des formes qui s'entrelacent, qui se lie pour donner
+        naissance à tous autre chose en fonction de la région. 
+      </>,
+      <>
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin sect__txt--italic">
+          On sait que le liquide utilisé comme encre était une poudre aux
+          propriétés médicinales de couleur bleu verte une fois encrée. Et
+          l'artiste utilisait une pointe en fer, pour la réalisation des motifs,
+          mais qu'en est-il d'eux ?
+        </span>
+      </>,
+      <>
+        On retrouve des motifs sur l’art celtes ainsi que sur des abjects du
+        quotidien, comme sur des poutres, des rochers, de l’orfèvrerie et sur
+        des armes. On peut noter une ressemblance avec l’art des peuples
+        nordiques, mais cela est dû à leurs nombreuses rencontre et échange lors
+        des expéditions de ces derniers.{" "}
+      </>,
+      <>
+        On peut dire que ces origines remontent aux débuts de la civilisation
+        celte, même si on ne connaît pas la date précise, avec des traces
+        écrites du 2e siècle.  Sur les plus de 200 peuplades, on retrouve le
+        peuple tatoué le plus connu : les pics. 
+        <br />
+        <br />
+        <span className="sect__txt--italic sect__txt--thin">
+          Leur nom signifie : ceux qui sont peints. Mais ils ne sont pas seuls,
+          on retrouve aussi des peuples gaulois et germains ou une partie du
+          clan était tatouée,  avec pour but d'effrayer les Romains. 
+        </span>
+      </>,
+      <>
+        Nous allons voyager dans le temps et dans les plaines verdoyantes des
+        tribus celtes, afin de découvrir la tradition qui les lies aux tatouages
+        ainsi que la symbolique qu’a pris place la nature dans leur art.{" "}
+      </>,
+      <>
+        Vers la moitié du 2e siècle, Claude Ptolémée va décrire la tribu des
+        pics ( breton) de smirtaée. De plus Isidore de Séville,  les décrit
+        comme un peuple couvert de décoration fait par un artiste avec une
+        aiguille. Qui par ces marques montre la position dans la société de ce
+        dernier. 
+        <br />
+        <br />
+        <span className="sect__txt--italic">
+          Chez les Scots(irlandais) , on remarque leur corps peint de
+          différentes figures par une pointe de fer et une encre. Même si on a
+          peu de trace écrite de présence de tatouage dans les récits celtes, 
+          on en retrouve chez les observateurs étrangers. 
+        </span>
+      </>,
+
+      <></>,
+      "",
+
+      <>
+        Les tatouages avaient plusieurs significations,  rôle. Premièrement, de
+        définir leur rang social ainsi que leur fonction dans la société. Mais
+        comme aujourd’hui, elle servait à montrer la personnalité de leur
+        porteur. 
+        <br />
+        <br />{" "}
+        <span className="sect__txt--thin sect__thin--italic">
+          On a retrouvé différentes sculptures représentant des celtes, mais il
+          est difficile d'affirmer si c'était vraiment des tatouages ou bien des
+          peintures corporelles. Mais ce qui est sûr, c'est que la disparition
+          des peuples celtiques et de la plupart de leur tradition avec
+          l'arrivée du christianisme.
+        </span>
+      </>,
+      "",
+      "",
+
+      "",
+
+      //
+      <>
+        On lui attribue plusieurs symboliques comme les différentes positions du
+        soleil,  les 3 mondes ( physique, des cieux avec les astres et le monde
+        spirituel avec les dieux, esprit et les morts).
+        <br />{" "}
+        <span className="sect__txt--thin">
+          Le sens des spirales indiquent une signification différente, vers la
+          gauche : la lutte et le combat & vers la droite : la paix & la
+          tranquillité.
+        </span>{" "}
+      </>,
+      <>
+        Les animaux ont une grande importance dans la vie et le culte des celtes
+        car d'une part ils étaient utiles lors des batailles et des travaux de
+        champs. Et montrer l'importance de la personne qui le porte avec son
+        rang social. <br />{" "}
+        <span className="sect__txt--thin">
+          On retrouve aussi le cheval divin, Epona, qui est liée à la terre Mère
+          et instaure le pouvoir de régner sur ses terres en donnant autorité et
+          puissance à son porteur.{" "}
+        </span>
+      </>,
+      <>
+        On retrouve diverse signification en fonction des peuples et des cultes,
+        mais pour les chrétiens, il représente la Sainte trinité et chez les
+        Celtes les différentes étapes de la vie d’un homme ( l’enfance, la vie
+        adulte et la vieillesse). <br />{" "}
+        <span className="sect__txt--thin sect__txt--italic">
+          {" "}
+          Mais comme pour les autres symboles, on retrouve surtout l’importance
+          du 3, qui est un chiffre important dans la culture celtes et bon
+          nombre d’autre cultes, car il se rapproche du nombre divin, celui qui
+          nous lie aux cieux et aux 3 mondes. C’est un symbole fort utilisé mais
+          qui se compose toujours de 3 cercles pour le créer.
+        </span>
+      </>,
+    ],
   ];
 
   let interTxt = [
@@ -594,16 +775,16 @@ function LayoutStyle2({ styleNum, boxH4 }) {
     [
       <>Insalubrite &&nbsp;Beaute</>,
       <>Au&nbsp;goulag en&nbsp;noir</>,
-      "Les motifs amblematiques"
+      "Les motifs amblematiques",
     ],
     [
       <>Dans&nbsp;les plaines&nbsp;celtes</>,
       <>Des&nbsp;plantes a&nbsp;l'encre</>,
-      <>Des&nbsp;plantes a&nbsp;l'encre</>
-    ]
+      <>Des&nbsp;plantes a&nbsp;l'encre</>,
+    ],
   ];
 
-  let allImg=[
+  let allImg = [
     [
       INtroSvgJ1,
       INtroSvgJ2,
@@ -625,9 +806,9 @@ function LayoutStyle2({ styleNum, boxH4 }) {
       Koi01,
       Koi02,
       Jigoku1,
-      Jigoku2
-
-    ],[
+      Jigoku2,
+    ],
+    [
       INtroSvgN1,
       INtroSvgN2,
       imgBgN1,
@@ -640,18 +821,42 @@ function LayoutStyle2({ styleNum, boxH4 }) {
       HistoN22,
       HistoN31,
       HistoN32,
-HistoN41,
-HistoN42,
-imgBgN3,
+      HistoN41,
+      HistoN42,
+      imgBgN3,
       Wyrd1,
       Wyrd2,
       Vegvisir1,
       Vegvisir2,
       Ygdrazil1,
-      Ygdrazil2
+      Ygdrazil2,
+    ],
+    [INtroSvgR2, INtroSvgR1, imgBgR1,
+      HotifulR1,HotifulR2,
+      imgBgR1,
+      HistoR11,HistoR12,
+      HistoR21,HistoR22,
+      HistoR31,HistoR32,
+      HistoR41,HistoR42,
+      imgBgR1,
+      epaule1,epaule2,
+      etoile1,etoile2,
+      vierge1,vierge2
 
+    ],[
+      INtroSvgC1,INtroSvgC2,
+      imgBgC1,
+      HotifulC1,HotifulC2,
+      imgBgC2,
+      HistoC11,HistoC12,
+      HistoC21,HistoC22,
+      HistoC31,HistoC32,
+      "","",
+      imgBgC1,
+      triskel1,triskel2,
+      epona1,epona2,
+      tri1,tri2
     ]
-
   ];
 
   return (
@@ -728,7 +933,6 @@ imgBgN3,
         img08={allImg[styleNum][13]}
         colTxt04={{ color: "#FDF2DE" }}
         actifB4={boxH4}
-        
       />
       <InterSectionBox
         WhitThext={true}
