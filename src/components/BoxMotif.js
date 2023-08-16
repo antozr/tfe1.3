@@ -1,5 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { createPortal } from "react-dom";
+import ImgOpenbig from "./ImgFullScreen";
 
 function BoxMotif({
   motifImg01,
@@ -9,6 +11,21 @@ function BoxMotif({
   blackMotif,
   noAnim,
 }) {
+  const [showImg, setShowImg] = useState(false);
+  const [urlImgBox, seturlImgBox] = useState("#");
+
+  function openImgBox(e) {
+    let srcImg = e.target.src;
+    seturlImgBox(srcImg);
+    setShowImg(true);
+  }
+  function closeImgBox(e) {
+    let boxImgFull = document.querySelector(".sect__imgOpenBig");
+    boxImgFull.classList.add("sect__imgOpenBig--anim");
+    setTimeout(() => {
+      setShowImg(false);
+    }, 600);
+  }
   const scrollRef = useRef(null);
   return (
     <>
@@ -20,34 +37,28 @@ function BoxMotif({
                 ? "sect__motifZone sect__motifZone--black"
                 : "sect__motifZone"
             }
-           
           >
             <div className="motif__boxImgAnim">
-              <div
-                className="motif__boxImg motif__boxImg--noAnim"
-                
-              >
+              <div className="motif__boxImg motif__boxImg--noAnim">
                 <img
                   src={motifImg01}
                   alt="Je suis un motif"
                   className="motif__img "
+                  onClick={openImgBox}
                 />
               </div>
 
-              <div
-                className="motif__boxImg  motif__boxImg--noAnim2"
-              >
+              <div className="motif__boxImg  motif__boxImg--noAnim2">
                 <img
                   src={motifImg02}
                   alt="Je suis un motif"
                   className="motif__img "
+                  onClick={openImgBox}
                 />
               </div>
             </div>
 
-            <div
-              className="motif__boxContent motif__boxContent--noAnim"
-            >
+            <div className="motif__boxContent motif__boxContent--noAnim">
               <h2 className="sect__title sect__title--2">{motiftitle}</h2>
               <p className="sect__txt sect__txt--ecart">{motifTxt}</p>
             </div>
@@ -84,13 +95,14 @@ function BoxMotif({
                   src={motifImg01}
                   alt="Je suis un motif"
                   className="motif__img "
+                  onClick={openImgBox}
                 />
               </motion.div>
 
               <motion.div
                 className="motif__boxImg motif__boxImg--second"
                 initial={{ opacity: 0, y: 200, x: "60vw" }}
-                whileInView={{ opacity: 1, y: "-20vh",  }}
+                whileInView={{ opacity: 1, y: "-20vh" }}
                 transition={{
                   duration: 0.4,
                   delay: 0.5,
@@ -103,6 +115,7 @@ function BoxMotif({
                   src={motifImg02}
                   alt="Je suis un motif"
                   className="motif__img "
+                  onClick={openImgBox}
                 />
               </motion.div>
             </div>
@@ -110,7 +123,7 @@ function BoxMotif({
             <motion.div
               className="motif__boxContent"
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 , x: "10vw"}}
+              whileInView={{ opacity: 1, x: "10vw" }}
               transition={{
                 duration: 0.8,
                 delay: 2.8,
@@ -125,6 +138,12 @@ function BoxMotif({
           </div>
         </>
       )}
+
+      {showImg &&
+        createPortal(
+          <ImgOpenbig closeModal={closeImgBox} urlImgBig={urlImgBox} />,
+          document.body
+        )}
     </>
   );
 }

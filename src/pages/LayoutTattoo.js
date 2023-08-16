@@ -16,7 +16,7 @@ import DonEdHardy01 from "../assets/images/oldamerica/donEdHardy01.webp";
 
 import PinUp01 from "../assets/images/oldamerica/pinup1.webp";
 import Pinup2 from "../assets/images/oldamerica/pinup2.webp";
-import Navire from "../assets/images/oldamerica/marinBat.webp";
+//import Navire from "../assets/images/oldamerica/marinBat.webp";
 import hiro1 from "../assets/images/oldamerica/hiro1.jpg";
 import hiro2 from "../assets/images/oldamerica/hiro2.jpg";
 import bat1 from "../assets/images/oldamerica/bat1.jpg";
