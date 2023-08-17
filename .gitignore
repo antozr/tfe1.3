@@ -6,10 +6,10 @@
 .pnp.js
 
 #images
-*webp
-*png
-*jpg
-*jpeg
+# *webp
+# *png
+# *jpg
+# *jpeg
 
 # testing
 /coverage
