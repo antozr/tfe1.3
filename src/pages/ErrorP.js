@@ -2,7 +2,8 @@ import React from "react";
 import { Link, useRouteError } from "react-router-dom";
 import InterSectionBox from "../components/InterSectionBox";
 
-import backInterOld from "../assets/images/nordic/interNordicnoir.webp"
+import backInterOld from "../assets/images/nordic/interNordicnoir.webp";
+import Foot from "../components/Foot";
 
 function ErrorP() {
   const error = useRouteError();
@@ -23,8 +24,7 @@ function ErrorP() {
       <InterSectionBox
         backImg={{ backgroundImage: `url(${backInterOld})`, height: "20vh" }}
       />
-
-      
+      <Foot />
     </>
   );
 }

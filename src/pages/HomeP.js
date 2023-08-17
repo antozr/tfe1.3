@@ -15,6 +15,7 @@ import TextColDroite from "../components/TextColDroite";
 import MapBox from "../components/MapBox";
 import SmallCardList from "../components/SmallCardList";
 import InterSectionBox from "../components/InterSectionBox";
+import Foot from "../components/Foot";
 
 function HomeP() {
 
@@ -151,7 +152,7 @@ function HomeP() {
       </div>
       <InterSectionBox backImg={{ backgroundImage: `url(${BGImg})` }} />
       {window.innerWidth > 900 ? <MapBox withBG={true} /> : <SmallCardList />}
-     
+     <Foot/>
     </>
   );
 }

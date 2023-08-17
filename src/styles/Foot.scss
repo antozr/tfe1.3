@@ -1,0 +1,52 @@
+
+.dwt__und{
+    fill: #f9b949;
+}
+.dwt{
+    fill: #1d1d1d;
+}
+
+.foot{
+    height: 60px;
+    width: 100%;
+    padding: 1vh 5vw 3vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    &__list{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;justify-content: space-between;
+        align-items: center;
+
+    }
+    &__link{
+        padding: 8px 12px;
+        transition: 0.3s;
+        &>svg{
+            height: 20px;
+            width: auto;
+        }
+        &:hover{
+            transition: 0.3s;
+            color: #f9b949;
+            transform: translateY(6px);
+        }
+    }
+}
+
+
+@media (min-width:600px){
+
+    .foot{
+
+        &__list{
+            width: 25%;
+            max-width: 200px;
+        }
+    }
+}
