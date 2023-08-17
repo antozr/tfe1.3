@@ -14,15 +14,15 @@ function ErrorP() {
       <section className="sect sect__attente" id="error-page">
         <h1 className="sect__title">Vous vous êtes perdus.</h1>
         <h2 className="sect__title sect__title--2">Retourner en lieu sûr.</h2>
-        <p>
+        <p className="sect__txt">
           <i>{error.statusText || error.message}</i>
         </p>
-        <Link to="/" className="error__link">
+        <Link to="/" className="error__link sect__txt  sect__txt--link">
           Go to home
         </Link>
       </section>
       <InterSectionBox
-        backImg={{ backgroundImage: `url(${backInterOld})`, height: "20vh" }}
+        backImg={{ backgroundImage: `url(${backInterOld})`, height: "30vh" }}
       />
       <Foot />
     </>

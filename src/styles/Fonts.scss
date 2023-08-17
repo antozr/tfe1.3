@@ -129,7 +129,23 @@
   }
 }
 
+.error{
 
+  &__link{
+    font-size: 38px;
+    padding: 2vh 3vw;
+    margin: 8vh 0;
+    background-color: #1d1d1d;
+    border-radius: 8px;
+    color: #f9b949;
+    &:hover{
+      transition: 0.3s;
+      color: #fdf2de;
+      background-color: #f9b949;
+      transform: translateX(20px);
+    }
+  }
+}
 
 @media (min-width: 600px) {
   .sect {
@@ -156,6 +172,14 @@
 
     &__txt{
       font-size: 18px;
+    }
+  }
+
+
+  .error{
+
+    &__link{
+      font-size: 28px;
     }
   }
 }
