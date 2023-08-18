@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { ChangeStateDataVisited } from '../logic/__mapStatus.js';
 function BoxMessageEnd() {
 
   function goTop(){
     window.scrollTo(0,0)
+    ChangeStateDataVisited()
   }
+
   return (
     <>
       <motion.div

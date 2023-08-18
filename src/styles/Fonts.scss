@@ -111,6 +111,9 @@
   width: auto;
   max-width: 60ch;
 }
+&--margeTop{
+  margin: 9vh 0 3vh 0 ;
+}
 
     &--ecart {
       margin: 28px 0 0 0;
@@ -172,6 +175,10 @@
 
     &__txt{
       font-size: 18px;
+
+      &--margeTop{
+        margin: -3vh 0 3vh 0 ;
+      }
     }
   }
 

@@ -30,7 +30,7 @@ function HomeP() {
       <br />
       <i>monde</i>
     </>,
-    <>Comment&nbsp;visiter le&nbsp;monde&nbsp;? </>,
+    <>Comment visiter le&nbsp;monde&nbsp;? </>,
     <>Un&nbsp;plus musical</>,
     <></>,
   ];
@@ -102,7 +102,7 @@ function HomeP() {
 
       <div className="homepage__boxContent">
         <div className="homepage__boxTxt">
-          <h2 className="sect__title  sect__title--druzokh ">{allTitle[2]}</h2>
+          <h2 className="sect__title  sect__title--druzokh ">{window.innerWidth < 600? allTitle[2] : <>Comment&nbsp;visiter le&nbsp;monde&nbsp;?</>}</h2>
           <div className="homepage__colTxt">
             <TextColDroite
               // title1={titleArray[0]}

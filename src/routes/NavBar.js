@@ -48,6 +48,7 @@ function openNav(e){
                 key={el.id}
                 to={el.link}
                 // className="nav__a"
+                onClick={openNav}
                 aria-label="Je redirige vers la home"
                 className={({ isActive, isPending }) =>
                   isPending

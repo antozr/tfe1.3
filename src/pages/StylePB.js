@@ -63,12 +63,12 @@ function StylePB() {
             vignettes :{" "}
           </h2>
           <ul className="styleTT__ul">
-            <li
+            {window.innerWidth >= 600 ? <li
               className="styleTT__el styleTT__elActif"
               onClick={changeMapShow}
             >
               <p className="sect__txt styleTT__linkNav ">Mode carte</p>
-            </li>
+            </li> : ""}
             <li className="styleTT__el" onClick={changeMapShow}>
               <p className="sect__txt styleTT__linkNav">Mode liste</p>
             </li>

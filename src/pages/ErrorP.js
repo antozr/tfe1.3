@@ -18,7 +18,7 @@ function ErrorP() {
           <i>{error.statusText || error.message}</i>
         </p>
         <Link to="/" className="error__link sect__txt  sect__txt--link">
-          Go to home
+          Retour à l'accueil
         </Link>
       </section>
       <InterSectionBox
