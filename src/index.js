@@ -13,6 +13,7 @@ import HomeP from "./pages/HomeP";
 import LayoutTattoo from "./pages/LayoutTattoo";
 import StyleLayout from "./routes/StyleLayout";
 import LayoutStyle2 from "./pages/LayoutStyle2";
+import CrediPage from "./pages/Credits";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "mon-aventure",
         element: <TonAventure />,
+      },
+      {
+        path: "credits",
+        element: <CrediPage />,
       },
       {
         path: "",
