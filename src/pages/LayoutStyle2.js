@@ -874,6 +874,7 @@ function LayoutStyle2({ styleNum, boxH4 }) {
         WhitThext={true}
         textTitle={interTxt[styleNum][0]}
         backImg={{ backgroundImage: `url(${allImg[styleNum][2]})` }}
+        horiAnim={true}
       />
       <div className="sect--heigth100 sect--snapChild">
         <SectHoriFull

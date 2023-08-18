@@ -35,11 +35,19 @@ function HistoryLandRow({
   img08,
   colTxt04,
   actifB4,
-}) {
+}) 
+
+{
+
+ 
+  // console.log("this is the clientY pos :");
+  // console.log(boxRef.offsetTop);
+
+ 
   return (
     <>
-      <div className="sect__historyland  sect--snapChild">
-        <div className="hori__grid hori__box--black  sect--snapChild">
+      <div className="sect__historyland  sect--snapChild"  >
+        <div className="hori__grid hori__box--black  sect--snapChild"  >
           <ContentBoxHori
             title01={title1}
             text01={txt1}
