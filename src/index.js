@@ -14,6 +14,7 @@ import LayoutTattoo from "./pages/LayoutTattoo";
 import StyleLayout from "./routes/StyleLayout";
 import LayoutStyle2 from "./pages/LayoutStyle2";
 import CrediPage from "./pages/Credits";
+import UikitPage from "./pages/Uikit";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "credits",
         element: <CrediPage />,
+      },
+      {
+        path: "uikit",
+        element: <UikitPage />,
       },
       {
         path: "",
