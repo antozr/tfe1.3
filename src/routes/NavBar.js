@@ -31,10 +31,10 @@ function NavBar() {
   let btnNav = useRef(document.querySelector(".nav__btn"))
 function openNav(e){
   if(!listLien.current.classList.contains("nav__list--open")){
-    listLien.current.classList.add("nav__list--open");
-  }else{
-    listLien.current.classList.remove("nav__list--open");
-  }
+    listLien.current.classList.remove("nav__list--open");}
+  // }else{
+  //   listLien.current.classList.remove("nav__list--open");
+  // }
   
 }
   return (

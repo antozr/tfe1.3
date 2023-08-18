@@ -53,9 +53,11 @@ function TonAventure() {
   const [dataImgActive, setDataImgActive] = useState([]);
   const [dataBoxInfo, setDataBoxInfo] = useState([]);
   const [mapLink, setMapLink] = useState([]);
-
+  
   const [urlImgBox, seturlImgBox] = useState("#");
   const [showImg, setShowImg] = useState(false);
+
+
   let allTitle = [
     <>
       Ton aventure <br />
@@ -185,7 +187,7 @@ function TonAventure() {
         setDataBoxInfo(["Contenu non trouvable"]);
       }
     }
-  });
+  },[]);
   function openImgBox(e) {
     let srcImg = e.target.src;
     seturlImgBox(srcImg);
@@ -198,6 +200,137 @@ function TonAventure() {
       setShowImg(false);
     }, 600);
   }
+  function changeDataLink(e) {
+    
+
+    setTimeout(() => {
+      changeDataInfoBox(e.target.title);
+    }, 800);
+
+    let allLink = document.querySelectorAll(".adventure__link");
+    allLink.forEach((el) => {
+      el.classList.remove("adventure__link--actif");
+    });
+    //console.log(e.target);
+    e.target.classList.add("adventure__link--actif");
+
+    document
+      .querySelector("#boxInfoGauche")
+      .classList.add("adventure__boxInfo--animClose");
+    document
+      .querySelector("#boxInfoGauche")
+      .addEventListener("animationend", (e) => {
+        e.target.classList.remove("adventure__boxInfo--animClose");
+      });
+  };
+  function changeDataInfoBox(linkActive) {
+    if (linkActive === "Old school") {
+      setDataBoxInfo([
+        dataDiscover[0].name,
+        dataDiscover[0].description,
+        dataDiscover[0].land,
+        dataDiscover[0].link,
+      ]);
+      setDataImgActive([
+        Hirondelle,
+        Pinup,
+        Pinup2,
+        Ancre1,
+        "Hirondelle",
+        "Pin-up",
+        "Pin-up",
+        "Bateau & ancre",
+      ]);
+
+      setMapLink(arrayListMapLink[0]);
+    } else if (linkActive === "Japon") {
+      setDataBoxInfo([
+        dataDiscover[1].name,
+        dataDiscover[1].description,
+        dataDiscover[1].land,
+        dataDiscover[1].link,
+      ]);
+      setDataImgActive([
+        Ryu02,
+        Jigoku1,
+        Koi02,
+        Ryu01,
+        "Dragon",
+        "Jigoku",
+        "Koi",
+        "Ryu",
+      ]);
+
+      setMapLink(arrayListMapLink[1]);
+    } else if (linkActive === "Russie & prisons ") {
+      setDataBoxInfo([
+        dataDiscover[2].name,
+        dataDiscover[2].description,
+        dataDiscover[2].land,
+        dataDiscover[2].link,
+      ]);
+      setDataImgActive([
+        Vierge2,
+        Epaullette2,
+        Prisonnier2,
+        Etoile1,
+        "Vierge à l'enfant",
+        "Epaulette",
+        "Prisonnier",
+        "Vierge",
+      ]);
+
+      setMapLink(arrayListMapLink[4]);
+    } else if (linkActive === "Celtes"){
+      setDataBoxInfo([
+        dataDiscover[3].name,
+        dataDiscover[3].description,
+        dataDiscover[3].land,
+        dataDiscover[3].link,
+      ]);
+      setDataImgActive([
+        dog,
+          horse,
+          triketra,
+          triskel,
+          "Chien",
+          "Epona",
+          "Triketra",
+          "Triskel",
+      ]);
+      setMapLink(arrayListMapLink[6]);
+    } else if (linkActive === "Nordic "){
+      setDataBoxInfo([
+        dataDiscover[4].name,
+        dataDiscover[4].description,
+        dataDiscover[4].land,
+        dataDiscover[4].link,
+      ]);
+      setDataImgActive([
+        drakar,
+        yggdrazil,
+        vigvizir,
+        wyrdToile,
+        "Drakkar",
+        "Yggdrasil",
+        "Vegvisir",
+        "Wyrd",
+      ]);
+      setMapLink(arrayListMapLink[5]);
+    }
+    
+    else {
+      setDataBoxInfo(["Contenu non trouvable"]);
+    }
+  };
+  
+  const MapDataLink = tabDataNameUse.map((value) => (
+    <li className="adventure__elNav" title={value} onClick={changeDataLink}>
+      <p title={value} className="adventure__link">
+        {value}
+      </p>
+    </li>
+  ));
 
   return (
     <>
@@ -259,6 +392,7 @@ function TonAventure() {
           </>
         ) : (
           <>
+         
             <div className="adventure__boxInfo " id="boxInfoGauche">
               <div className="adventure__colBox">
                 <TextColDroite title1={dataBoxInfo[0]} txt1={dataBoxInfo[1]} />
@@ -277,6 +411,12 @@ function TonAventure() {
               </Link>
             </div>
             {/* ADD IMG */}
+            <div className="adventure__boxContentAll">
+            {
+              tabDataNameUse.length <=0 ? "": <div className="adventure__navSecond">
+            {MapDataLink}
+              </div>
+            }
             <div className="adventure__gridBox">
               <ul className="adventure__listImg">
                 <li className="adventure__mobileEl">
@@ -324,6 +464,7 @@ function TonAventure() {
                   />
                 </li>
               </ul>
+            </div>
             </div>
           </>
         )}
