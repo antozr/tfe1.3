@@ -11,6 +11,7 @@ import MapBox from "../components/MapBox";
 function StylePB() {
   const [mapShox, setMapShow] = useState(false);
   const [showTrans, setShowTrans] = useState(false)
+  const [showTrans2, setShowTrans2] = useState(true)
 
   let allTitle = [<>Explore les styles</>, <></>, <></>];
 
@@ -49,8 +50,26 @@ function StylePB() {
       e.target.classList.add("styleTT__elActif");
     }
   }
+
+  setTimeout(()=>{
+   
+    window.scrollTo({
+      top: 0,
+  left: 0,
+  behavior: "smooth",
+    });
+  },800)
+  setTimeout(()=>{
+    setShowTrans2(false)
+  },1800)
   return (
     <>
+    
+      <motion.div
+      initial={{opacity:0, y:"20vh"}}
+      whileInView={{opacity:1, y:0}}
+      transition={{duration:0.8, delay:1}}      >
+
       <FirstSection
         BGImg={BGFirstSection}
         title1={allTitle[0]}
@@ -88,17 +107,34 @@ function StylePB() {
           </>
         )}
       </section>
+      </motion.div>
+
+      {showTrans2 &&
+        createPortal(
+          <>
+            <motion.div
+              className="sect__transPage"
+              initial={{ opacity:1, y:"-100vh", zIndex:30}}
+              animate={{ opacity:1 ,y:"200vh", height:"200vh"}}
+              transition={{duration:1.8,type: "tween",
+              ease: "circIn"}}
+              
+            >
+              
+            </motion.div>
+          </>,
+          document.body
+        )}
       
       {showTrans &&
         createPortal(
           <>
             <motion.div
-              className="sect__transPage"
-              initial={{ opacity:1, y:"60vh", zIndex:30}}
-              animate={{ opacity:1 ,y:"-200vh", height:"200vh"}}
-              exit={{opacity:0, y:"-300vh"}}
+              className="sect__transPage sect__transPage--full"
+              initial={{ opacity:1, y:"-100vh", zIndex:30}}
+              animate={{ opacity:1 ,y:"-200vh", height:"100vh"}}
               transition={{duration:2.2,type: "tween",
-              ease: "circIn",}}
+              ease: "circIn"}}
               
             >
               

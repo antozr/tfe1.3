@@ -89,7 +89,7 @@ function BoxMotif({
                   type: "tween",
                   ease: "circOut",
                 }}
-                // viewport={{ root: scrollRef, once: true }}
+                
               >
                 <img
                   src={motifImg01}
@@ -101,7 +101,7 @@ function BoxMotif({
 
               <motion.div
                 className="motif__boxImg motif__boxImg--second"
-                initial={{ opacity: 0, y: 200, x: "60vw" }}
+                initial={{ opacity: 0, y: "200px", x: "60vw" }}
                 whileInView={{ opacity: 1, y: "-20vh" }}
                 transition={{
                   duration: 0.4,
@@ -109,7 +109,7 @@ function BoxMotif({
                   type: "tween",
                   ease: "circOut",
                 }}
-                viewport={{ root: scrollRef }}
+                
               >
                 <img
                   src={motifImg02}
