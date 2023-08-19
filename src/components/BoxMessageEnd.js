@@ -16,27 +16,20 @@ const navigate = useNavigate();
     setShowTrans(true)
     setTimeout(()=>{
       navigate("/styles")
-    },2000)
+    },2300)
 
   }
 
   return (
     <>
-      <motion.div
+      <div
         className="sect__endBoxMes"
-        initial={{  }}
-        whileInView={{ }}
-        transition={{
-          type: "tween",
-          ease: "backIn",
-          delay: 1.8,
-          duration:0.6
-        }}
+        
       >
         <h2 className="sect__title sect__title--linkJaune sect__title--2 sect__title--jaune" onClick={goTop} aria-label="Lien pour changer de page">
           Go explorer d'autres styles ?
         </h2>
-      </motion.div>
+      </div>
 
       {showTrans &&
         createPortal(
@@ -45,9 +38,9 @@ const navigate = useNavigate();
               className="sect__transPage"
               initial={{ opacity:1, y:"60vh", zIndex:30}}
               animate={{ opacity:1 ,y:"-260vh", height:"300vh"}}
-              exit={{opacity:0, y:"-300vh"}}
-              transition={{duration:2.2,type: "tween",
-              ease: "circIn",}}
+              
+              transition={{duration:2.2,
+              ease: "circIn"}}
               
             >
               

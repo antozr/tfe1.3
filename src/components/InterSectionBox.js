@@ -32,14 +32,14 @@ function InterSectionBox({ WhitThext, backImg, textTitle, horiAnim }) {
         window.scrollTo({
           top: of1,
           left: 0,
-          behavior: "smooth",
+          behavior: "smooth"
         });
       }, 400);
     } else {
       window.scrollTo({
         top: box2.offsetTop,
         left: 0,
-        behavior: "smooth",
+        behavior: "smooth"
       });
       console.log(box2);
     }
