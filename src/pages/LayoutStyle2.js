@@ -1,11 +1,12 @@
-import React from "react";
+import React , { useState }from "react";
 import InterSectionBox from "../components/InterSectionBox";
 import HistoryLandRow from "../components/HistoryLandRow";
 import SectHoriFull from "../components/SectMaitreHori";
 import FirstSectionStyles from "../components/FirstSectionStyles";
 import BoxMotif from "../components/BoxMotif";
 import BoxMessageEnd from "../components/BoxMessageEnd";
-
+import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 /// import img japon
 import imgBgJ1 from "../assets/images/japon/compressed/irezumiBack2-min.webp";
 import imgBgJ2 from "../assets/images/japon/compressed/horishiFullWork-min.webp";
@@ -94,6 +95,8 @@ import tri1 from "../assets/images/celte/TRIKETRA1.webp";
 import tri2 from "../assets/images/celte/triketra2.webp";
 
 function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
+  const [showTrans2, setShowTrans2] = useState(true);
+
   let allTitle = [
     [
       "日本",
@@ -857,10 +860,27 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
       tri1,tri2
     ]
   ];
-
+ /* add animation load page */
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, 800);
+  setTimeout(() => {
+    setShowTrans2(false);
+  }, 1800);
+  /**/
   return (
     <>
-      <FirstSectionStyles
+    <motion.div
+        initial={{ opacity: 0, y: "20vh" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+      >
+
+<FirstSectionStyles
         BTD1={allTitle[styleNum][0]}
         BTD2={allTitle[styleNum][1]}
         title={allTitle[styleNum][2]}
@@ -1026,6 +1046,23 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
         motifTxt={allTxt[styleNum][15]}
       />
       <BoxMessageEnd />
+      </motion.div>
+      {showTrans2 &&
+        createPortal(
+          <>
+            <motion.div
+              className="sect__transPage"
+              initial={{ opacity:1, x:"-100vw", zIndex:30}}
+              animate={{ opacity:1 ,x:"200vw", height:"200vh"}}
+              transition={{duration:1.8,type: "tween",
+              ease: "circIn"}}
+              
+            >
+              
+            </motion.div>
+          </>,
+          document.body
+        )}
     </>
   );
 }

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import FirstSectionStyles from "../components/FirstSectionStyles";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 /// import images
 
 import HeartHolly from "../assets/images/svgs/coeur001.svg";
@@ -31,7 +32,7 @@ import BoxMessageEnd from "../components/BoxMessageEnd";
 
 function LayoutTattoo({ USColG, styleNum }) {
   gsap.registerPlugin(ScrollTrigger);
- 
+  const [showTrans2, setShowTrans2] = useState(true);
   let allTitle = [
     [
       <>L’old&nbsp;school</>,
@@ -127,7 +128,9 @@ function LayoutTattoo({ USColG, styleNum }) {
         et une seconde aux{" "}
         <span className="sect__txt--italic sect__txt--bold">
           {" "}
-          10.000 milles marins.<br/><br/>
+          10.000 milles marins.
+          <br />
+          <br />
         </span>
         Elles représentent les voyages et les expériences de ces derniers dans
         leur aventure sur les mers. Partant sur de longues traversées, mais
@@ -153,85 +156,125 @@ function LayoutTattoo({ USColG, styleNum }) {
     ],
     [],
   ];
-
+  /* add animation load page */
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, 800);
+  setTimeout(() => {
+    setShowTrans2(false);
+  }, 1800);
   /**/
   return (
     <>
-      <FirstSectionStyles
-        BTD1={allTitle[styleNum][0]}
-        BTD2={allTitle[styleNum][1]}
-        title={allTitle[styleNum][2]}
-        txt={allTxt[styleNum][0]}
-        Img01={HeartHolly}
-        Img02={AncreSvg}
-      />
-
-      <InterSectionBox
-        WhitThext={false}
-        backImg={{ backgroundImage: `url(${PaternUS})` }}
-      />
-      {USColG === true ? (
-        <>
-          <div className="sect sect__firstContenut sect--rowReverse sect--snapChild">
-            <div className="sect__colGauche">
-              <AnimColGauche />
-            </div>
-            <div className="sect__colDroite ">
-              <TextColDroite
-                title1={allTitle[styleNum][3]}
-                title2={allTitle[styleNum][4]}
-                txt1={allTxt[styleNum][1]}
-                txt2={allTxt[styleNum][2]}
-                txt3={allTxt[styleNum][3]}
-              />
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <HistoryLandRow />
-        </>
-      )}
-
-      <div className="sect--heigth100 sect--snapChild">
-        <SectHoriFull
-          BigTitle1={allTitle[styleNum][5]}
-          BigTitle12={"artists"}
-          BigTitle2={allTitle[styleNum][9]}
-          imgArtiste1={SailorJerry02}
-          imgArtiste2={DonEdHardy01}
-          textcol1={allTxt[styleNum][4]}
-          textcol2={allTxt[styleNum][5]}
-          textcol4={allTxt[styleNum][6]}
-          smallTitle1={allTitle[styleNum][9]}
-          smallTitle3={"L'apprenti "}
-          smallTitle4={"du marin"}
+      <motion.div
+        initial={{ opacity: 0, y: "20vh" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+      >
+        <FirstSectionStyles
+          BTD1={allTitle[styleNum][0]}
+          BTD2={allTitle[styleNum][1]}
+          title={allTitle[styleNum][2]}
+          txt={allTxt[styleNum][0]}
+          Img01={HeartHolly}
+          Img02={AncreSvg}
         />
-      </div>
-      <InterSectionBox
-        WhitThext={true}
-        textTitle={"Les motifs amblematiques"}
-        backImg={{ backgroundImage: `url(${DarkSkin})` }}
-      />
 
-<div className="sect__listMotif">
-  <BoxMotif 
-  motifImg01={hiro1} motifImg02={hiro2}
-  motiftitle={allTitle[styleNum][6]} motifTxt={allTxt[styleNum][7]}
-  />
-  <BoxMotif 
-  blackMotif={true} noAnim={true}
-  motifImg01={PinUp01} motifImg02={Pinup2}
-  motiftitle={allTitle[styleNum][7]} motifTxt={allTxt[styleNum][8]}
-  />
-  <BoxMotif 
-  blackMotif={true}
-  motifImg01={bat2} motifImg02={bat1}
-  motiftitle={allTitle[styleNum][8]} motifTxt={allTxt[styleNum][9]}
-  />
-</div>
-<BoxMessageEnd />
-      
+        <InterSectionBox
+          WhitThext={false}
+          backImg={{ backgroundImage: `url(${PaternUS})` }}
+        />
+        {USColG === true ? (
+          <>
+            <div className="sect sect__firstContenut sect--rowReverse sect--snapChild">
+              <div className="sect__colGauche">
+                <AnimColGauche />
+              </div>
+              <div className="sect__colDroite ">
+                <TextColDroite
+                  title1={allTitle[styleNum][3]}
+                  title2={allTitle[styleNum][4]}
+                  txt1={allTxt[styleNum][1]}
+                  txt2={allTxt[styleNum][2]}
+                  txt3={allTxt[styleNum][3]}
+                />
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <HistoryLandRow />
+          </>
+        )}
+
+        <div className="sect--heigth100 sect--snapChild">
+          <SectHoriFull
+            BigTitle1={allTitle[styleNum][5]}
+            BigTitle12={"artists"}
+            BigTitle2={allTitle[styleNum][9]}
+            imgArtiste1={SailorJerry02}
+            imgArtiste2={DonEdHardy01}
+            textcol1={allTxt[styleNum][4]}
+            textcol2={allTxt[styleNum][5]}
+            textcol4={allTxt[styleNum][6]}
+            smallTitle1={allTitle[styleNum][9]}
+            smallTitle3={"L'apprenti "}
+            smallTitle4={"du marin"}
+          />
+        </div>
+        <InterSectionBox
+          WhitThext={true}
+          textTitle={"Les motifs amblematiques"}
+          backImg={{ backgroundImage: `url(${DarkSkin})` }}
+        />
+
+        <div className="sect__listMotif">
+          <BoxMotif
+            motifImg01={hiro1}
+            motifImg02={hiro2}
+            motiftitle={allTitle[styleNum][6]}
+            motifTxt={allTxt[styleNum][7]}
+          />
+          <BoxMotif
+            blackMotif={true}
+            noAnim={true}
+            motifImg01={PinUp01}
+            motifImg02={Pinup2}
+            motiftitle={allTitle[styleNum][7]}
+            motifTxt={allTxt[styleNum][8]}
+          />
+          <BoxMotif
+            blackMotif={true}
+            motifImg01={bat2}
+            motifImg02={bat1}
+            motiftitle={allTitle[styleNum][8]}
+            motifTxt={allTxt[styleNum][9]}
+          />
+        </div>
+        <BoxMessageEnd />
+      </motion.div>
+
+
+      {showTrans2 &&
+        createPortal(
+          <>
+            <motion.div
+              className="sect__transPage"
+              initial={{ opacity:1, x:"-100vw", zIndex:30}}
+              animate={{ opacity:1 ,x:"200vw", height:"200vh"}}
+              transition={{duration:1.8,type: "tween",
+              ease: "circIn"}}
+              
+            >
+              
+            </motion.div>
+          </>,
+          document.body
+        )}
     </>
   );
 }
