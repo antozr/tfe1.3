@@ -42,7 +42,7 @@ const router = createBrowserRouter([
           },
           {
             path: "/styles/nordic",
-            element: <LayoutStyle2 styleNum={1} />,
+            element: <LayoutStyle2 styleNum={1}  reverseCol={true}/>,
           },
           {
             path: "/styles/russie",

@@ -93,7 +93,7 @@ import epona2 from "../assets/images/celte/epona2.webp";
 import tri1 from "../assets/images/celte/TRIKETRA1.webp";
 import tri2 from "../assets/images/celte/triketra2.webp";
 
-function LayoutStyle2({ styleNum, boxH4 }) {
+function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
   let allTitle = [
     [
       "日本",
@@ -875,32 +875,7 @@ function LayoutStyle2({ styleNum, boxH4 }) {
         backImg={{ backgroundImage: `url(${allImg[styleNum][2]})` }}
         horiAnim={true}
       />
-      <div className="sect--heigth100 sect--snapChild">
-        <SectHoriFull
-          BigTitle1={allTitle[styleNum][3]}
-          BigTitle12={allTitle[styleNum][4]}
-          BigTitle2={allTitle[styleNum][5]}
-          imgArtiste1={allImg[styleNum][3]}
-          imgArtiste2={allImg[styleNum][4]}
-          textcol1={allTxt[styleNum][1]}
-          textcol2={allTxt[styleNum][2]}
-          textcol3={""}
-          textcol4={allTxt[styleNum][3]}
-          textcol5={allTxt[styleNum][4]}
-          textcol6={""}
-          smallTitle1={allTitle[styleNum][6]}
-          smallTitle2={""}
-          smallTitle3={allTitle[styleNum][7]}
-          smallTitle4={allTitle[styleNum][8]}
-          fullImgs={true}
-        />
-      </div>
-      <InterSectionBox
-        WhitThext={true}
-        textTitle={interTxt[styleNum][1]}
-        backImg={{ backgroundImage: `url(${allImg[styleNum][5]})` }}
-      />
-      <HistoryLandRow
+      {reverseCol === true ? <HistoryLandRow
         title1={allTitle[styleNum][9]}
         txt1={allTxt[styleNum][5]}
         txt12={allTxt[styleNum][6]}
@@ -934,7 +909,85 @@ function LayoutStyle2({ styleNum, boxH4 }) {
         img08={allImg[styleNum][13]}
         colTxt04={{ color: "#FDF2DE" }}
         actifB4={boxH4}
+      />: <div className="sect--heigth100 sect--snapChild">
+        <SectHoriFull
+          BigTitle1={allTitle[styleNum][3]}
+          BigTitle12={allTitle[styleNum][4]}
+          BigTitle2={allTitle[styleNum][5]}
+          imgArtiste1={allImg[styleNum][3]}
+          imgArtiste2={allImg[styleNum][4]}
+          textcol1={allTxt[styleNum][1]}
+          textcol2={allTxt[styleNum][2]}
+          textcol3={""}
+          textcol4={allTxt[styleNum][3]}
+          textcol5={allTxt[styleNum][4]}
+          textcol6={""}
+          smallTitle1={allTitle[styleNum][6]}
+          smallTitle2={""}
+          smallTitle3={allTitle[styleNum][7]}
+          smallTitle4={allTitle[styleNum][8]}
+          fullImgs={true}
+        />
+      </div>}
+      <InterSectionBox
+        WhitThext={true}
+        textTitle={interTxt[styleNum][1]}
+        backImg={{ backgroundImage: `url(${allImg[styleNum][5]})` }}
       />
+      {reverseCol === true ? <div className="sect--heigth100 sect--snapChild">
+        <SectHoriFull
+          BigTitle1={allTitle[styleNum][3]}
+          BigTitle12={allTitle[styleNum][4]}
+          BigTitle2={allTitle[styleNum][5]}
+          imgArtiste1={allImg[styleNum][3]}
+          imgArtiste2={allImg[styleNum][4]}
+          textcol1={allTxt[styleNum][1]}
+          textcol2={allTxt[styleNum][2]}
+          textcol3={""}
+          textcol4={allTxt[styleNum][3]}
+          textcol5={allTxt[styleNum][4]}
+          textcol6={""}
+          smallTitle1={allTitle[styleNum][6]}
+          smallTitle2={""}
+          smallTitle3={allTitle[styleNum][7]}
+          smallTitle4={allTitle[styleNum][8]}
+          fullImgs={true}
+        />
+      </div> : <HistoryLandRow
+        title1={allTitle[styleNum][9]}
+        txt1={allTxt[styleNum][5]}
+        txt12={allTxt[styleNum][6]}
+        animImg1={true}
+        HB1={true}
+        img01={allImg[styleNum][6]}
+        img02={allImg[styleNum][7]}
+        colTxt01={{ color: "#FDF2DE" }}
+        title2={allTitle[styleNum][10]}
+        txt2={allTxt[styleNum][7]}
+        txt22={allTxt[styleNum][8]}
+        animImg2={true}
+        HB2={false}
+        img03={allImg[styleNum][8]}
+        img04={allImg[styleNum][9]}
+        colTxt02={{ color: "#FDF2DE" }}
+        title3={allTitle[styleNum][11]}
+        txt3={allTxt[styleNum][9]}
+        txt32={allTxt[styleNum][10]}
+        animImg3={false}
+        HB3={true}
+        img05={allImg[styleNum][10]}
+        img06={allImg[styleNum][11]}
+        colTxt03={{ color: "#FDF2DE" }}
+        title4={allTitle[styleNum][12]}
+        txt4={allTxt[styleNum][11]}
+        txt42={allTxt[styleNum][12]}
+        animImg4={false}
+        HB4={true}
+        img07={allImg[styleNum][12]}
+        img08={allImg[styleNum][13]}
+        colTxt04={{ color: "#FDF2DE" }}
+        actifB4={boxH4}
+      />}
       <InterSectionBox
         WhitThext={true}
         textTitle={interTxt[styleNum][2]}
