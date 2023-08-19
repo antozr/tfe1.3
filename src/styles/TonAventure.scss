@@ -31,6 +31,7 @@
     flex-direction: column;
     justify-content: flex-start;
     row-gap: 3vh;
+    overflow: hidden;
 
     &--small {
       margin: 20vh auto;
@@ -49,8 +50,9 @@
   }
   &__img {
     width: 100%;
-    height: auto;
-    margin: 8vh auto;
+    height: 60%;
+    margin: 3vh auto;
+    
     &--noData {
       height: 20vh;
       margin: -4vh 0 0 20vw;
@@ -105,7 +107,7 @@
   &__linkBoxP {
     width: 190px;
    min-height: 60px;
-    padding: 20px 30px;
+    padding: 20px 1.3vw;
     background-color: #1d1d1d;
     color: #fdf2de;
     border-radius: 8px;
@@ -119,13 +121,15 @@
     }
   }
   &__navSecond {
-    width: 60%;
-    height: 80px;
+    min-width: 40%;
+    max-width: 55%;
+    width: auto;
+    min-height: 80px;
     background-color: #000;
-    border: 2px solid red;
+    //border: 2px solid red;
     position: sticky;
     top: 10vh;
-    left: 40vw;
+    left: 55vw;
     border-radius: 8px;
     display: flex;
     flex-direction: row;
@@ -170,7 +174,8 @@
       column-gap: 2vw;
     }
     &__boxInfo {
-      height: 80vh;
+      max-height: 80vh;
+      height: auto;
       width: 30vw;
       position: sticky;
       top: 10vh;
@@ -179,6 +184,7 @@
     }
     &__boxContentAll {
       width: 70vw;
+      padding: 0 0 0 2vw;
     }
     &__gridBox {
       width: 100;

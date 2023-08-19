@@ -360,6 +360,7 @@ function TonAventure() {
             ? "sect__adventure sect__adventure--noCont"
             : "sect__adventure "
         }
+        id="infoContent"
       >
         {tabDataNameUse.length === 0 ? (
           <>

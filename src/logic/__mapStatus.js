@@ -67,7 +67,7 @@ export function ChangeStateDataVisited() {
   }
   //alert(pathNamePage)
 
-  if (pathNamePage === "/oldschool") {
+  if (pathNamePage === arrayListPathName[0]) {
     localStorage.setItem("US", true);
     SecondVisiteSelect = true;
     localStorage.setItem("ViewCheckPageStart", true);
