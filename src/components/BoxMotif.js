@@ -34,8 +34,8 @@ function BoxMotif({
           <div
             className={
               blackMotif === true
-                ? "sect__motifZone sect__motifZone--black"
-                : "sect__motifZone"
+                ? "sect__motifZone sect__motifZone--noAnim sect__motifZone--black"
+                : "sect__motifZone sect__motifZone--noAnim"
             }
           >
             <div className="motif__boxImgAnim">
@@ -87,7 +87,7 @@ function BoxMotif({
                   duration: 0.4,
                   delay: 2,
                   type: "tween",
-                  ease: "circOut",
+                  ease: "backOut",
                 }}
                 
               >
@@ -102,13 +102,14 @@ function BoxMotif({
               <motion.div
                 className="motif__boxImg motif__boxImg--second"
                 initial={{ opacity: 0, y: "200px", x: "60vw" }}
-                whileInView={{ opacity: 1, y: "-20vh" }}
+                whileInView={{ opacity: 1, y: "-40vh" }}
                 transition={{
                   duration: 0.4,
                   delay: 0.5,
                   type: "tween",
                   ease: "circOut",
                 }}
+                viewport={{ root: scrollRef, once: true }}
                 
               >
                 <img

@@ -42,6 +42,11 @@
     object-fit: contain;
     scale: 1;
     cursor:zoom-in;
+    transition: 0.2s;
+    &:hover{
+      transition: 0.4s;
+      filter: blur(3px) grayscale(0.8);
+    }
   }
 
   &__boxContent {
@@ -72,6 +77,9 @@
     &--black {
       background-color: #000;
       color: #fdf2de;
+    }
+    &--noAnim{
+      padding: 20vh 0 40vh ;
     }
   }
 
