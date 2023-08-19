@@ -27,7 +27,7 @@ function InterSectionBox({ WhitThext, backImg, textTitle, horiAnim }) {
     let box2 = document.querySelector("#moveInter");
     console.log(e);
     let of1 = box1.offsetTop;
-    if (e.screenY < ((window.innerHeight / 2)+100)) {
+    if (e.screenY > ((window.innerHeight / 2)+100)) {
       setTimeout(() => {
         window.scrollTo({
           top: of1,
