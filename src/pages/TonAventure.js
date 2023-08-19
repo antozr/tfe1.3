@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FirstSection from "../components/FirstSection";
 import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 ///img import
 import BGFirstSection from "../assets/images/boatAdventure.webp";
 import InterSectionBox from "../components/InterSectionBox";
@@ -53,10 +54,22 @@ function TonAventure() {
   const [dataImgActive, setDataImgActive] = useState([]);
   const [dataBoxInfo, setDataBoxInfo] = useState([]);
   const [mapLink, setMapLink] = useState([]);
-  
+
   const [urlImgBox, seturlImgBox] = useState("#");
   const [showImg, setShowImg] = useState(false);
+  const [showTrans2, setShowTrans2] = useState(true);
 
+  /*add animation load page */
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, 800);
+  setTimeout(() => {
+    setShowTrans2(false);
+  }, 1800);
 
   let allTitle = [
     <>
@@ -187,7 +200,7 @@ function TonAventure() {
         setDataBoxInfo(["Contenu non trouvable"]);
       }
     }
-  },[]);
+  }, []);
   function openImgBox(e) {
     let srcImg = e.target.src;
     seturlImgBox(srcImg);
@@ -201,8 +214,6 @@ function TonAventure() {
     }, 600);
   }
   function changeDataLink(e) {
-    
-
     setTimeout(() => {
       changeDataInfoBox(e.target.title);
     }, 800);
@@ -222,7 +233,7 @@ function TonAventure() {
       .addEventListener("animationend", (e) => {
         e.target.classList.remove("adventure__boxInfo--animClose");
       });
-  };
+  }
   function changeDataInfoBox(linkActive) {
     if (linkActive === "Old school") {
       setDataBoxInfo([
@@ -281,7 +292,7 @@ function TonAventure() {
       ]);
 
       setMapLink(arrayListMapLink[4]);
-    } else if (linkActive === "Celtes"){
+    } else if (linkActive === "Celtes") {
       setDataBoxInfo([
         dataDiscover[3].name,
         dataDiscover[3].description,
@@ -290,16 +301,16 @@ function TonAventure() {
       ]);
       setDataImgActive([
         dog,
-          horse,
-          triketra,
-          triskel,
-          "Chien",
-          "Epona",
-          "Triketra",
-          "Triskel",
+        horse,
+        triketra,
+        triskel,
+        "Chien",
+        "Epona",
+        "Triketra",
+        "Triskel",
       ]);
       setMapLink(arrayListMapLink[6]);
-    } else if (linkActive === "Nordic "){
+    } else if (linkActive === "Nordic ") {
       setDataBoxInfo([
         dataDiscover[4].name,
         dataDiscover[4].description,
@@ -317,13 +328,11 @@ function TonAventure() {
         "Wyrd",
       ]);
       setMapLink(arrayListMapLink[5]);
-    }
-    
-    else {
+    } else {
       setDataBoxInfo(["Contenu non trouvable"]);
     }
-  };
-  
+  }
+
   const MapDataLink = tabDataNameUse.map((value) => (
     <li className="adventure__elNav" title={value} onClick={changeDataLink}>
       <p title={value} className="adventure__link">
@@ -334,7 +343,11 @@ function TonAventure() {
 
   return (
     <>
-      <FirstSection
+    <motion.div
+      initial={{opacity:0, y:"20vh"}}
+      whileInView={{opacity:1, y:0}}
+      transition={{duration:0.8, delay:1}}      >
+ <FirstSection
         BGImg={BGFirstSection}
         title1={allTitle[0]}
         txt1={allTxt[0]}
@@ -393,7 +406,6 @@ function TonAventure() {
           </>
         ) : (
           <>
-         
             <div className="adventure__boxInfo " id="boxInfoGauche">
               <div className="adventure__colBox">
                 <TextColDroite title1={dataBoxInfo[0]} txt1={dataBoxInfo[1]} />
@@ -403,7 +415,9 @@ function TonAventure() {
                 className="adventure__linkBox sect__txt"
                 aria-label="Vers la carte"
               >
-                <p className="sect__txt adventure__linkBoxP">Visite {dataBoxInfo[2]}</p>
+                <p className="sect__txt adventure__linkBoxP">
+                  Visite {dataBoxInfo[2]}
+                </p>
                 <img
                   src={mapLink}
                   alt="Carte de pays ou d'une régions du monde. "
@@ -413,63 +427,77 @@ function TonAventure() {
             </div>
             {/* ADD IMG */}
             <div className="adventure__boxContentAll">
-            {
-              tabDataNameUse.length <=0 ? "": <div className="adventure__navSecond">
-            {MapDataLink}
+              {tabDataNameUse.length <= 0 ? (
+                ""
+              ) : (
+                <div className="adventure__navSecond">{MapDataLink}</div>
+              )}
+              <div className="adventure__gridBox">
+                <ul className="adventure__listImg">
+                  <li className="adventure__mobileEl">
+                    <p className="sect__title sect__title--2 sect__title--jaune">
+                      {dataImgActive[4]}
+                    </p>
+                    <img
+                      src={dataImgActive[0]}
+                      alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                      className="adventure__imgSlider"
+                      onClick={openImgBox}
+                    />
+                  </li>
+                  <li className="adventure__mobileEl">
+                    <p className="sect__title sect__title--2 sect__title--jaune">
+                      {dataImgActive[5]}
+                    </p>
+                    <img
+                      src={dataImgActive[1]}
+                      alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                      className="adventure__imgSlider"
+                      onClick={openImgBox}
+                    />
+                  </li>
+                  <li className="adventure__mobileEl">
+                    <p className="sect__title sect__title--2 sect__title--jaune">
+                      {dataImgActive[6]}
+                    </p>
+                    <img
+                      src={dataImgActive[2]}
+                      alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                      className="adventure__imgSlider"
+                      onClick={openImgBox}
+                    />
+                  </li>
+                  <li className="adventure__mobileEl">
+                    <p className="sect__title sect__title--2 sect__title--jaune">
+                      {dataImgActive[7]}
+                    </p>
+                    <img
+                      src={dataImgActive[3]}
+                      alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
+                      className="adventure__imgSlider"
+                      onClick={openImgBox}
+                    />
+                  </li>
+                </ul>
               </div>
-            }
-            <div className="adventure__gridBox">
-              <ul className="adventure__listImg">
-                <li className="adventure__mobileEl">
-                  <p className="sect__title sect__title--2 sect__title--jaune">
-                    {dataImgActive[4]}
-                  </p>
-                  <img
-                    src={dataImgActive[0]}
-                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
-                    className="adventure__imgSlider"
-                    onClick={openImgBox}
-                  />
-                </li>
-                <li className="adventure__mobileEl">
-                <p className="sect__title sect__title--2 sect__title--jaune">
-                    {dataImgActive[5]}
-                  </p>
-                  <img
-                    src={dataImgActive[1]}
-                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
-                    className="adventure__imgSlider"
-                    onClick={openImgBox}
-                  />
-                </li>
-                <li className="adventure__mobileEl">
-                <p className="sect__title sect__title--2 sect__title--jaune">
-                    {dataImgActive[6]}
-                  </p>
-                  <img
-                    src={dataImgActive[2]}
-                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
-                    className="adventure__imgSlider"
-                    onClick={openImgBox}
-                  />
-                </li>
-                <li className="adventure__mobileEl">
-                <p className="sect__title sect__title--2 sect__title--jaune">
-                    {dataImgActive[7]}
-                  </p>
-                  <img
-                    src={dataImgActive[3]}
-                    alt="Une représentation des différents motifs qu'on peut retrouver dans le monde du tatouage traditionel."
-                    className="adventure__imgSlider"
-                    onClick={openImgBox}
-                  />
-                </li>
-              </ul>
-            </div>
             </div>
           </>
         )}
       </div>
+      </motion.div>
+     
+      {showTrans2 &&
+        createPortal(
+          <>
+            <motion.div
+              className="sect__transPage"
+              initial={{ opacity: 1, y: "-100vh", zIndex: 30 }}
+              animate={{ opacity: 1, y: "200vh", height: "200vh" }}
+              transition={{ duration: 1.8, type: "tween", ease: "circIn" }}
+            ></motion.div>
+          </>,
+          document.body
+        )}
       {showImg &&
         createPortal(
           <ImgOpenbig closeModal={closeImgBox} urlImgBig={urlImgBox} />,
