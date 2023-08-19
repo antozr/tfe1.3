@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FirstSection from "../components/FirstSection";
-
+import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
 //import image
 
 import BGFirstSection from "../assets/images/japon/compressed/arrierePlanYakuza.webp";
@@ -9,6 +10,8 @@ import MapBox from "../components/MapBox";
 
 function StylePB() {
   const [mapShox, setMapShow] = useState(false);
+  const [showTrans, setShowTrans] = useState(false)
+
   let allTitle = [<>Explore les styles</>, <></>, <></>];
 
   let allTxt = [
@@ -27,8 +30,10 @@ function StylePB() {
   function changeMapShow(e) {
     if (e.target.innerText === "Mode carte") {
       setMapShow(false);
+      setShowTrans(true)
     } else if (e.target.innerText === "Mode liste") {
       setMapShow(true);
+      setShowTrans(true)
     } else {
       setMapShow(false);
     }
@@ -84,6 +89,23 @@ function StylePB() {
         )}
       </section>
       
+      {showTrans &&
+        createPortal(
+          <>
+            <motion.div
+              className="sect__transPage"
+              initial={{ opacity:1, y:"60vh", zIndex:30}}
+              animate={{ opacity:1 ,y:"-200vh", height:"200vh"}}
+              exit={{opacity:0, y:"-300vh"}}
+              transition={{duration:2.2,type: "tween",
+              ease: "circIn",}}
+              
+            >
+              
+            </motion.div>
+          </>,
+          document.body
+        )}
     </>
   );
 }
