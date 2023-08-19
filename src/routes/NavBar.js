@@ -32,6 +32,7 @@ function NavBar() {
 function openNav(e){
   if(!listLien.current.classList.contains("nav__list--open")){
     listLien.current.classList.remove("nav__list--open");}
+    window.scrollTo(0,0)
   // }else{
   //   listLien.current.classList.remove("nav__list--open");
   // }
