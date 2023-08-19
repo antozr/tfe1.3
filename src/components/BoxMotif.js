@@ -89,7 +89,7 @@ function BoxMotif({
                   type: "tween",
                   ease: "circOut",
                 }}
-                viewport={{ root: scrollRef, once: true }}
+                // viewport={{ root: scrollRef, once: true }}
               >
                 <img
                   src={motifImg01}
@@ -109,7 +109,7 @@ function BoxMotif({
                   type: "tween",
                   ease: "circOut",
                 }}
-                viewport={{ root: scrollRef, once: true }}
+                viewport={{ root: scrollRef }}
               >
                 <img
                   src={motifImg02}

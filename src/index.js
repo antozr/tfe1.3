@@ -50,7 +50,7 @@ const router = createBrowserRouter([
           },
           {
             path: "/styles/celtic",
-            element: <LayoutStyle2 styleNum={3} boxH4={true} />,
+            element: <LayoutStyle2 styleNum={3} boxH4={true} reverseCol={true} />,
           },
         ],
       },

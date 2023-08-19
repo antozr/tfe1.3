@@ -5,7 +5,7 @@ import { ChangeStateDataVisited } from '../logic/__mapStatus.js';
 function BoxMessageEnd() {
 
   function goTop(){
-    window.scrollTo(0,0)
+    window.scrollTo(0)
     ChangeStateDataVisited()
   }
 
