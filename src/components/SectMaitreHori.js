@@ -63,7 +63,7 @@ function SectHoriFull({ BigTitle1, BigTitle12, BigTitle2, imgArtiste1, imgArtist
 
                 </div>
                 <div className="hori__box ">
-                    <ContentBoxHori linkImg01={imgArtiste2} title01={smallTitle3} title02={smallTitle4} text01={textcol4} text02={textcol5} text03={textcol6} colorTxt={{ color: '#000' }} fullImg={fullImgs}/>
+                    <ContentBoxHori  linkImg01={imgArtiste2} title01={smallTitle3} title02={smallTitle4} text01={textcol4} text02={textcol5} text03={textcol6} colorTxt={{ color: '#000' }} fullImg={fullImgs}/>
 
                 </div>
             </div>

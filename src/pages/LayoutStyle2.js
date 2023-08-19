@@ -168,7 +168,6 @@ function LayoutStyle2({ styleNum, boxH4 }) {
       <>teknikel</>,
       <>L’origine des motifs </>,
       "Du point fait main",
-
       "Des motifs ",
       "riche de mythologie",
 
@@ -889,10 +888,11 @@ function LayoutStyle2({ styleNum, boxH4 }) {
           textcol4={allTxt[styleNum][3]}
           textcol5={allTxt[styleNum][4]}
           textcol6={""}
-          smallTitle1={""}
-          smallTitle2={allTitle[styleNum][6]}
+          smallTitle1={allTitle[styleNum][6]}
+          smallTitle2={""}
           smallTitle3={allTitle[styleNum][7]}
           smallTitle4={allTitle[styleNum][8]}
+          fullImgs={true}
         />
       </div>
       <InterSectionBox
