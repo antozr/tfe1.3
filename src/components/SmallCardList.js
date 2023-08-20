@@ -57,14 +57,14 @@ function SmallCardList() {
       className="styleTT__boxEL"
       style={{ backgroundImage: `url(${el.img})` }}
     >
-      <Link
+      {el.link === "/styles" ? <><p className="sect__txt styleTT__link" style={{cursor:"auto"}}><span> {el.name}</span></p> </> : <Link
         to={el.link}
         aria-label="direction vers un style de tattoo"
         className="sect__txt styleTT__link"
         onClick={goToStyle}
-      >
-        <span> {el.name}</span>
-      </Link>
+      > <span> {el.name}</span>
+      </Link>}
+       
     </li>
   ));
 
