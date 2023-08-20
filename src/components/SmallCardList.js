@@ -45,6 +45,13 @@ function SmallCardList() {
   ];
 
 
+
+  function goToStyle() {
+    window.scrollTo(0, 0);
+    let layoutStyleB = document.querySelector(".sect__layoutAnim");
+
+    layoutStyleB.classList.add("sect__layoutAnim--close");
+   }
   const allBoxLink = allLink.map((el) => (
     <li
       className="styleTT__boxEL"
@@ -54,6 +61,7 @@ function SmallCardList() {
         to={el.link}
         aria-label="direction vers un style de tattoo"
         className="sect__txt styleTT__link"
+        onClick={goToStyle}
       >
         <span> {el.name}</span>
       </Link>

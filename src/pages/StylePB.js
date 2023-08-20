@@ -57,7 +57,7 @@ function StylePB() {
   return (
     <>
       <div
-       className="sect__animOpen"
+       className="sect__animOpen sect__layoutAnim"
         
         
       >

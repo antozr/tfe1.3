@@ -1053,9 +1053,9 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
           <>
             <motion.div
               className="sect__transPage"
-              initial={{ opacity:1, x:"-100vw", zIndex:30}}
+              initial={{ opacity:1, x:"-280vw",height:"200vh",width:"300vw", zIndex:30}}
               animate={{ opacity:1 ,x:"200vw", height:"200vh"}}
-              transition={{duration:1.8,type: "tween",
+              transition={{duration:1.4,type: "tween",
               ease: "circIn"}}
               
             >
