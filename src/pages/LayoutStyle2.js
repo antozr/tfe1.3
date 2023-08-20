@@ -861,13 +861,8 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
     ]
   ];
  /* add animation load page */
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, 800);
+  
+    
   setTimeout(() => {
     setShowTrans2(false);
   }, 1800);

@@ -24,7 +24,7 @@ function InterSectionBox({ WhitThext, backImg, textTitle, horiAnim }) {
 
   function getTopSize(e) {
     let box1 = document.querySelector(".sect__artiste");
-    let box2 = document.querySelector("#moveInter");
+    //let box2 = document.querySelector("#moveInter");
     console.log(e);
     let of1 = box1.offsetTop;
     if (e.screenY > ((window.innerHeight / 2)+100)) {
@@ -35,13 +35,6 @@ function InterSectionBox({ WhitThext, backImg, textTitle, horiAnim }) {
           behavior: "smooth"
         });
       }, 400);
-    } else {
-      window.scrollTo({
-        top: box2.offsetTop,
-        left: 0,
-        behavior: "smooth"
-      });
-      console.log(box2);
     }
   }
 
