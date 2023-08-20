@@ -149,7 +149,9 @@ function MapBox({withBG}) {
             setTimeout(() => {
                 window.scrollTo(100, 0);
             }, 100)
+            let layoutStyleB = document.querySelector(".sect__layoutAnim");
 
+            layoutStyleB.classList.add("sect__layoutAnim--close");
             setTimeout(() => {
                 routChange(NamePath);
                 window.scrollTo(0, 0);
