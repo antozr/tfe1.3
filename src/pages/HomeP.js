@@ -85,7 +85,9 @@ function HomeP() {
   ];
   return (
     <>
-  
+  <div className="sect__animOpen sect__layoutAnim"  >
+
+ 
       <FirstSection
         BGImg={BGFirstSection}
         title1={allTitle[0]}
@@ -153,6 +155,7 @@ function HomeP() {
       <InterSectionBox backImg={{ backgroundImage: `url(${BGImg})` }} />
       {window.innerWidth > 900 ? <MapBox withBG={true} /> : <SmallCardList />}
      <Foot/>
+     </div>
     </>
   );
 }
