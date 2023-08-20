@@ -16,6 +16,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 100vh;
+      min-height:100vh;
       
     }
   }
@@ -207,6 +209,11 @@ animation: animDown1 2.2s ease-in both;
       top: 10vh;
       z-index: 2;
       padding: 0 2vw 0 2vw;
+
+      &--small {
+        margin: 20vh auto;
+        width: 55vw;
+      }
     }
     &__boxContentAll {
       width: 70vw;
