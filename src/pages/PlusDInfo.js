@@ -88,23 +88,16 @@ function PlusDInfo() {
   }
 
   /* add animation load page */
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, 800);
-  setTimeout(() => {
-    setShowTrans2(false);
-  }, 1800);
+
+  // function endOpenAnim(){
+  //   setShowTrans2(false)
+  //   console.log(setShowTrans2);
+  // }
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, y: "20vh" }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
+      <div
+        className="sect__animOpen"
       >
         <FirstSection
           BGImg={BGFirstSection}
@@ -156,21 +149,17 @@ function PlusDInfo() {
             firstBtnName={"Découvrir"}
           />
         </section>
-      </motion.div>
+      </div>
 
       {showTrans2 &&
         createPortal(
           <>
-            <motion.div
-              className="sect__transPage"
-              initial={{ opacity:1, y:"-100vh", zIndex:30}}
-              animate={{ opacity:1 ,y:"200vh", height:"200vh"}}
-              transition={{duration:1.8,type: "tween",
-              ease: "circIn"}}
+            <div
+               className="sect__transPage sect__transPage--animDown1"
               
             >
               
-            </motion.div>
+            </div>
           </>,
           document.body
         )}

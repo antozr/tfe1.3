@@ -878,6 +878,7 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
         initial={{ opacity: 0, y: "20vh" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
+        className="sect__layoutAnim"
       >
 
 <FirstSectionStyles

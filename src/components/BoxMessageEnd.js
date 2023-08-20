@@ -12,9 +12,12 @@ function BoxMessageEnd() {
     window.scrollTo(0, 0);
     ChangeStateDataVisited();
     setShowTrans(true);
-    setTimeout(() => {
-      navigate("/styles/");
-    }, 2300);
+    let layoutStyleB = document.querySelector('.sect__layoutAnim');
+
+    layoutStyleB.classList.add('sect__layoutAnim--close');
+    // setTimeout(() => {
+    //   navigate("/styles/");
+    // }, 2300);
   }
 
   return (
@@ -34,9 +37,9 @@ function BoxMessageEnd() {
           <>
             <motion.div
               className="sect__transPage"
-              initial={{ opacity: 1, y: "20vh", zIndex: 30 }}
-              animate={{ opacity: 1, y: "-60vh", height: "300vh" }}
-              transition={{ duration: 2.2, ease: "circIn" }}
+              initial={{ opacity: 1, y: "90vh", zIndex: 30 }}
+              animate={{ opacity: 1, y: "-360vh", height: "300vh" }}
+              transition={{ duration: 1.2, ease: "circIn" }}
             ></motion.div>
           </>,
           document.body

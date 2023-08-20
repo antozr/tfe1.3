@@ -39,6 +39,12 @@ animation: animDown1 2.2s ease-in both;
    
     animation-delay: 1s;
   }
+  &__layoutAnim{
+    &--close{
+      animation: close1 0.8s  ease-in both;
+      animation-direction: reverse;
+    }
+  }
 }
 
 .adventure {
@@ -290,6 +296,18 @@ animation: animDown1 2.2s ease-in both;
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+}
+@keyframes close1 {
+  0% {
+   opacity: 1;
+   transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(60vh);
   }
   
 }

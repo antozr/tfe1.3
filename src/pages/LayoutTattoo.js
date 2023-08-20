@@ -157,13 +157,7 @@ function LayoutTattoo({ USColG, styleNum }) {
     [],
   ];
   /* add animation load page */
-  setTimeout(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, 800);
+
   setTimeout(() => {
     setShowTrans2(false);
   }, 1800);
@@ -171,9 +165,10 @@ function LayoutTattoo({ USColG, styleNum }) {
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: "20vh" }}
+        initial={{ opacity: 0, y: "-20vh" }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="sect__animOpen sect__layoutAnim" 
       >
         <FirstSectionStyles
           BTD1={allTitle[styleNum][0]}
@@ -264,9 +259,9 @@ function LayoutTattoo({ USColG, styleNum }) {
           <>
             <motion.div
               className="sect__transPage"
-              initial={{ opacity:1, x:"-100vw", zIndex:30}}
+              initial={{ opacity:1, x:"-100vw",height:"200vh",width:"300vw", zIndex:30}}
               animate={{ opacity:1 ,x:"200vw", height:"200vh"}}
-              transition={{duration:1.8,type: "tween",
+              transition={{duration:1.4,type: "tween",
               ease: "circIn"}}
               
             >
