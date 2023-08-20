@@ -10,7 +10,7 @@ import SerpentSvg from "../assets/images/svgs/oldSchool/serpent.svg";
 import { loadDataMapAdventure } from "../logic/__mapStatus";
 import TextColDroite from "../components/TextColDroite";
 import BoutonNormal from "../components/BoutonComp";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import dataDiscover from "../assets/data/AdventureData.json";
 /// import des maps
 import CarteNordic from "../assets/images/svgs/nordic.svg";
@@ -322,7 +322,8 @@ function TonAventure() {
     } else {
       setDataBoxInfo(["Contenu non trouvable"]);
     }
-  }
+  };
+
 
   const MapDataLink = tabDataNameUse.map((value) => (
     <li className="adventure__elNav" title={value} onClick={changeDataLink}>
@@ -332,13 +333,26 @@ function TonAventure() {
     </li>
   ));
 
+
+  const navigate = useNavigate();
+
+  function goToStyle(link1) {
+    window.scrollTo(0, 0);
+    let layoutStyleB = document.querySelector(".sect__layoutAnim");
+
+    layoutStyleB.classList.add("sect__layoutAnim--close");
+    setTimeout(() => {
+      //setLocationNod(linkBtn)
+      navigate(dataBoxInfo[3]);
+    }, 800);}
+
   return (
     <>
     <motion.div
       initial={{opacity:0, y:"20vh"}}
       whileInView={{opacity:1, y:0}}
       transition={{duration:0.8, delay:1}}    
-      className="sect__animOpen"  >
+      className="sect__animOpen sect__layoutAnim"  >
  <FirstSection
         BGImg={BGFirstSection}
         title1={allTitle[0]}
@@ -383,9 +397,11 @@ function TonAventure() {
               </div>
               <div className="adventure__boxImgCo">
                 <BoutonNormal
-                  linkBtn={"/styles"}
+                  linkBtn={"/styles/"}
                   nameBtn={"Recherche un style "}
                   ClassColor={"sect__btn sect__btn--yellow"}
+                  linkHref={true}
+                  funChangeP={true}
                 />
 
                 <img
@@ -402,10 +418,11 @@ function TonAventure() {
               <div className="adventure__colBox">
                 <TextColDroite title1={dataBoxInfo[0]} txt1={dataBoxInfo[1]} />
               </div>
-              <Link
-                to={dataBoxInfo[3]}
+              <div
+                
                 className="adventure__linkBox sect__txt"
                 aria-label="Vers la carte"
+                onClick={goToStyle}
               >
                 <p className="sect__txt adventure__linkBoxP">
                   Visite {dataBoxInfo[2]}
@@ -415,7 +432,7 @@ function TonAventure() {
                   alt="Carte de pays ou d'une régions du monde. "
                   className="adventure__img"
                 />
-              </Link>
+              </div>
             </div>
             {/* ADD IMG */}
             <div className="adventure__boxContentAll">
