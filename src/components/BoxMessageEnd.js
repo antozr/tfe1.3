@@ -15,9 +15,9 @@ function BoxMessageEnd() {
     let layoutStyleB = document.querySelector('.sect__layoutAnim');
 
     layoutStyleB.classList.add('sect__layoutAnim--close');
-    // setTimeout(() => {
-    //   navigate("/styles/");
-    // }, 2300);
+    setTimeout(() => {
+      navigate("/styles/");
+    }, 1800);
   }
 
   return (

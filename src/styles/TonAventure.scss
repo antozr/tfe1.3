@@ -42,7 +42,6 @@ animation: animDown1 2.2s ease-in both;
   &__layoutAnim{
     &--close{
       animation: close1 0.8s  ease-in both;
-      animation-direction: reverse;
     }
   }
 }
