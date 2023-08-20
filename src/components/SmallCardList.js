@@ -7,9 +7,10 @@ import celteImg from "../assets/images/celte/TRIKETRA1.webp";
 import nordicimg from "../assets/images/nordic/vikingHome.webp";
 import russeImg from "../assets/images/russie/Caste.webp";
 import nextImg from "../assets/images/oldamerica/fondPeauNoir.webp";
-import { Link } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 
 function SmallCardList() {
+
   let allLink = [
     {
       link: "/styles/japon",
@@ -43,6 +44,7 @@ function SmallCardList() {
     },
   ];
 
+
   const allBoxLink = allLink.map((el) => (
     <li
       className="styleTT__boxEL"
@@ -70,7 +72,8 @@ function SmallCardList() {
       <div className="styleTT__box">
         <ul className="styleTT__boxUL">{allBoxLink}</ul>
       </div>
-    </>
+
+      </>
   );
 }
 

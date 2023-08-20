@@ -28,7 +28,16 @@
       top: 0;
       left: 0;
       z-index: 0;
-      
+
+
+      &--animDown1{
+animation: animDown1 2.2s ease-in both;
+      }
+  }
+  &__animOpen{
+    animation: open1 0.8s  ease-in both;
+   
+    animation-delay: 1s;
   }
 }
 
@@ -253,4 +262,34 @@
   100% {
     transform: translateX(0vw);
   }
+}
+@keyframes animDown1 {
+  0% {
+   opacity: 1;
+   height: 100vh;
+   transform: translateY(-100vh);
+   z-index: 30;
+  }
+
+  99% {
+    opacity: 1;
+    height: 200vh;
+    transform: translateY(200vh);
+  }
+  100%{
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes open1 {
+  0% {
+   opacity: 0;
+   transform: translateY(120px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
 }
