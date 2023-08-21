@@ -38,7 +38,7 @@ function NavBar() {
     }
    }
     window.scrollTo(0, 0);
-    console.log("hello");
+   // console.log("hello");
   }
   return (
     <header className={window.innerWidth > 600 ? "head" : "head head--mobile"}>

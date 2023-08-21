@@ -42,7 +42,7 @@ function ListSectionCard({dataCard, dataInfo,titleSection, bgBlack, bgBlackF, sm
   /// close part of info
 
   function closePartInfoList(e) {
-    console.log(e.target.parentElement.parentElement);
+    //console.log(e.target.parentElement.parentElement);
     e.target.parentElement.parentElement.classList.toggle(
       "stylePage__sect--small"
     );

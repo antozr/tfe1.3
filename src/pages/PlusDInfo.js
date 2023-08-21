@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FirstSection from "../components/FirstSection";
 import InterSectionBox from "../components/InterSectionBox";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 import dataStyle from "../assets/data/StylesData.json";
 ///import img
@@ -11,7 +11,7 @@ import ListSectionCard from "../components/ListSectionCard";
 import BGCelte from "../assets/images/celte/backCelt2.webp";
 
 function PlusDInfo() {
-  console.log("je suis olus info");
+  //console.log("je suis olus info");
   const [navSecondActif, setNavSecondActif] = useState("Tous");
   const [dataCard, setDataCard] = useState(dataStyle);
   const [showTrans2, setShowTrans2] = useState(true);

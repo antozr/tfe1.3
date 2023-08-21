@@ -12,7 +12,7 @@ function InterSectionBox({ WhitThext, backImg, textTitle, horiAnim }) {
       <div
         className="sect__nameBigBox sect__nameBigBox--fondImg sect--snapChild"
         style={backImg}
-        onMouseMove={horiAnim === true ? getTopSize : console.log("hey")}
+        onMouseMove={horiAnim === true ? getTopSize : console.log("")}
         id={horiAnim === true ? "moveInter" : ""}
       >
         <h2 className="sect__title sect_title--2 sect__title--big sect__title--druzokh">
@@ -25,7 +25,7 @@ function InterSectionBox({ WhitThext, backImg, textTitle, horiAnim }) {
   function getTopSize(e) {
     let box1 = document.querySelector(".sect__artiste");
     //let box2 = document.querySelector("#moveInter");
-    console.log(e);
+    //console.log(e);
     let of1 = box1.offsetTop;
     if (e.screenY > ((window.innerHeight / 2)+100)) {
       setTimeout(() => {
@@ -34,7 +34,7 @@ function InterSectionBox({ WhitThext, backImg, textTitle, horiAnim }) {
           left: 0,
           behavior: "smooth"
         });
-      }, 400);
+      }, 100);
     }
   }
 

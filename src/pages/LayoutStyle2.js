@@ -535,6 +535,7 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
       </>,
       "",
       <>
+      <br />
         Leur corps tatoué est une sorte de passeport servant à montrer à ceux
         qui savent le lire, ce qu'ils ont fait comme crimes , leur orientation
         sexuelle, leur rang dans "la mafia " de la prison ainsi que leurs idéaux

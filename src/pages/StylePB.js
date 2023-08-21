@@ -26,10 +26,10 @@ function StylePB() {
   ];
   /**/
   let urlcourante = document.location.pathname;
-  console.log(urlcourante);
+  //console.log(urlcourante);
   /**/
   function changeMapShow(e) {
-    console.log(setShowTrans2);
+    
     if (e.target.innerText === "Mode carte") {
       setMapShow(false);
       setShowTrans2(false)
