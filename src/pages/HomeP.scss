@@ -52,7 +52,7 @@
         justify-content: space-between;
         width: 100vw;
         height: auto;
-        padding: 17vh 3vw 0;
+        padding: 2vh 3vw 0;
         column-gap: 3vw;
         align-items: center;
 
@@ -127,7 +127,7 @@
 
         }
         &__boxContent{
-
+            padding: 17vh 3vw 0;
             &--reverse{
                 flex-direction: row-reverse;
             }

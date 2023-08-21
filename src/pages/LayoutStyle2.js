@@ -125,7 +125,7 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
       "Les 108 héros",
     ],
     [
-      <>Peuple&nbsp;nordique</>,
+      <>Les&nbsp;nordiques</>,
       "voyage",
       <>Voyage dans les plaines&nbsp;nordiques</>,
       <>La&nbsp;technique</>,
@@ -1018,13 +1018,22 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
         textTitle={interTxt[styleNum][2]}
         backImg={{ backgroundImage: `url(${allImg[styleNum][14]})` }}
       />
-      <BoxMotif
+      {
+        window.innerWidth < 600 ? <BoxMotif
         blackMotif={false}
+        noAnim={true}
         motifImg01={allImg[styleNum][15]}
         motifImg02={allImg[styleNum][16]}
         motiftitle={allTitle[styleNum][13]}
         motifTxt={allTxt[styleNum][13]}
-      />
+      />:<BoxMotif
+      blackMotif={false}
+      motifImg01={allImg[styleNum][15]}
+      motifImg02={allImg[styleNum][16]}
+      motiftitle={allTitle[styleNum][13]}
+      motifTxt={allTxt[styleNum][13]}
+    />
+      }
       <BoxMotif
         blackMotif={true}
         noAnim={true}
@@ -1033,14 +1042,21 @@ function LayoutStyle2({ styleNum, boxH4 , reverseCol}) {
         motiftitle={allTitle[styleNum][14]}
         motifTxt={allTxt[styleNum][14]}
       />
-      <BoxMotif
+      {window.innerWidth < 600 ? <BoxMotif
         blackMotif={false}
-        noAnim={false}
+        noAnim={true}
         motifImg01={allImg[styleNum][19]}
         motifImg02={allImg[styleNum][20]}
         motiftitle={allTitle[styleNum][15]}
         motifTxt={allTxt[styleNum][15]}
-      />
+      /> : <BoxMotif
+      blackMotif={false}
+      noAnim={false}
+      motifImg01={allImg[styleNum][19]}
+      motifImg02={allImg[styleNum][20]}
+      motiftitle={allTitle[styleNum][15]}
+      motifTxt={allTxt[styleNum][15]}
+    />}
       <BoxMessageEnd />
       </motion.div>
       {showTrans2 &&

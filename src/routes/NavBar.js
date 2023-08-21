@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./Navbar.scss";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   let allDataLink = [
@@ -28,23 +28,26 @@ function NavBar() {
 
   ////* Function to open / close tne nav in mobile */
   let listLien = useRef(document.querySelector(".nav__list"));
-  let btnNav = useRef(document.querySelector(".nav__btn"))
-function openNav(e){
-  if(!listLien.current.classList.contains("nav__list--open")){
-    listLien.current.classList.remove("nav__list--open");}
-    window.scrollTo(0,0)
-  // }else{
-  //   listLien.current.classList.remove("nav__list--open");
-  // }
-  
-}
+  let btnNav = useRef(document.querySelector(".nav__btn"));
+  function openNav(e) {
+    if (!listLien.current.classList.contains("nav__list--open")) {
+      listLien.current.classList.add("nav__list--open");
+    } else {
+      listLien.current.classList.remove("nav__list--open");
+    }
+    window.scrollTo(0, 0);
+    console.log("hello");
+  }
   return (
     <header className={window.innerWidth > 600 ? "head" : "head head--mobile"}>
       <nav className="head__nav">
         <ul className="nav__list" ref={listLien}>
           {allDataLink.map((el, key) => (
-            <li className="nav__el 
-            " key={el.id}>
+            <li
+              className="nav__el 
+            "
+              key={el.id}
+            >
               <NavLink
                 key={el.id}
                 to={el.link}

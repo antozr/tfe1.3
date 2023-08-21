@@ -19,21 +19,17 @@
     }
 
     &--noAnim {
-      width: 65vw;
-      transform: translateX(35vw) translateY(0vh);
+      width: 100vw;
       margin: 15vh 0 0 0 ;
      
     }
     &--noAnim2 {
       //position: relative;
       z-index: 2;
-      transform: translateX(0) translateY(-30vh);
-      max-width: 45vw;
+      max-width: 100vw;
       width: auto;
       height: auto;
       max-height: 80vh;
-      position: sticky;
-      top: 10vh;
     }
   }
   &__img {
@@ -54,13 +50,14 @@
     width: 50%;
 
     &--noAnim {
-      margin: 5vh 0 0 45vw;
+      margin: 6vh 0 0 2vw;
+      width: 100vw;
     }
   }
   &__boxImgAnim {
     height: auto;
     min-height: 80vh;
-    max-height: 100vh;
+    max-height: 180vh;
     // overflow: hidden;
   }
 }
@@ -79,7 +76,7 @@
       color: #fdf2de;
     }
     &--noAnim{
-      padding: 20vh 0 40vh ;
+      padding: 20vh 0 20vh ;
     }
   }
 
@@ -95,5 +92,75 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+
+@media(min-width:600px){
+  .motif {
+    &__boxImg {
+      width: 100%;
+      //min-height: 60vh;
+      max-height: 90vh;
+      //border: 2px solid red;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--second {
+        max-width: 45vw;
+        width: auto;
+  
+        height: auto;
+        max-width: 70vh;
+        position: sticky;
+        top: 60px;
+      }
+  
+      &--noAnim {
+        width: 65vw;
+        transform: translateX(35vw) translateY(0vh);
+        margin: 15vh 0 0 0 ;
+       
+      }
+      &--noAnim2 {
+        //position: relative;
+        z-index: 2;
+        transform: translateX(0) translateY(-30vh);
+        max-width: 45vw;
+        width: auto;
+        height: auto;
+        max-height: 80vh;
+        position: sticky;
+        top: 10vh;
+      }
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      scale: 1;
+      cursor:zoom-in;
+      transition: 0.2s;
+      &:hover{
+        transition: 0.4s;
+        filter: blur(3px) grayscale(0.8);
+      }
+    }
+  
+    &__boxContent {
+      padding: 5vh 5vw;
+      width: 50%;
+  
+      &--noAnim {
+        margin: 5vh 0 0 45vw;
+      }
+    }
+    &__boxImgAnim {
+      height: auto;
+      min-height: 80vh;
+      max-height: 100vh;
+      // overflow: hidden;
+    }
   }
 }
