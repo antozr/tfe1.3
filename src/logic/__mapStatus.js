@@ -36,24 +36,24 @@ export function initStatDataView() {
 export function ChangeStateDataVisited() {
 
   // //// a changer a l'upload en ligne 
-  let arrayListPathName = [
-    "/projets/tfe/oldschool",
-    "/projets/tfe/japon",
-    "/projets/tfe/nordic",
-    "/projets/tfe/russie",
-    "/projets/tfe/europe",
-    "/projets/tfe/pacifique",
-    "/projets/tfe/celtic",
-  ];
   // let arrayListPathName = [
-  //   "/styles/oldschool",
-  //   "/styles/japon",
-  //   "/styles/nordic",
-  //   "/styles/russie",
-  //   "/styles/europe",
-  //   "/styles/pacifique",
-  //   "/styles/celtic"
+  //   "/projets/tfe/oldschool",
+  //   "/projets/tfe/japon",
+  //   "/projets/tfe/nordic",
+  //   "/projets/tfe/russie",
+  //   "/projets/tfe/europe",
+  //   "/projets/tfe/pacifique",
+  //   "/projets/tfe/celtic",
   // ];
+  let arrayListPathName = [
+    "/styles/oldschool",
+    "/styles/japon",
+    "/styles/nordic",
+    "/styles/russie",
+    "/styles/europe",
+    "/styles/pacifique",
+    "/styles/celtic"
+  ];
   let pathNamePage = window.location.pathname;
   //console.log(pathNamePage);
   //console.log(arrayListPathName[1]);
