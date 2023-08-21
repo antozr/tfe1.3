@@ -232,7 +232,7 @@
         align-items: center;
         overflow: hidden;
         height: auto;
-        max-height: 60vh;
+        max-height: 90vh;
 
         &--minHeigt {
             margin: -130px 0 0 0;
@@ -379,9 +379,9 @@
     &__boxContent{
         width: auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         column-gap: 2vw;
-        row-gap: 1vh;
+        row-gap: 4vh;
         justify-content: flex-start;
         align-items: flex-end;
 
@@ -563,6 +563,23 @@
             }
 
            
+        }
+        .boxIntro{
+
+            &__boxContent{
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                column-gap: 2vw;
+                row-gap: 1vh;
+                justify-content: flex-start;
+                align-items: flex-end;
+        
+                &>p{
+                    max-width: 50ch;         
+                }
+        
+            }
         }
         
 

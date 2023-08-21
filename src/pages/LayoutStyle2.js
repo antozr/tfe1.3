@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 import imgBgJ1 from "../assets/images/japon/compressed/irezumiBack2-min.webp";
 import imgBgJ2 from "../assets/images/japon/compressed/horishiFullWork-min.webp";
 import backImgjap02 from "../assets/images/japon/compressed/arrierePlanYakuza.webp";
-import HistoJ11 from "../assets/images/japon/ainu1.webp";
+import HistoJ11 from "../assets/images/japon/compressed/ainu1.webp";
 import HistoJ12 from "../assets/images/japon/compressed/ainu2.webp";
 import HistoJ21 from "../assets/images/japon/compressed/meiji1-min.webp";
 import HistoJ22 from "../assets/images/japon/compressed/meiji2-min.webp";

@@ -30,11 +30,13 @@ function NavBar() {
   let listLien = useRef(document.querySelector(".nav__list"));
   let btnNav = useRef(document.querySelector(".nav__btn"));
   function openNav(e) {
-    if (!listLien.current.classList.contains("nav__list--open")) {
-      listLien.current.classList.add("nav__list--open");
-    } else {
+   if(window.innerWidth < 600){
+    if (listLien.current.classList.contains("nav__list--open")) {
       listLien.current.classList.remove("nav__list--open");
+    } else {
+      listLien.current.classList.add("nav__list--open");
     }
+   }
     window.scrollTo(0, 0);
     console.log("hello");
   }
