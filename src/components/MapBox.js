@@ -166,7 +166,7 @@ function MapBox({withBG}) {
     }
    
     return (
-        <section className={withBG === true ? " sect__map homepage__sect1--bgImg":"sect__map "}>
+        <section className={withBG === true ? " sect__map homepage__sect1--bgImg":"sect__map "} id='mapWorld'>
             <div className="sect__boxTitle sect__boxTitle--home">
                 <p className="sect__txt sect__txt--big sect__txt--jaune">
                     &

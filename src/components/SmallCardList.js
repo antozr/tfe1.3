@@ -77,7 +77,7 @@ function SmallCardList() {
            Parts à la découverte !
         </h2>
       </div>
-      <div className="styleTT__box">
+      <div className="styleTT__box" id="mapWorld">
         <ul className="styleTT__boxUL">{allBoxLink}</ul>
       </div>
 

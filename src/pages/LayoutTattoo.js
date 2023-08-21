@@ -58,7 +58,8 @@ function LayoutTattoo({ USColG, styleNum }) {
         née avec les marins qui voguait d’un port à l’autre, en marquant leur
         amour du monde sur leur&nbsp;corps.
       </>,
-      <>
+      <><br/>
+      <br/>
         Le style se compose de contours noirs épais avec des couleurs limitées
         avec les couleurs primaires{" "}
         <span className="sect__txt--thin sect__txt--italic">
@@ -228,12 +229,19 @@ function LayoutTattoo({ USColG, styleNum }) {
         />
 
         <div className="sect__listMotif">
+        {window.innerWidth < 600 ?
           <BoxMotif
+          noAnim={true}
             motifImg01={hiro1}
             motifImg02={hiro2}
             motiftitle={allTitle[styleNum][6]}
             motifTxt={allTxt[styleNum][7]}
-          />
+          />:<BoxMotif
+          motifImg01={hiro1}
+          motifImg02={hiro2}
+          motiftitle={allTitle[styleNum][6]}
+          motifTxt={allTxt[styleNum][7]}
+        />}
           <BoxMotif
             blackMotif={true}
             noAnim={true}
@@ -242,13 +250,20 @@ function LayoutTattoo({ USColG, styleNum }) {
             motiftitle={allTitle[styleNum][7]}
             motifTxt={allTxt[styleNum][8]}
           />
-          <BoxMotif
+          {window.innerWidth < 600 ? <BoxMotif
             blackMotif={true}
+            noAnim={true}
             motifImg01={bat2}
             motifImg02={bat1}
             motiftitle={allTitle[styleNum][8]}
             motifTxt={allTxt[styleNum][9]}
-          />
+          />:<BoxMotif
+          blackMotif={true}
+          motifImg01={bat2}
+          motifImg02={bat1}
+          motiftitle={allTitle[styleNum][8]}
+          motifTxt={allTxt[styleNum][9]}
+        />}
         </div>
         <BoxMessageEnd />
       </motion.div>

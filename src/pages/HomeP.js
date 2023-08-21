@@ -95,6 +95,7 @@ function HomeP() {
         span1={allTxt[1]}
         btnSwitch={true}
         nameBtn={"Voir la carte"}
+        
         linkBtn={"#mapWorld"}
         ClassColorBtn={"sect__btn sect__btn--yellow"}
         linkHrefbtn={true}
