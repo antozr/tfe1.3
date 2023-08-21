@@ -48,7 +48,7 @@ function FirstSection({
                   linkBtn={linkBtn}
                   ClassColor={ClassColorBtn}
                   linkHref={linkHrefbtn}
-                  funChangeP={false}
+                  withAnim={false}
                 />
               </>
             ) : (
